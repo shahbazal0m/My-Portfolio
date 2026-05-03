@@ -1,65 +1,167 @@
+'use client'; // Required because we are using React state and effects
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim"; // Standard, lightweight particles
 
 export default function Home() {
+  const [init, setInit] = useState(false);
+
+  // This should only run once to initialize the particle engine
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main className="relative w-full min-h-screen bg-[#030303] text-zinc-100 overflow-hidden">
+      {/* 1. Particle Background */}
+      {init && (
+        <Particles
+        id="tsparticles"
+        className="absolute inset-0 z-0"
+        options={{
+            background: { color: { value: "transparent" } },
+            fpsLimit: 120,
+            interactivity: {
+            events: {
+                onHover: {
+                enable: true,
+                mode: "repulse", // Isse cursor aane par particles door bhagenge
+                },
+            },
+            modes: {
+                repulse: {
+                distance: 120, // Kitni door bhagenge
+                duration: 0.4,
+                },
+            },
+            },
+            particles: {
+            color: {
+                value: ["#ffffff", "#4f46e5", "#c084fc"],
+            },
+            links: {
+                color: "#ffffff",
+                distance: 150,
+                enable: true,
+                opacity: 0.2, // Visibility kam karne ke liye opacity 0.5 se 0.2 kar di
+                width: 1,
+            },
+            move: {
+                enable: true,
+                speed: 1, // Speed thodi kam ki taaki distraction na ho
+            },
+            number: {
+                density: { enable: true, area: 800 },
+                value: 80, // Quantity thodi kam ki taaki clean lage
+            },
+            opacity: {
+                value: 0.4, // Isse particles thode subtle (soft) dikhenge
+            },
+            size: {
+                value: { min: 1, max: 3 },
+            },
+            },
+            detectRetina: true,
+        }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+      )}
+
+      {/* 2. Hero Section: Content Grid */}
+      <section className="relative z-10 w-full min-h-screen grid grid-cols-1 md:grid-cols-12 gap-8 items-center px-6 md:px-20 pt-24 pb-16 max-w-[1400px] mx-auto">
+        
+        {/* LEFT SIDE: Content */}
+        <motion.div 
+          className="md:col-span-7 flex flex-col items-start text-left space-y-6"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {/* Availability Tag */}
+          <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400">
+            Available for new opportunities
+          </div>
+
+          {/* Heading with New Gradient */}
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
+            <span className="text-white">Shahbaz</span>{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-500">
+              Alam
+            </span>
+            <br />
+            Full Stack Developer.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          {/* Description */}
+          <p className="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
+            Based in India, I specialize in crafting high-performance digital products, 
+            interactive interfaces, and scalable web solutions using React, Node.js, 
+            and the MERN stack.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+          {/* Buttons */}
+          <div className="flex gap-4 pt-4">
+            <button className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base">
+              View My Work
+            </button>
+            <button className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10">
+              Download Resume
+            </button>
+          </div>
+        </motion.div>
+
+        {/* RIGHT SIDE: Image */}
+        <motion.div 
+        className="md:col-span-5 flex justify-center items-center relative aspect-square md:aspect-auto"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ 
+            opacity: 1, 
+            scale: 1,
+            y: [0, -30, 0] // Yahan se image upar-neeche hogi
+        }}
+        transition={{ 
+            duration: 4, // 4 seconds ka loop
+            repeat: Infinity, // Hamesha chalta rahega
+            ease: "easeInOut",
+            opacity: { duration: 0.8 },
+            scale: { duration: 0.8 }
+        }}
+        >
+        {/* Subtle glow behind the image */}
+        <div className="absolute -inset-4 rounded-full bg-indigo-500/5 blur-[60px] -z-10" />
+
+        {/* Image Container */}
+        <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full p-[2px] glass overflow-hidden border border-white/10 shadow-2xl shadow-indigo-900/20">
+            <div className="w-full h-full rounded-full bg-[#050505] overflow-hidden relative">
+            <Image 
+                src="/portfolio_image.png" 
+                alt="Shahbaz Alam"
+                fill
+                className="object-cover object-top scale-100" // 'object-top' se head cut nahi hoga
+                priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            </div>
         </div>
-      </main>
-    </div>
+        </motion.div>
+      </section>
+
+      {/* 3. Featured Projects: Keeping your original position below */}
+      <section className="relative z-10 w-full py-16 px-6 md:px-20 max-w-[1400px] mx-auto border-t border-white/5">
+        <h2 className="text-3xl font-bold text-white mb-12">Featured Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="h-64 glass rounded-3xl p-6 border border-white/10 relative overflow-hidden group">
+            <div className="absolute inset-0 bg-indigo-900/10 opacity-0 group-hover:opacity-100 transition-opacity"/>
+            <p className="text-zinc-500">Project Card Placement</p>
+          </div>
+          <div className="h-64 glass rounded-3xl animate-pulse"></div>
+        </div>
+      </section>
+    </main>
   );
 }
