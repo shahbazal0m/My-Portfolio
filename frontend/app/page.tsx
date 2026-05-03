@@ -105,15 +105,26 @@ export default function Home() {
             and the MERN stack.
           </p>
 
-          {/* Buttons */}
-          <div className="flex gap-4 pt-4">
-            <button className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base">
-              View My Work
-            </button>
-            <button className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10">
-              Download Resume
-            </button>
-          </div>
+         {/* Buttons */}
+            <div className="flex gap-4 pt-4">
+            {/* View My Work - Ismein Projects section ki ID daal dein (#projects) */}
+            <a 
+                href="#projects" 
+                className="px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base cursor-pointer flex items-center justify-center"
+            >
+                View My Work
+            </a>
+
+            {/* Download Resume - Ismein apna Google Drive link paste karein */}
+            <a 
+                href="YAHAN_APNA_GOOGLE_DRIVE_LINK_DAALEIN" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 cursor-pointer flex items-center justify-center"
+            >
+                Download Resume
+            </a>
+            </div>
         </motion.div>
 
         {/* RIGHT SIDE: Image */}
