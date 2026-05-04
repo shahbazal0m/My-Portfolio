@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shahbaz Alam | Full Stack Developer",
+  title: "Shahbaz Alam | Web Developer",
   description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN and Next.js.",
 };
 
