@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Links Section */}
         <div className="hidden md:flex items-center gap-10 text-base font-bold text-zinc-400">
           <a href="#" className="hover:text-white transition-all cursor-pointer">Home</a>
-          <a href="#about" className="hover:text-white transition-all cursor-pointer">About</a>
+          <a href="#about" className="hover:text-white transition-all cursor-pointer">About Me</a>
           <a href="#projects" className="hover:text-white transition-all cursor-pointer">Projects</a>
           <a href="#contact" className="hover:text-white transition-all cursor-pointer">Contact</a>
         </div>
