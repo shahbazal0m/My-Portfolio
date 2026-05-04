@@ -28,7 +28,7 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  'MERN Stack Expert.'
+                  'MERN Stack Expert'
                 ],
                 autoStart: true,
                 loop: true,

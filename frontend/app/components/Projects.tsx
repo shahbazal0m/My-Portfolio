@@ -4,28 +4,28 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Event Management System",
-    image: "/event-project.png", 
-    tech: ["MongoDB", "Express", "React", "Node", "AWS"],
-    github: "https://github.com/shahbaz-alam", 
-    live: "https://your-demo-link.com",
-  },
-  {
-    title: "QR Attendance System",
+    title: "Personal Portfolio",
     image: "/qr-project.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
     github: "https://github.com/shahbaz-alam",
     live: "https://your-demo-link.com",
   },
   {
-    title: "QR Attendance System",
+    title: "Food Delevery Websites",
     image: "/qr-project.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
     github: "https://github.com/shahbaz-alam",
     live: "https://your-demo-link.com",
   },
   {
-    title: "QR Attendance System",
+    title: "Productivity Dashboard",
+    image: "/qr-project.png", 
+    tech: ["React", "Node.js", "Google Sheets", "AWS"],
+    github: "https://github.com/shahbaz-alam",
+    live: "https://your-demo-link.com",
+  },
+    {
+    title: "React Todo-App",
     image: "/qr-project.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
     github: "https://github.com/shahbaz-alam",
