@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
-    <section className="relative z-10 w-full min-h-screen grid grid-cols-1 md:grid-cols-12 gap-8 items-center px-6 md:px-20 pt-32 pb-16 max-w-[1400px] mx-auto">
+    <section className="relative z-10 w-full min-h-screen grid grid-cols-1 md:grid-cols-12 gap-8 items-center px-6 md:px-35 `max-w-[1400px]`">
       {/* LEFT SIDE: Content */}
       <motion.div
         className="md:col-span-7 flex flex-col items-start text-left space-y-6"
@@ -13,9 +13,9 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400">
-          Available for new opportunities
-        </div>
+      <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303] backdrop-blur-md relative z-10">
+        Available for new opportunities
+      </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
           <span className="text-white">Shahbaz</span>{" "}
@@ -54,11 +54,11 @@ const Hero = () => {
           </a>  
           <a
             href="#"
-            className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 cursor-pointer"
+            className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 cursor-pointer bg-[#030303] backdrop-blur-md relative z-10"
           >
             Download Resume
           </a>
-        </div>
+      </div>
       </motion.div>
 
       {/* RIGHT SIDE: Image */}

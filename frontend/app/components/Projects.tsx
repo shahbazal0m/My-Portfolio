@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Personal Portfolio",
+    title: "Personal Portfolio Website",
     image: "/qr-project.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
     github: "https://github.com/shahbaz-alam",
@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "Food Delevery Websites",
-    image: "/qr-project.png", 
+    image: "/image.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
     github: "https://github.com/shahbaz-alam",
     live: "https://your-demo-link.com",
@@ -24,7 +24,7 @@ const projects = [
     github: "https://github.com/shahbaz-alam",
     live: "https://your-demo-link.com",
   },
-    {
+  {
     title: "React Todo-App",
     image: "/qr-project.png", 
     tech: ["React", "Node.js", "Google Sheets", "AWS"],
@@ -35,7 +35,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-10 md:px-24 max-w-[1400px] mx-auto">
+    <section id="projects" className="py-5 px-10 md:px-24 max-w-[1400px] mx-auto relative z-10">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -51,22 +51,22 @@ const Projects = () => {
             key={index}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ y: -10 }}
-            className="glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-300"
+            whileHover={{ y: -10 }} // Card abhi bhi upar move hoga, jo ki accha lagta hai
+            className="glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
           >
-            {/* Project Image */}
-            <div className="relative w-full h-[250px] overflow-hidden border-b border-white/10">
+            {/* Project Image Wrapper - Yahan image ab constant rahegi */}
+            <div className="relative w-full h-[280px] overflow-hidden border-b border-white/10 bg-zinc-900">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover" // Zoom animation yahan se hata di gayi hai
               />
             </div>
 
             {/* Project Info */}
-            <div className="p-8 flex flex-col flex-grow space-y-6">
-              <h3 className="text-2xl font-bold text-white tracking-tight">
+            <div className="p-8 flex flex-col flex-grow space-y-6 bg-[#030303]/50 backdrop-blur-sm">
+              <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-indigo-400 transition-colors">
                 {project.title}
               </h3>
 
@@ -82,27 +82,25 @@ const Projects = () => {
                 ))}
               </div>
 
-                {/* 4. Action Buttons - Ultra Stable Cursor & Click */}
-                <div className="flex items-center gap-8 pt-4 mt-auto relative z-20">
+              {/* Action Buttons */}
+              <div className="flex items-center gap-8 pt-4 mt-auto relative z-20">
                 <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
-                    style={{ cursor: 'pointer' }} // Force cursor style
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
                 >
-                    GitHub
+                  GitHub
                 </a>
                 <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
-                    style={{ cursor: 'pointer' }} // Force cursor style
+                  href={project.live} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
                 >
-                    Live Demo 
+                  Live Demo 
                 </a>
-                </div>
+              </div>
             </div>
           </motion.div>
         ))}
