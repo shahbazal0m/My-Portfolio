@@ -26,7 +26,8 @@ export default function Home() {
       </div>
 
       {/* 4. About Me Section (B.Tech & Sheryians Education cards ke saath) */}
-      <About />
+      <Projects />
+      {/* <About /> */}
 
       {/* Divider: About aur Projects ke beech */}
       <div className="px-10 md:px-24 max-w-[1400px] mx-auto py-10">
@@ -36,7 +37,8 @@ export default function Home() {
       </div>
 
       {/* 5. Featured Projects Section */}
-      <Projects />
+      <About />
+      {/* <Projects /> */}
 
       {/* Divider: Projects aur Future Sections ke beech */}
       <div className="px-10 md:px-24 max-w-[1400px] mx-auto py-10">

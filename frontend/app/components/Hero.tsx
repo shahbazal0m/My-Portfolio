@@ -5,29 +5,31 @@ import Typewriter from 'typewriter-effect';
 
 const Hero = () => {
   return (
-    <section className="relative z-10 w-full min-h-screen grid grid-cols-1 md:grid-cols-12 gap-8 items-center px-6 md:px-35 `max-w-[1400px]`">
+    <section className="relative z-10 w-full min-h-[90vh] max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-4 items-center px-10 md:px-24 pt-32 pb-10">
+      
       {/* LEFT SIDE: Content */}
       <motion.div
-        className="md:col-span-7 flex flex-col items-start text-left space-y-6"
+        className="md:col-span-8 flex flex-col items-start text-left space-y-6 z-20"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-      <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303] backdrop-blur-md relative z-10">
-        Available for new opportunities
-      </div>
+        <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303] backdrop-blur-md relative z-10">
+          Available for new opportunities
+        </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-[1.1]">
+        <h1 className="text-5xl md:text-6xl lg:text-[75px] font-extrabold tracking-tight mb-4 leading-[1.1]">
           <span className="text-white">Shahbaz</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-500">
             Alam
           </span>
           <br />
-          {/* Typewriter Effect yahan add kiya hai */}
-          <span className="text-white/90">
+          <span className="text-white/85 whitespace-nowrap block w-max">
             <Typewriter
               options={{
                 strings: [
+                  'Frontend Developer',
+                  'Backend Developer',
                   'MERN Stack Expert'
                 ],
                 autoStart: true,
@@ -39,7 +41,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-lg md:text-xl text-zinc-400 max-w-2xl leading-relaxed">
+        <p className="text-lg md:text-xl text-zinc-400 max-w-xl leading-relaxed">
           Based in India, I specialize in crafting high-performance digital
           products, interactive interfaces, and scalable web solutions using
           React, Node.js, and the MERN stack.
@@ -58,42 +60,37 @@ const Hero = () => {
           >
             Download Resume
           </a>
-      </div>
+        </div>
       </motion.div>
 
-      {/* RIGHT SIDE: Image */}
+      {/* RIGHT SIDE: Static Square Image with Visible Tight Border */}
       <motion.div
-        className="md:col-span-5 flex justify-center items-center relative aspect-square md:aspect-auto"
+        className="md:col-span-4 flex justify-end items-center relative"
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="absolute -inset-4 rounded-full bg-indigo-500/5 blur-[60px] -z-10" />
-
-        {/* Upar-Niche wala animation sirf is inner div par taaki blink na ho */}
-        <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full p-[2px] glass overflow-hidden border border-white/10 shadow-2xl shadow-indigo-900/20"
+        <div
+          // Outer container se border aur padding hata di hai gap khatam karne ke liye
+          className="relative w-[300px] h-[300px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] ml-auto overflow-hidden shadow-2xl shadow-black/60"
         >
-          <div className="w-full h-full rounded-full bg-[#050505] overflow-hidden relative">
+          <div 
+            // Border ko border-2 aur white/30 kiya hai taaki wo pop kare aur image ke edge par rahe
+            className="w-full h-full bg-[#050505] relative rounded-[2.5rem] border-2 border-white/30 overflow-hidden"
+          >
             <Image
               src="/portfolio_image.png"
               alt="Shahbaz Alam"
               fill
-              sizes="(max-width: 768px) 100vw, 400px"
-              className="object-cover object-top scale-100"
+              sizes="(max-width: 768px) 100vw, 420px"
+              className="object-cover object-center scale-100 hover:scale-105 transition-transform duration-500"
               priority
             />
+            
+            {/* Subtle bottom shadow overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent z-10 pointer-events-none" />
           </div>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   );
