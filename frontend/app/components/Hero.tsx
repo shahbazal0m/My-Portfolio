@@ -14,9 +14,16 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="inline-block px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303] backdrop-blur-md relative z-10">
-          Available for new opportunities
-        </div>
+      <div className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303] backdrop-blur-md relative z-10">
+        {/* Green Dot Wrapper */}
+        <span className="relative flex h-2 w-2">
+          {/* Blinking Animation Layer */}
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          {/* Static Solid Dot Layer */}
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+        </span>
+        Available for new opportunities
+      </div>
 
         <h1 className="text-5xl md:text-6xl lg:text-[75px] font-extrabold tracking-tight mb-4 leading-[1.1]">
           <span className="text-white">Shahbaz</span>{" "}

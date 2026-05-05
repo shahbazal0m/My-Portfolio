@@ -10,7 +10,7 @@ const education = [
   },
   {
     title: "Full Stack Web Development",
-    institution: "Sheryians Coding School",
+    institution: "Sheryians Coding School - Bhopal",
     duration: "Professional Training",
     details: "Mastered MERN Stack (MongoDB, Express, React, Node.js) and modern UI/UX."
   },
