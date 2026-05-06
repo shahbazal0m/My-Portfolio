@@ -45,14 +45,24 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger Button (Visible only on Mobile) */}
-          <div className="md:hidden flex items-center">
-            <button 
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white text-2xl focus:outline-none p-1"
-            >
-              {isOpen ? <HiX className="text-indigo-400" /> : <HiMenuAlt3 />}
-            </button>
-          </div>
+          {/* Hamburger Button (Visible only on Mobile) */}
+<div className="md:hidden flex items-center">
+  <button 
+    onClick={() => setIsOpen(!isOpen)}
+    className="text-white focus:outline-none p-1 flex items-center justify-center"
+  >
+    {isOpen ? (
+      <HiX className="text-2xl text-indigo-400" />
+    ) : (
+      /* Custom Staggered Icon: Right Aligned */
+      <div className="flex flex-col gap-[5px] items-end">
+        <span className="block w-5 h-[2px] bg-white rounded-full"></span>
+        <span className="block w-5 h-[2px] bg-white rounded-full"></span>
+        <span className="block w-5 h-[2px] bg-white rounded-full"></span>
+      </div>
+    )}
+  </button>
+</div>
         </motion.div>
 
 {/* Mobile Menu Overlay */}
