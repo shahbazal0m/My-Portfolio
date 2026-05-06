@@ -14,7 +14,7 @@ const Contact = () => {
         {/* Section Title */}
         <div className="mb-16 flex flex-col items-center text-center">
           <h2 className="text-4xl font-semibold uppercase tracking-widest text-white">Contact Us</h2>
-          <div className="h-1 w-40 bg-indigo-500 mt-2 rounded-full" />
+          <div className="h-1 w-40 bg-indigo-500 mt-2 rounded-full mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -63,12 +63,25 @@ const Contact = () => {
                   <p className="text-white font-medium text-lg tracking-tight">Bhopal, Madhya Pradesh India</p>
                 </div>
               </div>
+
+              {/* --- NEW: CURRENT STATUS CARD (Line Removed) --- */}
+              <div className="space-y-8">
+                <div className="p-5 rounded-2xl bg-indigo-500/5 border border-indigo-500/10 relative overflow-hidden group/status">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-indigo-500/5 blur-3xl -z-10 group-hover/status:bg-indigo-500/10 transition-colors" /> 
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+                    <p className="text-xs font-bold text-indigo-400 uppercase tracking-wider">Current Status</p>
+                  </div>
+                  <p className="text-zinc-400 text-sm leading-relaxed">
+                    Available for <span className="text-zinc-200">Full Stack Developer</span> roles and internships. Ready to contribute to scalable web applications.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* RIGHT SIDE: CONTACT FORM */}
           <div className="glass p-8 md:p-10 rounded-[2.5rem] border border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative overflow-hidden group order-1 lg:order-2">
-            {/* Subtle Glow Effect */}
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 blur-[80px] group-hover:bg-indigo-500/20 transition-all duration-700" />
             
             <form className="space-y-6 relative z-10">
@@ -85,7 +98,7 @@ const Contact = () => {
                 <label className="text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Email Address</label>
                 <input 
                   type="email" 
-                  placeholder="enter your email address"
+                  placeholder="example@gmail.com"
                   className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
                 />
               </div>
@@ -99,7 +112,7 @@ const Contact = () => {
                 />
               </div>
 
-              <button className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 group/btn shadow-lg shadow-indigo-500/20">
+              <button className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 group/btn shadow-lg shadow-indigo-500/20 cursor-pointer">
                 SEND MESSAGE
                 <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>
