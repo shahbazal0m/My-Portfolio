@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -56,6 +56,8 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent" />
         </div>
       </div>
+
+      <Footer />
     </main>
   );
 }
