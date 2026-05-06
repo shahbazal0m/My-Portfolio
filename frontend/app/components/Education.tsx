@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react"; // Ise install kar lena: npm install lucide-react
+import { ExternalLink } from "lucide-react";
 
 const education = [
   {
@@ -17,7 +17,7 @@ const education = [
     university: "Job Ready Cohort",
     duration: "Professional Training",
     details: "Mastered MERN Stack (MongoDB, Express, React, Node.js) and modern UI/UX design principles.",
-    certificateLink: "https://your-certificate-link.com" // Yahan apna link daalein
+    certificateLink: "https://your-certificate-link.com"
   },
   {
     title: "Higher Secondary Education - 12th",
@@ -39,15 +39,22 @@ const education = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-5 px-10 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="education" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
         className="w-full"
       >
-        <h2 className="text-4xl font-semibold uppercase tracking-widest text-white">Education</h2>
-        <div className="h-1 w-56 bg-indigo-500 mt-2 rounded-full mb-10" /> 
+        {/* Title aur Line alignment: flex-col aur items-center se dono center ho jayenge */}
+        <div className="flex flex-col items-center justify-center text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
+                Education
+            </h2>
+            {/* mx-auto se line title ke niche perfect center rahegi */}
+            <div className="h-1 w-30 md:w-40 bg-indigo-500 mt-2 rounded-full mx-auto" /> 
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {education.map((edu, index) => (
@@ -56,41 +63,41 @@ const Education = () => {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="glass p-8 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col justify-between"
+              viewport={{ once: true }}
+              className="glass p-6 md:p-8 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
             >
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">
                   <div className="space-y-2">
-                    <h4 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent group-hover:from-indigo-400 group-hover:to-purple-400 transition-all duration-300 leading-tight">
+                    <h4 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent group-hover:from-indigo-400 group-hover:to-purple-400 transition-all duration-300 leading-tight text-left">
                       {edu.title}
                     </h4>
-                    <div className="space-y-1">
+                    <div className="space-y-1 text-left">
                       <p className="text-indigo-400/90 font-medium tracking-wide text-sm uppercase">
                         {edu.institution}
                       </p>
-                      <p className="text-zinc-500 text-xs font-medium italic">
+                      <p className="text-zinc-500 text-[10px] md:text-xs font-medium italic">
                         {edu.university}
                       </p>
                     </div>
                   </div>
-                  <span className="w-fit shrink-0 text-xs font-mono font-bold tracking-tighter text-indigo-300 bg-indigo-500/10 px-4 py-1.5 rounded-xl border border-indigo-500/20 backdrop-blur-md">
+                  <span className="w-fit shrink-0 text-[10px] md:text-xs font-mono font-bold tracking-tighter text-indigo-300 bg-indigo-500/10 px-4 py-1.5 rounded-xl border border-indigo-500/20 backdrop-blur-md">
                     {edu.duration}
                   </span>
                 </div>
 
                 <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-6" />
 
-                <p className="text-zinc-400 text-base leading-relaxed font-light mb-6">
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-6 flex-grow text-left">
                   {edu.details}
                 </p>
 
-                {/* View Certificate Button - Only shows if link exists */}
                 {edu.certificateLink && (
                   <a 
                     href={edu.certificateLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors group/btn"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors group/btn mt-auto"
                   >
                     View Certificate 
                     <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[100] flex justify-center pt-6 pointer-events-none">
+    <nav className="fixed top-0 left-0 right-0 z-[100] flex justify-center pt-8 pointer-events-none">
       
       {/* Container matching your 1400px layout */}
       <div className="w-full max-w-[1400px] mx-auto px-6 md:px-24 relative">
@@ -44,7 +44,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Hamburger Button (Visible only on Mobile) */}
           {/* Hamburger Button (Visible only on Mobile) */}
 <div className="md:hidden flex items-center">
   <button 
