@@ -41,8 +41,8 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="mb-16"
       >
-        <h2 className="text-4xl font-bold text-white tracking-tight">My Projects</h2>
-        <div className="h-1 w-12 bg-indigo-500 mt-2 rounded-full" />
+        <h2 className="text-4xl font-semibold uppercase tracking-widest text-white">My Projects</h2>
+          <div className="h-1 w-13 bg-indigo-500 mt-2 rounded-full mb-10" /> 
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

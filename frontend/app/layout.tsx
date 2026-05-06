@@ -23,16 +23,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // 'scroll-smooth' add kiya hai anchor navigation ke liye
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030303] text-zinc-100 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030303] text-zinc-100 min-h-screen overflow-x-hidden`}
       >
-        {/* Yahan aapka Navbar aayega baad mein */}
-        <main className="relative flex flex-col items-center overflow-hidden mx-auto">
-          {children}
-        </main>
-        {/* Yahan aapka Footer aayega */}
+        {/* Main tag yahan se hata diya hai taaki page.tsx se conflict na ho */}
+        {children}
       </body>
     </html>
   );

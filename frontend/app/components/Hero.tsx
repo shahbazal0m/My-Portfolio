@@ -1,4 +1,5 @@
 "use client";
+import { FileText } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
@@ -62,10 +63,15 @@ const Hero = () => {
             View My Work
           </a>  
           <a
-            href="#"
-            className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 cursor-pointer bg-[#030303] backdrop-blur-md relative z-10"
+            href="/shahbaz-resume.pdf" // Yahan apna actual resume path daalein
+            download="Shahbaz_Alam_Resume"
+            className="px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 cursor-pointer bg-[#030303] backdrop-blur-md relative z-10 flex items-center gap-2 group"
           >
             Download Resume
+            <FileText 
+              size={18} 
+              className="text-indigo-400 group-hover:scale-110 transition-transform duration-300" 
+            />
           </a>
         </div>
       </motion.div>
