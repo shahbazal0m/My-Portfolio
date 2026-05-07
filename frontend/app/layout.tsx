@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+// 1. Toaster import kiya
+import { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,19 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030303] text-zinc-100 min-h-screen overflow-x-hidden`}
       >
-        {/* Main tag yahan se hata diya hai taaki page.tsx se conflict na ho */}
+        {/* 2. Toaster component yahan add kiya */}
+        <Toaster 
+          position="top-right" 
+          reverseOrder={false} 
+          toastOptions={{
+            // Default styling jo aapke dark theme par suit karegi
+            style: {
+              background: '#18181b',
+              color: '#fff',
+              border: '1px solid rgba(255,255,255,0.1)',
+            },
+          }}
+        />
         {children}
       </body>
     </html>
