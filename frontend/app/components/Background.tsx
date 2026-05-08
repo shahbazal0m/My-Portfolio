@@ -41,7 +41,8 @@ const Background = () => {
             width: 1,
           },
           move: { enable: true, speed: 1 },
-          number: { density: { enable: true, area: 800 }, value: 80 },
+          // ✅ Fix
+          number: { density: { enable: true, width: 800 }, value: 80 },
           opacity: { value: 0.4 },
           size: { value: { min: 1, max: 3 } },
         },
