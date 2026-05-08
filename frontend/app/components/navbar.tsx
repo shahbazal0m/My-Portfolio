@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { HiX } from 'react-icons/hi';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

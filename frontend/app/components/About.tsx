@@ -40,7 +40,7 @@ const AboutMe = () => {
             </p>
 
             <p className="hidden sm:block">
-              Whether it's architecting a complex <span className="text-indigo-400 font-medium">Next.js</span> application or fine-tuning responsive UI with <span className="text-indigo-400 font-medium">Tailwind CSS</span>, I am committed to delivering high-performance products.
+              Whether it&apos;s architecting a complex <span className="text-indigo-400 font-medium">Next.js</span> application or fine-tuning responsive UI with <span className="text-indigo-400 font-medium">Tailwind CSS</span>, I am committed to delivering high-performance products.
             </p>
           </div>
         </div>

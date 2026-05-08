@@ -7,7 +7,7 @@ const projects = [
     title: "Personal Portfolio Website",
     image: "/portfolio-img.png", 
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
-    github: "#",
+    github: "https://github.com/shahbazal0m",
     live: "",
   },
   {
@@ -60,13 +60,13 @@ const Projects = () => {
             viewport={{ once: true }}
             className="glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
           >
-            <div className="relative w-full h-[200px] sm:h-[250px] md:h-[280px] overflow-hidden border-b border-white/10 bg-zinc-900">
+            <div className="w-full overflow-hidden border-b border-white/10 bg-zinc-900">
               <Image
                 src={project.image}
                 alt={project.title}
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-top"
+                width={1900}
+                height={910}
+                className="w-full h-auto"
                 priority={index < 2}
               />
             </div>
@@ -88,22 +88,26 @@ const Projects = () => {
               </div>
 
               <div className="flex items-center gap-6 md:gap-8 pt-4 mt-auto relative z-20">
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
-                >
-                  GitHub
-                </a>
-                <a 
-                  href={project.live} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
-                >
-                  Live Demo 
-                </a>
+                {project.github && (
+                  <a 
+                    href={project.github} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {project.live && (
+                  <a 
+                    href={project.live} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
+                  >
+                    Live Demo 
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

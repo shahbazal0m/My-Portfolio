@@ -3,39 +3,48 @@ import { toast } from 'react-hot-toast';
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, 
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, 
-      formRef.current!, 
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
-    )
-    .then(() => {
-        toast.success("Success! I'll get back to you soon.", {
-          duration: 4000,
-          style: {
-            background: '#18181b', 
-            color: '#fff',
-            border: '1px solid #6366f1',
-          },
-        });
-        
-        setLoading(false);
-        formRef.current?.reset(); 
-    }, (error) => {
-        console.error(error.text);
-        toast.error("Oops! Something went wrong. Please try again.");
-        setLoading(false);
-    });
+    const form = formRef.current;
+    if (!form) return;
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from_name: formData.get("from_name"),
+          from_email: formData.get("from_email"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Failed to send");
+
+      toast.success("Success! I'll get back to you soon.", {
+        duration: 4000,
+        style: {
+          background: '#18181b',
+          color: '#fff',
+          border: '1px solid #6366f1',
+        },
+      });
+
+      form.reset();
+    } catch {
+      toast.error("Oops! Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -125,7 +134,7 @@ const Contact = () => {
                 Reach out to me directly
               </h3>
               <p className="text-zinc-400 text-sm md:text-lg leading-relaxed font-light">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
               </p>
             </div>
 

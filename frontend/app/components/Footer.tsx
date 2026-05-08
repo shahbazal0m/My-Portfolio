@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -7,21 +8,21 @@ const Footer = () => {
   const socialLinks = [
     { 
       name: "GitHub", 
-      icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png", 
+      icon: "/icons/github.png", 
       link: "https://github.com/shahbazal0m",
       hoverClass: "hover:bg-zinc-800 hover:border-zinc-700",
       imgClass: "filter invert"
     },
     { 
       name: "LinkedIn", 
-      icon: "https://cdn-icons-png.flaticon.com/512/174/174857.png", 
+      icon: "/icons/linkedin.png", 
       link: "https://www.linkedin.com/in/iamshahbaz-alam/",
       hoverClass: "hover:bg-[#0077B5] hover:border-[#0077B5]/50",
       imgClass: "group-hover:filter group-hover:invert transition-all duration-300" 
     },
     { 
-      name: "Twitter", 
-      icon: "https://cdn-icons-png.flaticon.com/512/733/733579.png", 
+      name: "X (Twitter)", 
+      icon: "/icons/twitter.png", 
       link: "https://x.com/shahbaz_al0m",
       hoverClass: "hover:bg-zinc-900 hover:border-zinc-800",
       imgClass: "filter invert"
@@ -58,9 +59,11 @@ const Footer = () => {
                 whileTap={{ scale: 0.9 }}
                 className={`w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all duration-300 group shadow-lg ${social.hoverClass}`}
               >
-                <img 
+                <Image 
                   src={social.icon} 
                   alt={social.name} 
+                  width={24}
+                  height={24}
                   className={`w-5 h-5 md:w-6 md:h-6 object-contain opacity-50 group-hover:opacity-100 transition-opacity ${social.imgClass}`} 
                 />
               </motion.a>
