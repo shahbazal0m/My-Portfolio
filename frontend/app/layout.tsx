@@ -24,6 +24,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Shahbaz Alam | Web Developer",
   description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN and Next.js.",
+  icons: {
+    // Laptop/Desktop tab icon
+    icon: "/favicon-32x32.png", 
+    // Android devices ke liye
+    shortcut: "/android-chrome-192x192.png", 
+    // iPhone/iPad ke liye
+    apple: "/apple-touch-icon.png", 
+  },
 };
 
 export default function RootLayout({
@@ -34,7 +42,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        /* Isse browser extensions (jaise ColorZilla) ke extra attributes hydration error nahi denge */
         suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030303] text-zinc-100 min-h-screen overflow-x-hidden`}
       >
