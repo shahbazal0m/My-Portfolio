@@ -17,7 +17,7 @@ const education = [
     university: "Job Ready Cohort",
     duration: "Professional Training",
     details: "Mastered MERN Stack (MongoDB, Express, React, Node.js) and modern UI/UX design principles.",
-    certificateLink: "https://your-certificate-link.com"
+    certificateLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing"
   },
   {
     title: "Higher Secondary Education - 12th",

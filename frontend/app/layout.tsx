@@ -1,7 +1,6 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// 1. Toaster import kiya
 import { Toaster } from 'react-hot-toast';
 
 const geistSans = Geist({
@@ -13,6 +12,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+// Viewport configuration
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   title: "Shahbaz Alam | Web Developer",
@@ -27,18 +34,36 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
+        /* Isse browser extensions (jaise ColorZilla) ke extra attributes hydration error nahi denge */
+        suppressHydrationWarning={true}
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#030303] text-zinc-100 min-h-screen overflow-x-hidden`}
       >
-        {/* 2. Toaster component yahan add kiya */}
         <Toaster 
-          position="top-right" 
+          position="top-center" 
           reverseOrder={false} 
+          containerStyle={{
+            top: 40,
+            left: 20,
+            right: 20,
+          }}
           toastOptions={{
-            // Default styling jo aapke dark theme par suit karegi
+            success: {
+              iconTheme: {
+                primary: '#6366f1',
+                secondary: '#fff',
+              },
+            },
             style: {
               background: '#18181b',
               color: '#fff',
-              border: '1px solid rgba(255,255,255,0.1)',
+              border: '1px solid #6366f1', 
+              maxWidth: '500px',
+              width: 'fit-content',
+              minWidth: '280px',
+              padding: '8px 16px',
+              borderRadius: '10px',
+              fontSize: '14px',
+              fontWeight: '500',
             },
           }}
         />

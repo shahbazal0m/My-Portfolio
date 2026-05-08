@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="contact" className="py-10 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,25 +65,33 @@ const Contact = () => {
               
               {/* Full Name Input */}
               <div className="space-y-2">
-                <label className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Full Name</label>
+                <label htmlFor="name-input" className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Full Name</label>
                 <input 
-                  name="name" // Matches {{name}} in EmailJS dashboard
+                  id="name-input"
+                  name="from_name" // EmailJS template ke variable se match karne ke liye
                   type="text" 
                   required
+                  autoComplete="name"
+                  enterKeyHint="next"
                   placeholder="enter your name"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
                 />
               </div>
 
               {/* Email Address Input */}
               <div className="space-y-2">
-                <label className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Email Address</label>
+                <label htmlFor="email-input" className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">
+                  Email Address
+                </label>
                 <input 
-                  name="email" // Matches {{email}} in EmailJS dashboard
+                  id="email-input"
+                  name="from_email" // EmailJS template ke variable se match karne ke liye
                   type="email" 
                   required
+                  autoComplete="email"
+                  enterKeyHint="next"
                   placeholder="example@gmail.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
                 />
               </div>
 
@@ -91,11 +99,11 @@ const Contact = () => {
               <div className="space-y-2">
                 <label className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Your Message</label>
                 <textarea 
-                  name="message" // Matches {{message}} in EmailJS dashboard
+                  name="message" 
                   rows={4}
                   required
                   placeholder="Let's talk about your next big project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-sm md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700 resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700 resize-none"
                 />
               </div>
 

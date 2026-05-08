@@ -12,19 +12,49 @@ body {
   padding: 0;
 }
 
-/* globals.css */
+/* Scroll and Overflow Fix */
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
+/* Mobile Input Width & Box-Sizing Fix */
+input, textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
 
-/* Tailwind v4 mein custom classes direct likh sakte hain */
+/* Autofill styling fix - Dark Theme Support 
+    Yeh mobile aur desktop dono par autofill ke gande background ko remove karega
+*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  /* Text color ko white force karein */
+  -webkit-text-fill-color: #ffffff !important;
+  
+  /* Background box shadow ko aapke form ke background color (#0a0a0a) se replace karein */
+  -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important; 
+  
+  /* Transition ensure karta hai ki color change na ho */
+  transition: background-color 5000s ease-in-out 0s !important;
+  
+  /* Typing cursor color */
+  caret-color: white !important;
+}
+
+/* Tailwind v4 Custom Theme */
 @theme {
   --color-glass-bg: rgba(255, 255, 255, 0.03);
   --color-glass-border: rgba(255, 255, 255, 0.1);
 }
 
+/* Glassmorphism Effect */
 .glass {
   background: var(--color-glass-bg);
   backdrop-filter: blur(12px);
@@ -33,14 +63,11 @@ html, body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+/* Background Animated Glow Points */
 .glow-point {
   position: absolute;
   border-radius: 9999px;
   background: rgba(59, 130, 246, 0.15);
   filter: blur(120px);
   pointer-events: none;
-}
-
-html {
-  scroll-behavior: smooth;
 }

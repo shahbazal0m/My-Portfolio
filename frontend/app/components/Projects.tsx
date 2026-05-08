@@ -6,14 +6,14 @@ const projects = [
   {
     title: "Personal Portfolio Website",
     image: "/portfolio-img.png", 
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
     github: "https://github.com/shahbazal0m/My-Portfolio",
     live: "https://your-demo-link.com",
   },
   {
-    title: "Food Delivery Websites",
-    image: "/image.png", 
-    tech: ["React", "Node.js", "Google Sheets", "AWS"],
+    title: "Food Delivery Website",
+    image: "/food-website.png", 
+    tech: ["HTML5", "CSS3","JavaScript (ES6+)",  "JSON", "Swiper.js"],
     github: "https://github.com/shahbazal0m/foodie-website",
     live: "https://foodie-website-eta-one.vercel.app/",
   },
