@@ -10,7 +10,7 @@ const certificates = [
     organization: "Sheryians Coding School",
     date: "Jan - Sep 2025",
     icon: <Award className="text-purple-400" />,
-    image: "/certificates/sheryians.png",
+    image: "/certificates-images/sheryians.png",
     tags: ["MERN Stack", "DevOps", "DSA"],
     verifyLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing", 
   },
