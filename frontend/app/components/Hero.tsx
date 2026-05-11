@@ -75,9 +75,9 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[2.5rem] border-2 border-white/20">
+        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[2rem] border-2 border-white/20">
           <Image
-            src="/portfolio_image.png"
+            src="/my-profile-image.jpeg"
             alt="Shahbaz Alam"
             fill
             className="object-cover object-top hover:scale-105 transition-transform duration-500"

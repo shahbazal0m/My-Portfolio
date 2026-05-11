@@ -37,14 +37,20 @@ const Background = () => {
             color: "#ffffff",
             distance: 150,
             enable: true,
-            opacity: 0.2,
+            // 0.2 se kam karke 0.08 kiya taaki lines bahut halki dikhein
+            opacity: 0.08, 
             width: 1,
           },
-          move: { enable: true, speed: 1 },
-          // ✅ Fix
-          number: { density: { enable: true, width: 800 }, value: 80 },
-          opacity: { value: 0.4 },
-          size: { value: { min: 1, max: 3 } },
+          // Speed 1 se kam karke 0.8 ki hai thoda smooth feel ke liye
+          move: { enable: true, speed: 0.8 }, 
+          // Particles ki density thodi control ki hai
+          number: { 
+            density: { enable: true, width: 800 }, 
+            value: 65 
+          },
+          // 0.4 se kam karke 0.15 kiya, ab ye background mein dab jayenge
+          opacity: { value: 0.15 }, 
+          size: { value: { min: 0.5, max: 2 } },
         },
         detectRetina: true,
       }}
