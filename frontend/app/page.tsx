@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import Certifications from "./components/certificates";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -42,6 +43,14 @@ export default function Home() {
       </div>
 
       <Education />
+
+      <div className="px-10 md:px-24 max-w-[1400px] mx-auto py-10">
+        <div className="h-[1px] w-full bg-white/10 relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent" />
+        </div>
+      </div>
+
+        <Certifications />
 
       <div className="px-10 md:px-24 max-w-[1400px] mx-auto py-10">
         <div className="h-[1px] w-full bg-white/10 relative">

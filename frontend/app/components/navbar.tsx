@@ -28,7 +28,7 @@ export default function Navbar() {
         >
           {/* Logo Section */}
           <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 cursor-pointer tracking-tighter whitespace-nowrap">
-            Shahbaz Alam
+            SHAHBAZ.
           </div>
 
           {/* Desktop Links (Hidden on Mobile) */}

@@ -5,28 +5,28 @@ import Image from "next/image";
 const projects = [
   {
     title: "Personal Portfolio Website",
-    image: "/portfolio-img.png", 
+    image: "/project-image/portfolio-img.png", 
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
     github: "https://github.com/shahbazal0m",
     live: "",
   },
   {
     title: "Food Delivery Website",
-    image: "/food-website.png", 
+    image: "/project-image/food-website.png", 
     tech: ["HTML5", "CSS3","JavaScript (ES6+)",  "JSON", "Swiper.js", " Font Awesome", "Google Fonts"],
     github: "https://github.com/shahbazal0m/foodie-website",
     live: "https://foodie-website-eta-one.vercel.app/",
   },
   {
     title: "Event Management Website",
-    image: "/Event-website.png", 
+    image: "/project-image/Event-website.png", 
     tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Unsplash REST API / Images", "Font Awesome"],
     github: "https://github.com/shahbazal0m/event-management-website",
     live: "https://event-management-website-henna.vercel.app/",
   },
   {
     title: "E-commerce Website",
-    image: "/E-commerce.png", 
+    image: "/project-image/E-commerce.png", 
     tech: ["HTML5", "CSS3 ", "JavaScript (ES6+)", "REST API", "JSON", "Font Awesome"],
     github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
     live: "https://frontend-ecommerce-website-two.vercel.app/",

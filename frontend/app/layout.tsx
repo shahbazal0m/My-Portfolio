@@ -23,14 +23,11 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: "Shahbaz Alam | Web Developer",
-  description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN and Next.js.",
+  description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN Stack.",
   icons: {
-    // Laptop/Desktop tab icon
-    icon: "/favicon-32x32.png", 
-    // Android devices ke liye
-    shortcut: "/android-chrome-192x192.png", 
-    // iPhone/iPad ke liye
-    apple: "/apple-touch-icon.png", 
+    icon: "/tab-logo/favicon-32x32.png", 
+    shortcut: "/tab/logo/android-chrome-192x192.png", 
+    apple: "tab/logo/apple-touch-icon.png", 
   },
 };
 

@@ -77,7 +77,7 @@ const Hero = () => {
       >
         <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[2rem] border-2 border-white/20">
           <Image
-            src="/my-profile-image.jpeg"
+            src="/profile-image/my-profile-image.jpeg"
             alt="Shahbaz Alam"
             fill
             className="object-cover object-top hover:scale-105 transition-transform duration-500"

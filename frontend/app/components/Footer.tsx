@@ -8,21 +8,21 @@ const Footer = () => {
   const socialLinks = [
     { 
       name: "GitHub", 
-      icon: "/icons/github.png", 
+      icon: "/social-icons/github.png", 
       link: "https://github.com/shahbazal0m",
       hoverClass: "hover:bg-zinc-800 hover:border-zinc-700",
       imgClass: "filter invert"
     },
     { 
       name: "LinkedIn", 
-      icon: "/icons/linkedin.png", 
+      icon: "/social-icons/linkedin.png", 
       link: "https://www.linkedin.com/in/iamshahbaz-alam/",
       hoverClass: "hover:bg-[#0077B5] hover:border-[#0077B5]/50",
       imgClass: "group-hover:filter group-hover:invert transition-all duration-300" 
     },
     { 
       name: "X (Twitter)", 
-      icon: "/icons/twitter.png", 
+      icon: "/social-icons/twitter.png", 
       link: "https://x.com/shahbaz_al0m",
       hoverClass: "hover:bg-zinc-900 hover:border-zinc-800",
       imgClass: "filter invert"

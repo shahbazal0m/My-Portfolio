@@ -29,7 +29,7 @@ const education = [
   },
   {
     title: "Secondary Education - 10th",
-    institution: "Mahatma Gandhi Shikshan Sansthan, Darbhanga",
+    institution: "M G Shikshan Sansthan Bahadurpur, Darbhanga",
     university: "CBSE, New Delhi",
     duration: "2019 — 2020",
     details: "Achieved strong academic performance in core subjects.",
