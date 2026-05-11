@@ -35,22 +35,20 @@ const Background = () => {
           color: { value: ["#ffffff", "#4f46e5", "#c084fc"] },
           links: {
             color: "#ffffff",
-            distance: 150,
+            // Distance 150 se 130 kiya taaki lines choti aur kam dikhein
+            distance: 130, 
             enable: true,
-            // 0.2 se kam karke 0.08 kiya taaki lines bahut halki dikhein
-            opacity: 0.08, 
+            opacity: 0.1, 
             width: 1,
           },
-          // Speed 1 se kam karke 0.8 ki hai thoda smooth feel ke liye
           move: { enable: true, speed: 0.8 }, 
-          // Particles ki density thodi control ki hai
           number: { 
             density: { enable: true, width: 800 }, 
-            value: 65 
+            // 70 se kam karke 45 kiya hai taaki screen saaf lage
+            value: 45 
           },
-          // 0.4 se kam karke 0.15 kiya, ab ye background mein dab jayenge
-          opacity: { value: 0.15 }, 
-          size: { value: { min: 0.5, max: 2 } },
+          opacity: { value: 0.2 }, 
+          size: { value: { min: 1, max: 2.2 } },
         },
         detectRetina: true,
       }}
