@@ -24,15 +24,6 @@ const certificates = [
     verifyLink: "https://www.credly.com/badges/7b92f015-e6fd-4e7b-b2ed-6b4b85f9a17c/linked_in_profile",
   },
   {
-    title: "Cloud Computing (NPTEL)",
-    organization: "IIT Kharagpur",
-    date: "Jul - Oct 2025",
-    icon: <ShieldCheck className="text-lime-400" />,
-    image: "/certificates-images/nptel.png",
-    tags: ["Distributed Systems", "Virtualization", "Scaling"],
-    verifyLink: "https://drive.google.com/file/d/10rA8xpujhkxIuzI0q4pavUi-xrW2ZHAH/view?usp=drivesdk",
-  },
-  {
     title: "Hashgraph Developer",
     organization: "The Hashgraph Association",
     date: "Dec 2025",
@@ -41,9 +32,16 @@ const certificates = [
     tags: ["DLT", "Hedera", "Smart Contracts"],
     verifyLink: "https://drive.google.com/file/d/1un2lXML7KnmlSbGuA6L1Ryzg_Ty9lOQX/view?usp=sharing",
   },
+  {
+    title: "Cloud Computing (NPTEL)",
+    organization: "IIT Kharagpur",
+    date: "Jul - Oct 2025",
+    icon: <ShieldCheck className="text-lime-400" />,
+    image: "/certificates-images/nptel.png",
+    tags: ["Distributed Systems", "Virtualization", "Scaling"],
+    verifyLink: "https://drive.google.com/file/d/10rA8xpujhkxIuzI0q4pavUi-xrW2ZHAH/view?usp=drivesdk",
+  },
 ];
-
-
 
 const Certifications = () => {
   return (
@@ -73,16 +71,16 @@ const Certifications = () => {
               transition={{ delay: index * 0.1 }}
               className="group relative bg-zinc-900/40 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-xl hover:border-white/20 transition-all duration-500"
             >
-              <div className="flex flex-col lg:flex-row h-full">
-                
-                {/* Updated Image Container for better visibility */}
-                <div className="relative w-full lg:w-56 h-100 lg:h-auto bg-zinc-800/50 flex items-center justify-center p-1">
-                  <div className="relative w-full h-full aspect-[4/3] lg:aspect-auto">
+              <div className="flex flex-col lg:flex-row items-stretch">
+
+                {/* Image Container - no crop, full certificate visible */}
+                <div className=" lg:w-72">
+                  <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
                     <Image
                       src={cert.image}
                       alt={cert.title}
                       fill
-                      className="object-contain transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover"
                     />
                   </div>
                 </div>
@@ -122,7 +120,7 @@ const Certifications = () => {
                     href={cert.verifyLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-white font-semibold hover:gap-3 transition-all group/btn"
+                    className="inline-flex items-center gap-2 text-sm text-white font-small hover:gap-3 transition-all group/btn"
                   >
                     Verify Credential 
                     <ExternalLink size={14} className="text-lime-400 group-hover/btn:rotate-12 transition-transform" />

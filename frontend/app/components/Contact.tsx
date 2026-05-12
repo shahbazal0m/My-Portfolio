@@ -141,21 +141,21 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-5 group">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500 shadow-xl shrink-0">
-                  <Mail size={20} />
+                  <Phone size={20} />
                 </div>
-                <div className="min-w-0">
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Email Me</p>
-                  <p className="text-white font-medium text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
+                <div>
+                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me | whatsapp</p>
+                  <p className="text-white font-medium text-sm md:text-lg">+91 - 9507034643</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-5 group">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all duration-500 shadow-xl shrink-0">
-                  <Phone size={20} />
+                  <Mail size={20} />
                 </div>
-                <div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me</p>
-                  <p className="text-white font-medium text-sm md:text-lg">+91 9507034643</p>
+                <div className="min-w-0">
+                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Email Me</p>
+                  <p className="text-white font-medium text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
                 </div>
               </div>
 
