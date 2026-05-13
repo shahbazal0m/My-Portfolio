@@ -2,6 +2,7 @@
 import Background from "./components/Background";
 import Navbar from "./components/navbar";
 import Hero from "./components/Hero";
+import SkillsMarquee from "./components/SkillsMarquee"
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Education from "./components/Education";
@@ -16,7 +17,8 @@ export default function Home() {
       <Background />
       <Navbar />
       <Hero />
-
+      <SkillsMarquee />
+      
       {/* Hero aur Projects ke beech divider */}
       <div className="px-10 md:px-24 max-w-[1400px] mx-auto py-10">
         <div className="h-[1px] w-full bg-white/10 relative">
