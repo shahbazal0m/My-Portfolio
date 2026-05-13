@@ -34,27 +34,30 @@ const skills = [
 ];
 
 const SkillsMarquee = () => {
-  // 2 sets are enough for the -50% loop defined in your config
   const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <div className="w-full relative py-5 bg-black/20 border-y border-white/5 overflow-hidden">
+    /* Wapas 'relative' kar diya aur bottom-0 hata diya */
+    <div className="w-full relative py-6 bg-black/20 border-y border-white/5 overflow-hidden z-30">
       
-      {/* Side Gradients (Black Blur) */}
-      <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
+      {/* Responsive Side Gradients (Mobile: w-16, Laptop: w-40) */}
+      <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
 
-      {/* Marquee Container using the Tailwind class you just created */}
-      <div className="flex w-max items-center animate-marquee will-change-transform">
+      {/* Marquee Wrapper with 20s speed */}
+      <div 
+        className="flex w-max items-center animate-marquee will-change-transform"
+        style={{ animationDuration: '20s' }}
+      >
         {duplicatedSkills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 group px-10 cursor-default select-none"
+            className="flex items-center gap-3 md:gap-4 group px-6 md:px-10 cursor-default select-none"
           >
-            <div className="text-xl opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-out">
+            <div className="text-lg md:text-xl opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-out">
               {skill.icon}
             </div>
-            <span className="text-[10px] font-bold text-zinc-600 group-hover:text-zinc-200 transition-all duration-500 uppercase tracking-[0.3em] whitespace-nowrap">
+            <span className="text-[9px] md:text-[10px] font-bold text-zinc-600 group-hover:text-zinc-200 transition-all duration-500 uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap">
               {skill.name}
             </span>
           </div>
