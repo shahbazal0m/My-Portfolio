@@ -5,7 +5,7 @@ import Image from "next/image";
 const projects = [
   {
     title: "Personal Portfolio Website",
-    image: "/project-image/portfolio-website.png", 
+    image: "/project-image/portfolio-website(2).png", 
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
     github: "https://github.com/shahbazal0m",
     live: "",
