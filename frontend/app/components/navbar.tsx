@@ -8,9 +8,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
+    // { name: "About", href: "#about" },
     { name: "Projects", href: "#projects" },
     { name: "Education", href: "#education" },
+    { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -32,7 +33,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Links (Hidden on Mobile) */}
-          <div className="hidden md:flex items-center gap-10 text-base font-bold text-zinc-400">
+          <div className="hidden md:flex items-center gap-9 text-base font-bold text-zinc-400">
             {navLinks.map((link) => (
               <a 
                 key={link.name} 

@@ -25,7 +25,7 @@ const Hero = () => {
         </div>
 
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[75px] font-extrabold tracking-tight leading-[1.2] md:leading-[1.1]">
-          <span className="text-white">Shahbaz</span>{" "}
+          <span className="text-white/85">Shahbaz</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-500">
             Alam
           </span>
@@ -34,7 +34,10 @@ const Hero = () => {
           <span className="text-white/85 block min-h-[30px] md:min-h-auto md:whitespace-nowrap md:w-max">
             <Typewriter
               options={{
-                strings: ['Frontend Developer', 'Backend Developer', 'MERN Stack Expert'],
+                strings: ['Frontend Developer',
+                  'Backend Developer', 
+                  'MERN Stack Expert'
+                ],
                 autoStart: true,
                 loop: true,
                 delay: 75,
@@ -53,7 +56,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto px-4 md:px-0">
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base text-center"
+            className="w-full sm:w-auto px-8 py-3 bg-white/85 text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base text-center"
           >
             View My Work
           </a>  
@@ -63,7 +66,6 @@ const Hero = () => {
             className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group"
           >
             Download Resume
-            <FileText size={18} className="text-indigo-400 group-hover:scale-110 transition-transform duration-300" />
           </a>
         </div>
       </motion.div>
