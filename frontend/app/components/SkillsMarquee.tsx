@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { MdDevices } from "react-icons/md";
 import { 
   SiHtml5, 
   SiCss,
@@ -13,24 +14,35 @@ import {
   SiNextdotjs, 
   SiGit, 
   SiGithub, 
-  SiVercel, 
+  SiVercel,
+  SiMinutemailer,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 const skills = [
+  // Languages
   { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" /> },
   { name: "CSS", icon: <SiCss className="text-[#1572B6]" /> },
+  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+
+  // Frameworks & Libraries
+  { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+  { name: "Framer Motion", icon: <SiFramer className="text-white" /> },
+
+  // Styling
   { name: "SCSS", icon: <SiSass className="text-[#CC6699]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-  { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
-  { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
-  { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
-  { name: "Framer Motion", icon: <SiFramer className="text-white" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+  { name: "Responsive Design", icon: <MdDevices className="text-[#00BCD4]" /> },
+
+  // Tools & Platforms
   { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
   { name: "GitHub", icon: <SiGithub className="text-white" /> },
-  { name: "Vercel", icon: <SiVercel className="text-white" /> },
   { name: "VS Code", icon: <VscVscode className="text-[#007ACC]" /> },
+  { name: "Vercel", icon: <SiVercel className="text-white" /> },
+  { name: "EmailJS", icon: <SiMinutemailer className="text-[#FFCA28]" /> },
+  { name: "React Hot Toast", icon: <span className="text-lg">🔥</span> },
 ];
 
 const SkillsMarquee = () => {

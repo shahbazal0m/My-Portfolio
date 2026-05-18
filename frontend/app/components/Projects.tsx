@@ -11,7 +11,7 @@ const projects = [
     live: "",
   },
   {
-    title: "Food Delivery Website",
+    title: "Food Delivery Web App",
     image: "/project-image/food-website.png", 
     tech: ["HTML5", "CSS3","JavaScript (ES6+)",  "JSON", "Swiper.js", " Font Awesome", "Google Fonts"],
     github: "https://github.com/shahbazal0m/foodie-website",
