@@ -61,7 +61,7 @@ const Hero = () => {
             View My Work
           </a>  
           <a
-            href="https://drive.google.com/file/d/19hcC9y2IK68eeuzaK8IqdEQG4c7W31Uf/view?usp=sharing"
+            href="https://drive.google.com/file/d/1RHOXGigmO0tCD1g7lh8HsUYj5hcLJTSE/view?usp=sharing"
             download="Shahbaz_Alam_Resume"
             className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group"
           >

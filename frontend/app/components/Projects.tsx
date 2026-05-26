@@ -10,8 +10,15 @@ const projects = [
     github: "https://github.com/shahbazal0m",
     live: "",
   },
+    {
+    title: "FocusFlow - Productivity Dashboard",
+    image: "/project-image/Pro-dashboar.png", 
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)","Swiper.js", "Remix Icons", "WeatherAPI"],
+    github: "https://github.com/shahbazal0m/productivity-dashboard",
+    live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
+  },
   {
-    title: "Food Delivery Web App",
+    title: "Food Ordering Web App",
     image: "/project-image/food-website.png", 
     tech: ["HTML5", "CSS3","JavaScript (ES6+)",  "JSON", "Swiper.js", " Font Awesome", "Google Fonts"],
     github: "https://github.com/shahbazal0m/foodie-website",
@@ -27,7 +34,7 @@ const projects = [
   {
     title: "E-commerce Website",
     image: "/project-image/E-commerce.png", 
-    tech: ["HTML5", "CSS3 ", "JavaScript (ES6+)", "REST API", "JSON", "Font Awesome"],
+    tech: ["HTML5", "CSS3 ", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
     github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
     live: "https://frontend-ecommerce-website-two.vercel.app/",
   }
