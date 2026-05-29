@@ -30,16 +30,17 @@ const AboutMe = () => {
           {/* Content ko bhi center align kiya hai (mx-auto aur text-center) */}
           <div className="relative z-10 space-y-5 md:space-y-6 text-zinc-300 leading-relaxed text-base md:text-xl max-w-5xl mx-auto ">
             <p>
-              I am <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a dedicated <span className="text-white">Full Stack Developer</span> currently pursuing my B.Tech in Computer Science from <span className="text-white/90">PIMR, Bhopal</span>. 
+              I am <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a dedicated <span className="text-white">Full Stack Developer</span> currently pursuing my B.Tech in Computer Science and Engineering from <span className="text-white/90">PIMR, Bhopal</span> - (affiliated to <span className="text-white/90">RGPV University Bhopal, Madhya Pradesh</span>).  
               I thrive at the intersection of logic and design, specializing in the 
               <span className="text-indigo-400 font-semibold italic"> MERN stack</span>.
             </p>
-            
+
+
             <p>
               My journey is fueled by a passion for <span className="text-purple-400 font-medium">Cloud Infrastructure</span> and <span className="text-purple-400 font-medium">DevOps</span>, using tools like AWS and Docker to ensure seamless application deployment.
             </p>
 
-            <p className="hidden sm:block">
+            <p>
               Whether it&apos;s architecting a complex <span className="text-indigo-400 font-medium">Next.js</span> application or fine-tuning responsive UI with <span className="text-indigo-400 font-medium">Tailwind CSS</span>, I am committed to delivering high-performance products.
             </p>
           </div>

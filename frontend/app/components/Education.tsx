@@ -8,7 +8,7 @@ const education = [
     institution: "Prestige Institute of Management and Research (PIMR)",
     university: "RGPV University, Bhopal Madhya Pradesh",
     duration: "2022 — 2026",
-    details: "Focusing on full-stack development and core computer science fundamentals.",
+    details: "Focusing on full-stack development and core computer science subjects.",
     certificateLink: null
   },
   {
@@ -16,7 +16,7 @@ const education = [
     institution: "Sheryians Coding School Bhopal",
     university: "Job Ready Cohort",
     duration: "Professional Training",
-    details: "Mastered MERN Stack (MongoDB, Express, React, Node.js) and modern UI/UX design principles.",
+    details: "Mastered MERN Stack (MongoDB, Express.js, React.js, Node.js), Data Structures & Algorithms, and DevOps practices including CI / CD, Docker & Kubernetes. It also focused on Aptitude & Reasoning.",
     certificateLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing"
   },
   {
