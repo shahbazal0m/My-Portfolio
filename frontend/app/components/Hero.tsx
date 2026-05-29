@@ -34,7 +34,8 @@ const Hero = () => {
           <span className="text-white/85 block min-h-[30px] md:min-h-auto md:whitespace-nowrap md:w-max">
             <Typewriter
               options={{
-                strings: ['Frontend Developer',
+                strings: [
+                  'Frontend Developer',
                   // 'Backend Developer', 
                   // 'MERN Stack Expert'
                 ],

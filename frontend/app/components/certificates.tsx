@@ -6,31 +6,22 @@ import Image from "next/image";
 
 const certificates = [
   {
-    title: "Job Ready Cohort",
-    organization: "Sheryians Coding School",
-    date: "Jan - Sep 2025",
-    icon: <Award className="text-purple-400" />,
-    image: "/certificates-images/sheryians.png",
-    tags: ["MERN Stack", "DevOps", "DSA"],
-    verifyLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing", 
-  },
-  {
-    title: "AWS Academy Graduate",
-    organization: "AWS Academy",
-    date: "Nov 2025",
-    icon: <Cloud className="text-blue-400" />,
-    image: "/certificates-images/aws.png",
-    tags: ["Cloud Architecting", "AWS Services"],
-    verifyLink: "https://www.credly.com/badges/7b92f015-e6fd-4e7b-b2ed-6b4b85f9a17c/linked_in_profile",
-  },
-  {
     title: "Hashgraph Developer",
     organization: "The Hashgraph Association",
-    date: "Dec 2025",
+    date: "16 - Dec 2025",
     icon: <Link2 className="text-indigo-400" />,
     image: "/certificates-images/Hashgraphh.png",
     tags: ["DLT", "Hedera", "Smart Contracts"],
     verifyLink: "https://drive.google.com/file/d/1un2lXML7KnmlSbGuA6L1Ryzg_Ty9lOQX/view?usp=sharing",
+  },
+  {
+    title: "AWS Academy Graduate",
+    organization: "AWS Academy",
+    date: "09 - Nov 2025",
+    icon: <Cloud className="text-blue-400" />,
+    image: "/certificates-images/aws.png",
+    tags: ["Cloud Architecting", "AWS Services"],
+    verifyLink: "https://www.credly.com/badges/7b92f015-e6fd-4e7b-b2ed-6b4b85f9a17c/linked_in_profile",
   },
   {
     title: "Cloud Computing (NPTEL)",
@@ -40,6 +31,24 @@ const certificates = [
     image: "/certificates-images/nptel.png",
     tags: ["Distributed Systems", "Virtualization", "Scaling"],
     verifyLink: "https://drive.google.com/file/d/10rA8xpujhkxIuzI0q4pavUi-xrW2ZHAH/view?usp=drivesdk",
+  },
+  {
+    title: "Frontend Hackathon",
+    organization: "Sheryians Coding School",
+    date: "26- July 2025",
+    icon: <Award className="text-amber-400" />, 
+    image: "/certificates-images/sheryians-hackathon.png", 
+    tags: ["HTML5", "CSS3", "JavaScript (ES6+)"],
+    verifyLink: "https://drive.google.com/file/d/13Mx3er0g1mzQTu6tIgGcWFAGazs-YQ-g/view?usp=sharing", 
+  },
+  {
+    title: "Job Ready Cohort",
+    organization: "Sheryians Coding School",
+    date: "Jan - Sep 2025",
+    icon: <Award className="text-purple-400" />,
+    image: "/certificates-images/sheryians.png",
+    tags: ["MERN Stack", "DevOps", "DSA"],
+    verifyLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing", 
   },
 ];
 
