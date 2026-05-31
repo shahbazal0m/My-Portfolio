@@ -28,7 +28,11 @@ const Contact = () => {
         }),
       });
 
-      if (!response.ok) throw new Error("Failed to send");
+      // Server se actual error message lo
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send");
+      }
 
       toast.success("Success! I'll get back to you soon.", {
         duration: 4000,
@@ -40,8 +44,16 @@ const Contact = () => {
       });
 
       form.reset();
-    } catch {
-      toast.error("Oops! Something went wrong. Please try again.");
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Something went wrong.";
+      toast.error(message, {
+        duration: 4000,
+        style: {
+          background: '#18181b',
+          color: '#fff',
+          border: '1px solid #ef4444',
+        },
+      });
     } finally {
       setLoading(false);
     }
@@ -77,7 +89,7 @@ const Contact = () => {
                 <label htmlFor="name-input" className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Full Name</label>
                 <input 
                   id="name-input"
-                  name="from_name" // EmailJS template ke variable se match karne ke liye
+                  name="from_name"
                   type="text" 
                   required
                   autoComplete="name"
@@ -94,7 +106,7 @@ const Contact = () => {
                 </label>
                 <input 
                   id="email-input"
-                  name="from_email" // EmailJS template ke variable se match karne ke liye
+                  name="from_email"
                   type="email" 
                   required
                   autoComplete="email"
