@@ -35,7 +35,7 @@ const certificates = [
   {
     title: "Frontend Hackathon",
     organization: "Sheryians Coding School",
-    date: "26- July 2025",
+    date: "26 - July 2025",
     icon: <Award className="text-amber-400" />, 
     image: "/certificates-images/sheryians-hackathon.png", 
     tags: ["HTML5", "CSS3", "JavaScript (ES6+)"],

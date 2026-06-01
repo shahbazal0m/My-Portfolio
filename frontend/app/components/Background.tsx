@@ -22,7 +22,7 @@ const Background = () => {
       className="absolute inset-0 z-0"
       options={{
         background: { color: { value: "transparent" } },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onHover: { enable: true, mode: "repulse" },
@@ -35,21 +35,37 @@ const Background = () => {
           color: { value: ["#ffffff", "#4f46e5", "#c084fc"] },
           links: {
             color: "#ffffff",
-            // Distance 150 se 130 kiya taaki lines choti aur kam dikhein
-            distance: 130, 
+            distance: 130,
             enable: true,
-            opacity: 0.1, 
+            opacity: 0.1,
             width: 1,
           },
-          move: { enable: true, speed: 0.8 }, 
-          number: { 
-            density: { enable: true, width: 800 }, 
-            // 70 se kam karke 45 kiya hai taaki screen saaf lage
-            value: 45 
+          move: { enable: true, speed: 0.8 },
+          number: {
+            density: { enable: true, width: 800 },
+            value: 45,
           },
-          opacity: { value: 0.2 }, 
+          opacity: { value: 0.2 },
           size: { value: { min: 1, max: 2.2 } },
         },
+        responsive: [
+          {
+            maxWidth: 768,
+            options: {
+              fpsLimit: 30,
+              interactivity: {
+                events: {
+                  onHover: { enable: false },
+                },
+              },
+              particles: {
+                number: { value: 20 },
+                links: { enable: false },
+                move: { speed: 0.5 },
+              },
+            },
+          },
+        ],
         detectRetina: true,
       }}
     />

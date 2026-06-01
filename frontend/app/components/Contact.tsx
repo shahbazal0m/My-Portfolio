@@ -28,7 +28,6 @@ const Contact = () => {
         }),
       });
 
-      // Server se actual error message lo
       if (!response.ok) {
         const data = await response.json();
         throw new Error(data.error || "Failed to send");
@@ -71,7 +70,7 @@ const Contact = () => {
         {/* Section Title */}
         <div className="mb-16 flex flex-col items-center justify-center text-center">
           <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
-            Contact Us
+            Get In Touch
           </h2>
           <div className="h-1 w-30 md:w-45 bg-indigo-500 mt-2 rounded-full mx-auto" />
         </div>
@@ -84,7 +83,6 @@ const Contact = () => {
             
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
               
-              {/* Full Name Input */}
               <div className="space-y-2">
                 <label htmlFor="name-input" className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Full Name</label>
                 <input 
@@ -99,7 +97,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Email Address Input */}
               <div className="space-y-2">
                 <label htmlFor="email-input" className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">
                   Email Address
@@ -116,7 +113,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Your Message */}
               <div className="space-y-2">
                 <label className="text-[10px] md:text-xs font-bold text-zinc-500 uppercase tracking-[0.2em] ml-1">Your Message</label>
                 <textarea 
@@ -133,8 +129,20 @@ const Contact = () => {
                 disabled={loading}
                 className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:bg-zinc-800 text-white font-bold py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 group/btn shadow-lg shadow-indigo-500/20 cursor-pointer text-sm md:text-base"
               >
-                {loading ? "SENDING..." : "SEND MESSAGE"}
-                <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                {loading ? (
+                  <>
+                    SENDING...
+                    <svg className="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                  </>
+                ) : (
+                  <>
+                    SEND MESSAGE
+                    <Send size={18} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                  </>
+                )}
               </button>
             </form>
           </div>
@@ -146,7 +154,7 @@ const Contact = () => {
                 Reach out to me directly
               </h3>
               <p className="text-zinc-400 text-sm md:text-lg leading-relaxed font-light">
-                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision. 
+                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
 
@@ -156,8 +164,8 @@ const Contact = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me | whatsapp</p>
-                  <p className="text-white font-medium text-sm md:text-lg">+91 - 9507034643</p>
+                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me | WhatsApp</p>
+                  <p className="text-white font-small text-sm md:text-lg">+91 9507034643</p>
                 </div>
               </div>
 
@@ -167,7 +175,7 @@ const Contact = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Email Me</p>
-                  <p className="text-white font-medium text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
+                  <p className="text-white font-small text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
                 </div>
               </div>
 
@@ -177,13 +185,13 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">My Location</p>
-                  <p className="text-white font-medium text-sm md:text-lg">Bhopal, Madhya Pradesh India</p>
+                  <p className="text-white font-small text-sm md:text-lg">Bhopal, Madhya Pradesh, India</p>
                 </div>
               </div>
 
               <div className="p-5 rounded-[1.5rem] bg-indigo-500/5 border border-indigo-500/10 relative overflow-hidden group/status">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse "/>
                   <p className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">Current Status</p>
                 </div>
                 <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">

@@ -17,17 +17,15 @@ const geistMono = Geist_Mono({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export const metadata: Metadata = {
-  title: "Shahbaz Alam | Web Developer",
+  title: "Shahbaz Alam | Full Stack Developer",
   description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN Stack.",
   icons: {
-    icon: "/tab-logo/favicon-32x32.png", 
-    shortcut: "/tab/logo/android-chrome-192x192.png", 
-    apple: "tab/logo/apple-touch-icon.png", 
+    icon: "/tab-logo/favicon-32x32.png",
+    shortcut: "/tab-logo/android-chrome-192x192.png",
+    apple: "/tab-logo/apple-touch-icon.png",
   },
 };
 
@@ -76,7 +74,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-
-

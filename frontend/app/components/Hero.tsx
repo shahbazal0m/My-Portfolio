@@ -3,71 +3,99 @@ import { FileText } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
+import { SiGithub } from "react-icons/si";
+import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-32 md:pt-40 pb-12">
+    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-32 md:pt-40 pb-12">
       
       {/* LEFT SIDE: Content */}
       <motion.div
-        // space-y-3 (mobile) aur md:space-y-4 (laptop) kiya hai gap control ke liye
         className="md:col-span-7 flex flex-col items-center text-center md:items-start md:text-left space-y-3 md:space-y-4 z-20 md:mt-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 text-[10px] md:text-sm font-medium border rounded-full glass border-white/20 text-zinc-400 bg-[#030303]/80 backdrop-blur-md mb-1">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          Available for new opportunities
-        </div>
+        {/* Greeting */}
+        <p className="text-indigo-400/80 text-xs md:text-sm font-semibold tracking-[0.3em]">
+          Hi, I&apos;m
+        </p>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-[75px] font-extrabold tracking-tight leading-[1.2] md:leading-[1.1]">
+        <h1 className="text-3xl sm:text-5xl md:text-[52px] lg:text-[62px] xl:text-[72px] font-extrabold tracking-tight leading-[1.2] md:leading-[1.15]">
           <span className="text-white/85">Shahbaz</span>{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-500">
             Alam
           </span>
           <br />
-          {/* Mobile par min-h-auto aur laptop par whitespace-nowrap rakha hai */}
-          <span className="text-white/85 block min-h-[30px] md:min-h-auto md:whitespace-nowrap md:w-max">
+          <span className="text-white/85 block min-h-[40px] md:min-h-[60px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[52px]">
             <Typewriter
               options={{
                 strings: [
+                  'Full Stack Developer',
+                  'MERN Stack Developer',
                   'Frontend Developer',
-                  // 'Backend Developer', 
-                  // 'MERN Stack Expert'
+                  'Backend Developer',
                 ],
                 autoStart: true,
                 loop: true,
                 delay: 75,
-                deleteSpeed: 50,
+                deleteSpeed: 40,
               }}
             />
           </span>
         </h1>
 
-        {/* Mobile par mt-[-4px] kiya hai gap kam karne ke liye */}
-        <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0 mt-[-4px] md:mt-0">
+        <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0">
           Based in India, I specialize in crafting high-performance digital
           products and scalable web solutions using React, Node.js, and the MERN stack.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto px-4 md:px-0">
+        {/* Buttons + Social Icons */}
+        <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto px-4 md:px-0">
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-3 bg-white/85 text-black font-semibold rounded-full hover:bg-zinc-200 transition-all text-base text-center"
+            className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group text-center"
           >
             View My Work
-          </a>  
+          </a>
           <a
             href="https://drive.google.com/file/d/1RHOXGigmO0tCD1g7lh8HsUYj5hcLJTSE/view?usp=sharing"
-            download="Shahbaz_Alam_Resume"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group"
           >
-            Download Resume
+            <FileText size={16} className="opacity-70 group-hover:opacity-100 transition-opacity" />
+            View Resume
           </a>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-3">
+            <a
+              href="https://www.linkedin.com/in/iamshahbaz-alam/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
+              href="https://github.com/shahbazal0m"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+            >
+              <SiGithub size={18} />
+            </a>
+            <a
+              href="https://x.com/shahbaz_al0m"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#1DA1F2] hover:bg-[#1DA1F2]/10 hover:border-[#1DA1F2]/30 transition-all duration-300"
+            >
+              <FaTwitter size={17} />
+            </a>
+          </div>
         </div>
       </motion.div>
 

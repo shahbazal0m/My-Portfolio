@@ -1,40 +1,41 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
     title: "Personal Portfolio Website",
-    image: "/project-image/portfolio-website(2).png", 
+    image: "/project-image/portfolio.png",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
     github: "https://github.com/shahbazal0m",
     live: "",
   },
-    {
+  {
     title: "FocusFlow - Productivity Dashboard",
-    image: "/project-image/Pro-dashboar.png", 
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)","Swiper.js", "Remix Icons", "WeatherAPI"],
+    image: "/project-image/Pro-dashboar.png",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Swiper.js", "Remix Icons", "WeatherAPI"],
     github: "https://github.com/shahbazal0m/productivity-dashboard",
     live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
   },
   {
     title: "Food Ordering Web App",
-    image: "/project-image/food-website.png", 
-    tech: ["HTML5", "CSS3","JavaScript (ES6+)",  "JSON", "Swiper.js", " Font Awesome", "Google Fonts"],
+    image: "/project-image/food-website.png",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Swiper.js", "Font Awesome", "Google Fonts"],
     github: "https://github.com/shahbazal0m/foodie-website",
     live: "https://foodie-website-eta-one.vercel.app/",
   },
   {
     title: "Event Management Website",
-    image: "/project-image/Event-website.png", 
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Unsplash REST API / Images", "Font Awesome"],
+    image: "/project-image/Event-website.png",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Unsplash REST API", "Font Awesome"],
     github: "https://github.com/shahbazal0m/event-management-website",
     live: "https://event-management-website-henna.vercel.app/",
   },
   {
     title: "E-commerce Website",
-    image: "/project-image/E-commerce.png", 
-    tech: ["HTML5", "CSS3 ", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
+    image: "/project-image/E-commerce.png",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
     github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
     live: "https://frontend-ecommerce-website-two.vercel.app/",
   }
@@ -43,7 +44,6 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
-      {/* Updated Header Section for Perfect Centering */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,6 @@ const Projects = () => {
         <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
           My Projects
         </h2>
-        {/* Line ko center mein rakhne ke liye w-24 aur mx-auto use kiya hai */}
         <div className="h-1 w-35 md:w-47 bg-indigo-500 mt-2 rounded-full mx-auto" /> 
       </motion.div>
 
@@ -63,7 +62,7 @@ const Projects = () => {
             key={index}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            whileHover={{ y: -10 }} 
+            whileHover={{ y: -10 }}
             viewport={{ once: true }}
             className="glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
           >
@@ -100,9 +99,10 @@ const Projects = () => {
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
+                    className="inline-flex items-center gap-1.5 text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none group/link"
                   >
                     GitHub
+                    <ExternalLink size={11} className="group-hover/link:rotate-12 transition-transform" />
                   </a>
                 )}
                 {project.live && (
@@ -110,9 +110,10 @@ const Projects = () => {
                     href={project.live} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-block text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none"
+                    className="inline-flex items-center gap-1.5 text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none group/link"
                   >
-                    Live Demo 
+                    Live Demo
+                    <ExternalLink size={11} className="group-hover/link:rotate-12 transition-transform" />
                   </a>
                 )}
               </div>
@@ -120,6 +121,38 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+
+      {/* More Projects Button */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3 }}
+        className="flex justify-center md:center mt-12"
+      >
+        <a
+          href="https://github.com/shahbazal0m"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-3 glass rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all duration-300 group text-sm font-medium"
+        >
+          See All Projects
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="group-hover:translate-x-1 transition-transform duration-300 text-indigo-400"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </motion.div>
     </section>
   );
 };

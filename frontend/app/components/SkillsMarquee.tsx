@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
 import { MdDevices } from "react-icons/md";
+import { FaAws } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
 import { 
   SiHtml5, 
   SiCss,
@@ -16,6 +17,11 @@ import {
   SiGithub, 
   SiVercel,
   SiMinutemailer,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiDocker,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -26,40 +32,46 @@ const skills = [
   { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
 
-  // Frameworks & Libraries
+  // Frontend
   { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
   { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { name: "Framer Motion", icon: <SiFramer className="text-white" /> },
-
-  // Styling
   { name: "SCSS", icon: <SiSass className="text-[#CC6699]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
   { name: "Responsive Design", icon: <MdDevices className="text-[#00BCD4]" /> },
 
-  // Tools & Platforms
+  // Backend
+  { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
+  { name: "Express.js", icon: <SiExpress className="text-white" /> },
+  { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+  { name: "Mongoose", icon: <SiMongoose className="text-[#880000]" /> },
+
+  // DevOps & Cloud
+  { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
+  { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
+
+  // Tools
   { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
   { name: "GitHub", icon: <SiGithub className="text-white" /> },
+  { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
   { name: "VS Code", icon: <VscVscode className="text-[#007ACC]" /> },
   { name: "Vercel", icon: <SiVercel className="text-white" /> },
   { name: "EmailJS", icon: <SiMinutemailer className="text-[#FFCA28]" /> },
-  { name: "React Hot Toast", icon: <span className="text-lg">🔥</span> },
 ];
 
 const SkillsMarquee = () => {
   const duplicatedSkills = [...skills, ...skills];
 
   return (
-    /* Wapas 'relative' kar diya aur bottom-0 hata diya */
     <div className="w-full relative py-6 bg-black/20 border-y border-white/5 overflow-hidden z-30">
       
-      {/* Responsive Side Gradients (Mobile: w-16, Laptop: w-40) */}
+      {/* Side Gradients */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
       <div className="absolute inset-y-0 right-0 w-16 md:w-40 bg-gradient-to-l from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
 
-      {/* Marquee Wrapper with 20s speed */}
       <div 
         className="flex w-max items-center animate-marquee will-change-transform"
-        style={{ animationDuration: '20s' }}
+        style={{ animationDuration: '35s' }}
       >
         {duplicatedSkills.map((skill, index) => (
           <div
