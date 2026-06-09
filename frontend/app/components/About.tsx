@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <section id="about" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="about" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10 scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -11,7 +11,6 @@ const AboutMe = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-full"
       >
-        {/* Title */}
         <div className="flex flex-col items-center justify-center text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
             About Me
@@ -29,31 +28,31 @@ const AboutMe = () => {
           {/* text-center hata diya — left aligned paragraphs readable hote hain */}
           <div className="relative z-10 space-y-5 md:space-y-6 text-zinc-300 leading-relaxed text-base md:text-xl max-w-5xl mx-auto text-center md:text-left">
             <p>
-              I am <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a dedicated{" "}
-              <span className="text-white">Full Stack Developer</span> who has completed my B.Tech in
-              Computer Science and Engineering from{" "}
-              <span className="text-white/90">PIMR, Bhopal</span> (affiliated to{" "}
-              <span className="text-white/90">RGPV University, Madhya Pradesh</span>). I thrive at the
-              intersection of logic and design, specializing in the{" "}
-              <span className="text-indigo-400 font-semibold italic">MERN stack</span>.
+              I&apos;m <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a{" "}
+              <span className="text-white">Full Stack Developer</span> with a B.Tech in Computer Science
+              & Engineering from <span className="text-white/90">PIMR, Bhopal</span>{" "}
+              <span className="text-zinc-500 text-sm">(RGPV University, Madhya Pradesh)</span>. I build
+              fast, scalable, and user-focused web applications — from clean frontends to robust backends.
             </p>
 
             <p>
-              Beyond the frontend, I work with{" "}
-              <span className="text-purple-400 font-medium">Cloud Infrastructure</span> and{" "}
-              <span className="text-purple-400 font-medium">DevOps</span> — leveraging{" "}
-              <span className="text-white/80">AWS</span> and{" "}
-              <span className="text-white/80">Docker</span> to build and deploy scalable,
-              production-ready applications.
+              I completed an intensive{" "}
+              <span className="text-indigo-400 font-medium">Full Stack Web Development</span> training at{" "}
+              <span className="text-white/90">Sheryians Coding School, Bhopal</span> under the{" "}
+              <span className="text-white/90">Job Ready Cohort</span> program, where I mastered the{" "}
+              <span className="text-indigo-400 font-semibold italic">MERN Stack</span> — MongoDB,
+              Express.js, React.js, and Node.js — alongside DSA, DevOps practices, Docker, Kubernetes,
+              and CI/CD pipelines. I also participated in a{" "}
+              <span className="text-amber-400 font-medium">Frontend Hackathon</span> organized by
+              Sheryians in July 2025.
             </p>
 
             <p>
-              Whether it&apos;s architecting a full{" "}
-              <span className="text-indigo-400 font-medium">Next.js</span> application, designing
-              intuitive interfaces with{" "}
-              <span className="text-indigo-400 font-medium">Tailwind CSS</span>, or optimizing backend
-              performance with <span className="text-indigo-400 font-medium">Node.js</span> — I am
-              committed to delivering high-quality, high-performance products.
+              Beyond development, I work with{" "}
+              <span className="text-purple-400 font-medium">Cloud Infrastructure</span> — holding an{" "}
+              <span className="text-white/80">AWS Academy Graduate</span> certification and an{" "}
+              <span className="text-white/80">NPTEL Cloud Computing</span> certification from IIT
+              Kharagpur — ensuring my applications are built for production and scale.
             </p>
           </div>
         </div>

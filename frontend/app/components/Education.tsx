@@ -5,41 +5,45 @@ import { ExternalLink } from "lucide-react";
 const education = [
   {
     title: "B.Tech in Computer Science & Engineering",
-    institution: "Prestige Institute of Management and Research (PIMR)",
+    institution: "Prestige Institute of Management and Research, Bhopal",
     university: "RGPV University, Bhopal Madhya Pradesh",
     duration: "2022 — 2026",
+    // cgpa: "7.56",
     details: "Focusing on full-stack development and core computer science subjects.",
     certificateLink: null
   },
   {
-    title: "Full Stack Web Development",
-    institution: "Sheryians Coding School Bhopal",
+    title: "Full Stack Development",
+    institution: "Sheryians Coding School",
     university: "Job Ready Cohort",
-    duration: "Professional Training",
+    duration: "Jan - Sep 2025",
     details: "Mastered MERN Stack (MongoDB, Express.js, React.js, Node.js), Data Structures & Algorithms, and DevOps practices including CI / CD, Docker & Kubernetes. It also focused on Aptitude & Reasoning.",
+    cgpa: null,
     certificateLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing"
   },
   {
-    title: "Higher Secondary Education - 12th",
+    title: "Higher Education",
     institution: "Islamia College, Darbhanga",
     university: "BSEB - Patna, Bihar",
     duration: "2020 — 2022",
     details: "Completed with a focus on Physics, Chemistry, and Mathematics.",
+    cgpa: null,
     certificateLink: null
   },
   {
-    title: "Secondary Education - 10th",
+    title: "Secondary Education",
     institution: "M G Shikshan Sansthan Bahadurpur, Darbhanga",
     university: "CBSE, New Delhi",
     duration: "2019 — 2020",
     details: "Achieved strong academic performance in core subjects.",
+    cgpa: null,
     certificateLink: null
   }
 ];
 
 const Education = () => {
   return (
-    <section id="education" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="education" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10 scroll-mt-20">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -47,13 +51,11 @@ const Education = () => {
         viewport={{ once: true }}
         className="w-full"
       >
-        {/* Title aur Line alignment: flex-col aur items-center se dono center ho jayenge */}
         <div className="flex flex-col items-center justify-center text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
-                Education
-            </h2>
-            {/* mx-auto se line title ke niche perfect center rahegi */}
-            <div className="h-1 w-30 md:w-40 bg-indigo-500 mt-2 rounded-full mx-auto" /> 
+          <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
+            Education
+          </h2>
+          <div className="h-1 w-30 md:w-40 bg-indigo-500 mt-2 rounded-full mx-auto" /> 
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -88,16 +90,25 @@ const Education = () => {
 
                 <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-6" />
 
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-6 flex-grow text-left">
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-4 flex-grow text-center">
                   {edu.details}
                 </p>
+
+                {/* CGPA Badge */}
+                {edu.cgpa && (
+                  <div className="mb-4">
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
+                      CGPA: {edu.cgpa} / 10
+                    </span>
+                  </div>
+                )}
 
                 {edu.certificateLink && (
                   <a 
                     href={edu.certificateLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-small text-indigo-400 hover:text-indigo-300 transition-colors group/btn mt-auto"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors group/btn mt-auto"
                   >
                     View Certificate 
                     <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />

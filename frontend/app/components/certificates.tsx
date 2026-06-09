@@ -5,19 +5,19 @@ import { ExternalLink, Award, ShieldCheck, Cloud, Link2 } from "lucide-react";
 import Image from "next/image";
 
 const certificates = [
-  {
-    title: "Hashgraph Developer",
-    organization: "The Hashgraph Association",
-    date: "16 - Dec 2025",
-    icon: <Link2 className="text-indigo-400" />,
-    image: "/certificates-images/Hashgraphh.png",
-    tags: ["DLT", "Hedera", "Smart Contracts"],
-    verifyLink: "https://drive.google.com/file/d/1un2lXML7KnmlSbGuA6L1Ryzg_Ty9lOQX/view?usp=sharing",
-  },
+  // {
+  //   title: "Hashgraph Developer",
+  //   organization: "The Hashgraph Association",
+  //   date: "16 - Dec 2025",
+  //   icon: <Link2 className="text-indigo-400" />,
+  //   image: "/certificates-images/Hashgraphh.png",
+  //   tags: ["DLT", "Hedera", "Smart Contracts"],
+  //   verifyLink: "https://drive.google.com/file/d/1un2lXML7KnmlSbGuA6L1Ryzg_Ty9lOQX/view?usp=sharing",
+  // },
   {
     title: "AWS Academy Graduate",
     organization: "AWS Academy",
-    date: "09 - Nov 2025",
+    date: "09 - Nov - 2025",
     icon: <Cloud className="text-blue-400" />,
     image: "/certificates-images/aws.png",
     tags: ["Cloud Architecting", "AWS Services"],
@@ -35,7 +35,7 @@ const certificates = [
   {
     title: "Frontend Hackathon",
     organization: "Sheryians Coding School",
-    date: "26 - July 2025",
+    date: "26 - July - 2025",
     icon: <Award className="text-amber-400" />, 
     image: "/certificates-images/sheryians-hackathon.png", 
     tags: ["HTML5", "CSS3", "JavaScript (ES6+)"],
@@ -139,6 +139,38 @@ const Certifications = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* See More Certificates */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="flex justify-center mt-10"
+        >
+          <a
+            href="https://drive.google.com/drive/folders/your-folder-id"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-8 py-3 glass rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all duration-300 group text-sm font-medium"
+          >
+            See All Certificates
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="group-hover:translate-x-1 transition-transform duration-300 text-indigo-400"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </motion.div>
       </div>
     </section>
   );

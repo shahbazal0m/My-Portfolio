@@ -10,6 +10,8 @@ import Certifications from "./components/certificates";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Divider from "./components/Divider";
+import ScrollToTop from "./components/Scrolltotop";
+import VisitorCounter from "./components/Visitorcounter";
 
 export default function Home() {
   return (
@@ -36,6 +38,9 @@ export default function Home() {
 
       <Divider />
       <Footer />
+
+      <ScrollToTop />
+      <VisitorCounter />
     </main>
   );
 }

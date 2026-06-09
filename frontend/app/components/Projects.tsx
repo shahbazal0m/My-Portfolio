@@ -131,7 +131,7 @@ const Projects = () => {
         className="flex justify-center md:center mt-12"
       >
         <a
-          href="https://github.com/shahbazal0m"
+          href="https://github.com/shahbazal0m?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 px-8 py-3 glass rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all duration-300 group text-sm font-medium"

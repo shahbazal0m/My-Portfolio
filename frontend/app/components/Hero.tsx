@@ -4,15 +4,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
 import { SiGithub } from "react-icons/si";
-import { FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-32 md:pt-40 pb-12">
+    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-28 md:pt-40 pb-12">
       
       {/* LEFT SIDE: Content */}
       <motion.div
-        className="md:col-span-7 flex flex-col items-center text-center md:items-start md:text-left space-y-3 md:space-y-4 z-20 md:mt-6"
+        className="md:col-span-7 flex flex-col items-center text-center md:items-start md:text-left space-y-2 md:space-y-4 z-20 md:mt-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -28,7 +28,7 @@ const Hero = () => {
             Alam
           </span>
           <br />
-          <span className="text-white/85 block min-h-[40px] md:min-h-[60px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[52px]">
+          <span className="text-white/85 block min-h-[32px] md:min-h-[50px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[52px]">
             <Typewriter
               options={{
                 strings: [
@@ -46,9 +46,8 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0">
-          Based in India, I specialize in crafting high-performance digital
-          products and scalable web solutions using React, Node.js, and the MERN stack.
+        <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0 mt-1 md:mt-2">
+          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and scalable web applications.
         </p>
 
         {/* Buttons + Social Icons */}
@@ -72,14 +71,6 @@ const Hero = () => {
           {/* Social Icons */}
           <div className="flex items-center gap-3">
             <a
-              href="https://www.linkedin.com/in/iamshahbaz-alam/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300"
-            >
-              <FaLinkedinIn size={18} />
-            </a>
-            <a
               href="https://github.com/shahbazal0m"
               target="_blank"
               rel="noopener noreferrer"
@@ -88,12 +79,20 @@ const Hero = () => {
               <SiGithub size={18} />
             </a>
             <a
+              href="https://www.linkedin.com/in/iamshahbaz-alam/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300"
+            >
+              <FaLinkedinIn size={18} />
+            </a>
+            <a
               href="https://x.com/shahbaz_al0m"
               target="_blank"
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#1DA1F2] hover:bg-[#1DA1F2]/10 hover:border-[#1DA1F2]/30 transition-all duration-300"
             >
-              <FaTwitter size={17} />
+              <FaXTwitter size={17} />
             </a>
           </div>
         </div>
