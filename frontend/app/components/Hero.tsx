@@ -17,7 +17,6 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Greeting */}
         <p className="text-indigo-400/80 text-xs md:text-sm font-semibold tracking-[0.3em]">
           Hi, I&apos;m
         </p>

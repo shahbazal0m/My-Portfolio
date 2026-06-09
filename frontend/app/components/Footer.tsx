@@ -17,6 +17,9 @@ const Footer = () => {
 
 export default Footer;
 
+
+
+
 // "use client";
 // import { motion } from "framer-motion";
 // import Image from "next/image";
@@ -49,7 +52,6 @@ export default Footer;
 //   ];
 
 //   return (
-//     // Padding update: px-6 for mobile to keep items aligned with your navbar
 //     <footer className="w-full pt-16 pb-8 px-6 md:px-24 border-t border-white/5 bg-[#0a0a0a] relative z-10">
 //       <div className="max-w-[1400px] mx-auto">
         

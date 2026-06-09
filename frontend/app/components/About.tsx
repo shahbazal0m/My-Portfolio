@@ -25,7 +25,7 @@ const AboutMe = () => {
           
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           
-          {/* text-center hata diya — left aligned paragraphs readable hote hain */}
+          {/* text-left aligned paragraphs readable*/}
           <div className="relative z-10 space-y-5 md:space-y-6 text-zinc-300 leading-relaxed text-base md:text-xl max-w-5xl mx-auto text-center md:text-left">
             <p>
               I&apos;m <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a{" "}
