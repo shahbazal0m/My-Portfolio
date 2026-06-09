@@ -94,13 +94,13 @@ const Education = () => {
                   {edu.details}
                 </p>
 
-                {edu.cgpa && (
+                {/* {edu.cgpa && (
                   <div className="mb-4">
                     <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
                       CGPA: {edu.cgpa} / 10
                     </span>
                   </div>
-                )}
+                )} */}
 
                 {edu.certificateLink && (
                   <a 
