@@ -10,7 +10,6 @@ const education = [
     duration: "2022 — 2026",
     // cgpa: "7.56",
     details: "Focusing on full-stack development and core computer science subjects.",
-    certificateLink: null
   },
   {
     title: "Full Stack Development",
@@ -18,7 +17,6 @@ const education = [
     university: "Job Ready Cohort",
     duration: "Jan - Sep 2025",
     details: "Mastered MERN Stack (MongoDB, Express.js, React.js, Node.js), Data Structures & Algorithms, and DevOps practices including CI / CD, Docker & Kubernetes. It also focused on Aptitude & Reasoning.",
-    cgpa: null,
     certificateLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing"
   },
   {
@@ -28,7 +26,6 @@ const education = [
     duration: "2020 — 2022",
     details: "Completed with a focus on Physics, Chemistry, and Mathematics.",
     cgpa: null,
-    certificateLink: null
   },
   {
     title: "Secondary Education",
@@ -37,7 +34,6 @@ const education = [
     duration: "2019 — 2020",
     details: "Achieved strong academic performance in core subjects.",
     cgpa: null,
-    certificateLink: null
   }
 ];
 
