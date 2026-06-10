@@ -19,7 +19,7 @@ const AboutMe = () => {
         </div>
 
         {/* Glass container */}
-        <div className="glass p-6 sm:p-8 md:p-16 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/10 relative overflow-hidden group shadow-2xl">
+        <div className="glass p-6 sm:p-8 md:p-16 rounded-[1rem] md:rounded-[2.5rem] border border-white/10 relative overflow-hidden group shadow-2xl">
           
           <div className="absolute top-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-indigo-500/10 blur-[80px] md:blur-[120px] rounded-full -mr-20 -mt-20 pointer-events-none group-hover:bg-indigo-500/20 transition-colors duration-700" />
           

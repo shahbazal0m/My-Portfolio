@@ -66,7 +66,7 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass p-6 md:p-8 rounded-[2rem] border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
+              className="glass p-6 md:p-8 rounded-[1rem] border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
             >
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">

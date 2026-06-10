@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-28 md:pt-40 pb-12">
+    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-28 md:pt-40 pb-12 ">
       
       {/* LEFT SIDE: Content */}
       <motion.div
@@ -27,7 +27,7 @@ const Hero = () => {
             Alam
           </span>
           <br />
-          <span className="text-white/85 block min-h-[32px] md:min-h-[50px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[52px]">
+          <span className="text-white/85 block min-h-[32px] md:min-h-[50px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[50px]">
             <Typewriter
               options={{
                 strings: [
@@ -104,7 +104,7 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[2rem] border-2 border-white/20">
+        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[1rem] border-2 border-white/20">
           <Image
             src="/profile-image/my-profile-image.jpeg"
             alt="Shahbaz Alam"

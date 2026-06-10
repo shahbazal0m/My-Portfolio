@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import SkillsMarquee from "./components/SkillsMarquee";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import GitHubActivity from "./components/Githubactivity";
 import Education from "./components/Education";
 import Certifications from "./components/certificates";
 import Contact from "./components/Contact";
@@ -31,12 +32,15 @@ export default function Home() {
       <Projects />
 
       <Divider />
+      <GitHubActivity />
+
+      <Divider />
       <Certifications />
 
       <Divider />
       <Contact />
 
-      <Divider />
+      {/* <Divider /> */}
       <Footer />
 
       <ScrollToTop />

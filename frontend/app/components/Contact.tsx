@@ -59,7 +59,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-10 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="contact" className="py-10 px-6 md:px-24 mb-5 max-w-[1400px] mx-auto relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           
           {/* RIGHT SIDE (Form) */}
-          <div className="glass p-6 md:p-10 rounded-[2rem] border border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative overflow-hidden group order-1 lg:order-2">
+          <div className="glass p-6 md:p-10 rounded-[1rem] border border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative overflow-hidden group order-1 lg:order-2">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 blur-[80px] group-hover:bg-indigo-500/20 transition-all duration-700" />
             
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
@@ -93,7 +93,7 @@ const Contact = () => {
                   autoComplete="name"
                   enterKeyHint="next"
                   placeholder="enter your name"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
+                  className="w-full bg-white/5 border border-white/10 rounded-[1rem] px-6 py-2 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
                 />
               </div>
 
@@ -109,7 +109,7 @@ const Contact = () => {
                   autoComplete="email"
                   enterKeyHint="next"
                   placeholder="example@gmail.com"
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
+                  className="w-full bg-white/5 border border-white/10 rounded-[1rem] px-6 py-2 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700"
                 />
               </div>
 
@@ -120,7 +120,7 @@ const Contact = () => {
                   rows={4}
                   required
                   placeholder="Let's talk about your next big project..."
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700 resize-none"
+                  className="w-full bg-white/5 border border-white/10 rounded-[1rem] px-6 py-2 text-[16px] md:text-base text-white focus:outline-none focus:border-indigo-500/50 transition-all duration-300 placeholder:text-zinc-700 resize-none"
                 />
               </div>
 
@@ -164,7 +164,7 @@ const Contact = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me | WhatsApp</p>
+                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me</p>
                   <p className="text-white font-small text-sm md:text-lg">+91 9507034643</p>
                 </div>
               </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="p-5 rounded-[1.5rem] bg-indigo-500/5 border border-indigo-500/10 relative overflow-hidden group/status">
+              <div className="p-5 rounded-[1rem] bg-indigo-500/5 border border-indigo-500/10 relative overflow-hidden group/status">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse "/>
                   <p className="text-[10px] font-bold text-indigo-400 uppercase tracking-wider">Current Status</p>

@@ -69,7 +69,6 @@ const Certifications = () => {
             Professional validations of my technical expertise in Full Stack Development, Cloud Infrastructure, and Emerging Technologies.
           </p>
         </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {certificates.map((cert, index) => (
             <motion.div
@@ -78,7 +77,7 @@ const Certifications = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative bg-zinc-900/40 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-xl hover:border-white/20 transition-all duration-500"
+              className="group relative bg-zinc-900/40 border border-white/10 rounded-[1rem] overflow-hidden backdrop-blur-xl hover:border-white/20 transition-all duration-500"
             >
               <div className="flex flex-col lg:flex-row items-stretch">
 

@@ -64,7 +64,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ y: -10 }}
             viewport={{ once: true }}
-            className="glass rounded-[2rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
+            className="glass rounded-[1rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
           >
             <div className="w-full overflow-hidden border-b border-white/10 bg-zinc-900">
               <Image
