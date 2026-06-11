@@ -46,7 +46,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0 mt-1 md:mt-2">
-          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and scalable web applications.
+          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and building scalable web applications.
         </p>
 
         {/* Buttons + Social Icons */}

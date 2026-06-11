@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { SiGithub } from "react-icons/si";
 
 const projects = [
   {
@@ -92,17 +93,16 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-
-              <div className="flex items-center gap-6 md:gap-8 pt-4 mt-auto relative z-20">
+              <div className="grid grid-cols-2 gap-4 pt-4 mt-auto relative z-20">
                 {project.github && (
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-indigo-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none group/link"
+                    className={`inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-indigo-500/10 border border-white/10 hover:border-indigo-500/30 rounded-xl transition-all duration-300 ${!project.live ? "col-span-2" : ""}`}
                   >
+                    <SiGithub size={14} />
                     GitHub
-                    <ExternalLink size={11} className="group-hover/link:rotate-12 transition-transform" />
                   </a>
                 )}
                 {project.live && (
@@ -110,10 +110,10 @@ const Projects = () => {
                     href={project.live} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[11px] md:text-sm font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-purple-400 transition-all duration-300 cursor-pointer hover:translate-x-1 select-none group/link"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-purple-500/10 border border-white/10 hover:border-purple-500/30 rounded-xl transition-all duration-300"
                   >
+                    <ExternalLink size={14} />
                     Live Demo
-                    <ExternalLink size={11} className="group-hover/link:rotate-12 transition-transform" />
                   </a>
                 )}
               </div>
@@ -121,7 +121,6 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-
       {/* More Projects Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
