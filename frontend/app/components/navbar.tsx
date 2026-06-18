@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiX } from 'react-icons/hi';
 import { SiGithub } from 'react-icons/si';
 import { FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
+import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,15 +58,18 @@ export default function Navbar() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className={`rounded-[2.5rem] glass px-5 md:px-8 py-3 md:py-4 flex justify-between items-center pointer-events-auto transition-all duration-500 ${
+          className={`rounded-full px-5 md:px-8 py-3 md:py-4 flex justify-between items-center pointer-events-auto transition-all duration-500 ${
             scrolled
               ? 'bg-[#030303]/80 backdrop-blur-2xl border border-white/15 shadow-2xl shadow-black/50'
               : 'bg-[#030303]/50 backdrop-blur-xl border border-white/20 shadow-lg'
           }`}
         >
           {/* Logo */}
-          <a href="#hero" className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 cursor-pointer tracking-tighter whitespace-nowrap">
-            SHAHBAZ.
+          <a href="#hero" className="flex items-center gap-2 cursor-pointer">
+            <Logo size={32} />
+            <span className="text-medium md:text-2xl font-small bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 tracking-tighter whitespace-nowrap">
+              Shahbaz Alam
+            </span>
           </a>
 
           {/* Desktop Links */}
@@ -108,7 +112,7 @@ export default function Navbar() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: -10 }}
               transition={{ duration: 0.3 }}
-              className="absolute top-[68px] left-6 right-6 p-8 glass border border-white/10 rounded-[2rem] bg-[#030303]/80 backdrop-blur-2xl md:hidden z-[99] shadow-2xl pointer-events-auto"
+              className="absolute top-[68px] left-4 right-4 p-8 glass border border-white/10 rounded-[2.5rem] bg-[#030303]/80 backdrop-blur-2xl md:hidden z-[99] shadow-2xl pointer-events-auto"
             >
               <motion.div 
                 variants={{
@@ -136,7 +140,7 @@ export default function Navbar() {
                 ))}
 
                 {/* Mobile Social Icons */}
-                <div className="flex items-center gap-6 mt-2 pt-4 border-t border-white/10 w-full justify-center">
+                <div className="flex items-center gap-4 mt-2 pt-4 border-t border-white/10 w-full justify-center">
                   {socialLinks.map((social) => (
                     <a
                       key={social.name}
@@ -144,7 +148,7 @@ export default function Navbar() {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => setIsOpen(false)}
-                      className={`w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 ${social.hoverClass} hover:bg-white/10 transition-all duration-300`}
+                      className={`w-11 h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 ${social.hoverClass} hover:bg-white/10 transition-all duration-300`}
                     >
                       {social.icon}
                     </a>

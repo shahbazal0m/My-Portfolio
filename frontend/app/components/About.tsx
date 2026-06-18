@@ -29,9 +29,8 @@ const AboutMe = () => {
           <div className="relative z-10 space-y-5 md:space-y-6 text-zinc-300 leading-relaxed text-base md:text-xl max-w-5xl mx-auto text-center md:text-left">
             <p>
               I&apos;m <span className="text-white font-bold tracking-tight">Shahbaz Alam</span>, a{" "}
-              <span className="text-white">Full Stack Developer</span> with a B.Tech in Computer Science
-              & Engineering from <span className="text-white/90">PIMR, Bhopal</span>{" "}
-              <span className="text-zinc-500 text-sm">(RGPV University, Madhya Pradesh)</span>. I build
+              <span className="text-white">Full Stack Developer</span> holding a <span className="text-white font-medium">B.Tech degree in Computer Science & Engineering</span> from <span className="text-white/90">PIMR, Bhopal</span>{" "}
+              <span className="text-zinc-400 text-sm md:text-base">(RGPV University, Madhya Pradesh)</span>. I build
               fast, scalable, and user-focused web applications — from clean frontends to robust backends.
             </p>
 

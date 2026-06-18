@@ -6,40 +6,29 @@ import { SiGithub } from "react-icons/si";
 
 const projects = [
   {
-    title: "Personal Portfolio Website",
-    image: "/project-image/portfolio.png",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
-    github: "https://github.com/shahbazal0m",
-    live: "",
+    title: "E-commerce Website",
+    image: "/project-image/E-commerce.png",
+    description: "A comprehensive digital catalog system simulating active state shopping flows, REST API responses, scalable utility classes, and optimized card checkouts.",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
+    github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
+    live: "https://frontend-ecommerce-website-two.vercel.app/",
   },
-  {
-    title: "FocusFlow - Productivity Dashboard",
+  { 
+    title: "Productivity Dashboard",
     image: "/project-image/Pro-dashboar.png",
+    description: "An elegant workspace management hub offering real-time custom weather widgets, task queues, habit tracking, and sleek Swiper-powered micro-frontend blocks.",
     tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Swiper.js", "Remix Icons", "WeatherAPI"],
     github: "https://github.com/shahbazal0m/productivity-dashboard",
     live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
   },
   {
-    title: "Food Ordering Web App",
-    image: "/project-image/food-website.png",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Swiper.js", "Font Awesome", "Google Fonts"],
-    github: "https://github.com/shahbazal0m/foodie-website",
-    live: "https://foodie-website-eta-one.vercel.app/",
+    title: "Personal Portfolio Website",
+    image: "/project-image/portfolio.png",
+    description: "A highly interactive, modern portfolio website showcasing dynamic client-side animations, smooth transitions, and seamless responsive design structures.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
+    github: "https://github.com/shahbazal0m",
+    live: "",
   },
-  {
-    title: "Event Management Website",
-    image: "/project-image/Event-website.png",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Unsplash REST API", "Font Awesome"],
-    github: "https://github.com/shahbazal0m/event-management-website",
-    live: "https://event-management-website-henna.vercel.app/",
-  },
-  {
-    title: "E-commerce Website",
-    image: "/project-image/E-commerce.png",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
-    github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
-    live: "https://frontend-ecommerce-website-two.vercel.app/",
-  }
 ];
 
 const Projects = () => {
@@ -78,12 +67,17 @@ const Projects = () => {
               />
             </div>
 
-            <div className="p-6 md:p-8 flex flex-col flex-grow space-y-6 bg-[#030303]/50 backdrop-blur-sm">
+            <div className="p-6 md:p-8 flex flex-col flex-grow space-y-5 bg-[#030303]/50 backdrop-blur-sm">
               <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-indigo-400 transition-colors">
                 {project.title}
               </h3>
 
-              <div className="flex flex-wrap gap-2">
+              {/* Enhanced Typography for Project Description */}
+              <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased transition-colors duration-300 group-hover:text-zinc-100 selection:bg-indigo-500/30">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 pt-1">
                 {project.tech.map((item, i) => (
                   <span 
                     key={i} 
@@ -93,16 +87,18 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <div className="grid grid-cols-2 gap-4 pt-4 mt-auto relative z-20">
+
+              {/* Fully Responsive Capsule Action Buttons */}
+              <div className="flex items-center gap-2 sm:gap-3 pt-3 mt-auto relative z-20 w-full">
                 {project.github && (
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-indigo-500/10 border border-white/10 hover:border-indigo-500/30 rounded-xl transition-all duration-300 ${!project.live ? "col-span-2" : ""}`}
+                    className={`flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-indigo-500/10 border border-white/10 hover:border-indigo-500/30 rounded-full transition-all duration-300 whitespace-nowrap ${!project.live ? "w-full flex-none" : ""}`}
                   >
-                    <SiGithub size={14} />
-                    GitHub
+                    <SiGithub size={14} className="flex-shrink-0" />
+                    <span>GitHub</span>
                   </a>
                 )}
                 {project.live && (
@@ -110,10 +106,10 @@ const Projects = () => {
                     href={project.live} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 px-4 py-3 text-xs font-bold uppercase tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-purple-500/10 border border-white/10 hover:border-purple-500/30 rounded-xl transition-all duration-300"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-purple-500/10 border border-white/10 hover:border-purple-500/30 rounded-full transition-all duration-300 whitespace-nowrap"
                   >
-                    <ExternalLink size={14} />
-                    Live Demo
+                    <ExternalLink size={14} className="flex-shrink-0" />
+                    <span>Live Demo</span>
                   </a>
                 )}
               </div>
@@ -121,6 +117,7 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
+
       {/* More Projects Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

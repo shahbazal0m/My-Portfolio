@@ -153,9 +153,12 @@ const Contact = () => {
               <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
                 Reach out to me directly
               </h3>
-              <p className="text-zinc-400 text-sm md:text-lg leading-relaxed font-light">
-                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
+              
+              <div className="pl-4 border-l-2 border-indigo-500/40">
+                <p className="text-zinc-400 text-sm md:text-[17px] font-sans font-normal tracking-wide leading-relaxed max-w-xl antialiased">
+                  I&apos;m always open to discussing <span className="text-zinc-100/85 font-medium">new projects</span>, <span className="text-zinc-100/85 font-medium">creative ideas</span>, or opportunities to be part of <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 font-semibold">your vision</span>.
+                </p>
+              </div>
             </div>
 
             <div className="space-y-6">
@@ -164,8 +167,8 @@ const Contact = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Call Me</p>
-                  <p className="text-white font-small text-sm md:text-lg">+91 9507034643</p>
+                  <p className="text-zinc-500 text-[10px] font-semibold uppercase tracking-widest mb-0.5">Call Me</p>
+                  <p className="text-zinc-300 font-small text-sm md:text-lg">+91-9507034643</p>
                 </div>
               </div>
 
@@ -174,8 +177,8 @@ const Contact = () => {
                   <Mail size={20} />
                 </div>
                 <div className="min-w-0">
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">Email Me</p>
-                  <p className="text-white font-small text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
+                  <p className="text-zinc-500 text-[10px] font-semibold uppercase tracking-widest mb-0.5">Email Me</p>
+                  <p className="text-zinc-300 font-small text-sm md:text-lg truncate">shahbazalam4842@gmail.com</p>
                 </div>
               </div>
 
@@ -184,8 +187,8 @@ const Contact = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <p className="text-zinc-500 text-[10px] uppercase tracking-widest mb-0.5">My Location</p>
-                  <p className="text-white font-small text-sm md:text-lg">Bhopal, Madhya Pradesh, India</p>
+                  <p className="text-zinc-500 text-[10px] font-semibold uppercase tracking-widest mb-0.5">My Location</p>
+                  <p className="text-zinc-300 font-small text-sm md:text-lg">Bhopal, Madhya Pradesh, India</p>
                 </div>
               </div>
 

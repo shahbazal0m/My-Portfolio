@@ -1,5 +1,5 @@
 "use client";
-import { FileText } from "lucide-react";
+import { FileText, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Typewriter from 'typewriter-effect';
@@ -40,13 +40,14 @@ const Hero = () => {
                 loop: true,
                 delay: 75,
                 deleteSpeed: 40,
-              }}
+                }}
             />
           </span>
         </h1>
 
-        <p className="text-sm md:text-lg text-zinc-400 max-w-xl leading-relaxed px-2 md:px-0 mt-1 md:mt-2">
-          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and building scalable web applications.
+        {/* Upgraded Premium Paragraph Font Styling */}
+        <p className="text-sm md:text-[17px] text-zinc-400/85 font-sans font-normal tracking-wide leading-relaxed max-w-xl px-2 md:px-0 mt-2 md:mt-3 antialiased">
+          Based in India, I&apos;m a <span className="text-zinc-300 font-medium">Full Stack Developer</span> specializing in <span className="text-zinc-300 font-medium">MERN Stack</span>, and building scalable web applications.
         </p>
 
         {/* Buttons + Social Icons */}
@@ -56,7 +57,9 @@ const Hero = () => {
             className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group text-center"
           >
             View My Work
+            <ArrowUpRight size={18} className="opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
           </a>
+          
           <a
             href="https://drive.google.com/file/d/1RHOXGigmO0tCD1g7lh8HsUYj5hcLJTSE/view?usp=sharing"
             target="_blank"

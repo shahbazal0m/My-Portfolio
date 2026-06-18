@@ -65,7 +65,7 @@ const Certifications = () => {
           <h2 className="text-3xl md:text-4xl font-semibold uppercase text-white/85 mb-4">
             Certifications & <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-lime-400">Credentials</span>
           </h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-400 max-w-xl mx-auto">
             Professional validations of my technical expertise in Full Stack Development, Cloud Infrastructure, and Emerging Technologies.
           </p>
         </motion.div>

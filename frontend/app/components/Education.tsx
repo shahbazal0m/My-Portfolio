@@ -8,7 +8,6 @@ const education = [
     institution: "Prestige Institute of Management and Research, Bhopal",
     university: "RGPV University, Bhopal Madhya Pradesh",
     duration: "2022 — 2026",
-    // cgpa: "7.56",
     details: "Focusing on full-stack development and core computer science subjects.",
   },
   {
@@ -84,30 +83,25 @@ const Education = () => {
                   </span>
                 </div>
 
-                <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-6" />
+                <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-5" />
 
-                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-4 flex-grow text-center">
+                {/* Exact Description Match with Project Component Styling */}
+                <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased text-left mb-6 flex-grow transition-colors duration-300 group-hover:text-zinc-100 selection:bg-indigo-500/30">
                   {edu.details}
                 </p>
 
-                {/* {edu.cgpa && (
-                  <div className="mb-4">
-                    <span className="inline-flex items-center gap-1.5 text-[11px] font-bold px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-indigo-300">
-                      CGPA: {edu.cgpa} / 10
-                    </span>
-                  </div>
-                )} */}
-
                 {edu.certificateLink && (
-                  <a 
-                    href={edu.certificateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors group/btn mt-auto"
-                  >
-                    View Certificate 
-                    <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                  </a>
+                  <div className="pt-2 mt-auto text-left">
+                    <a 
+                      href={edu.certificateLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-wider text-indigo-400 hover:text-indigo-300 transition-colors group/btn"
+                    >
+                      View Certificate 
+                      <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-indigo-400" />
+                    </a>
+                  </div>
                 )}
               </div>
 
