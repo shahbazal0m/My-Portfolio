@@ -53,3 +53,5 @@ const Logo = ({ size = 40 }: { size?: number }) => {
 };
 
 export default Logo;
+
+// redesign logo, visitor counter & GitHub activity badges; clean up spacing

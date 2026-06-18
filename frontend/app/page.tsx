@@ -40,9 +40,8 @@ export default function Home() {
       <Divider />
       <Contact />
 
-      {/* <div className="w-full flex justify-center py-6">
-        <VisitorCounter />
-      </div> */}
+      {/* <Divider /> */}
+      <VisitorCounter />
 
       {/* <Divider /> */}
       <Footer />

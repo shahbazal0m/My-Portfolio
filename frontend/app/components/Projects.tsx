@@ -5,8 +5,18 @@ import { ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 const projects = [
-  {
+    {
     id: "01",
+    type: "Frontend / Web",
+    title: "Food Ordering Web App",
+    image: "/project-image/food-website.png",
+    description: "A highly responsive food delivery store layout built with seamless category sorting filters, custom micro-interactions, and JSON-based menu integration.",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Swiper.js", "Font Awesome", "Google Fonts"],
+    github: "https://github.com/shahbazal0m/foodie-website",
+    live: "https://foodie-website-eta-one.vercel.app/",
+  },
+  {
+    id: "02",
     type: "Frontend / UI",
     title: "E-commerce Website",
     image: "/project-image/E-commerce.png",
@@ -16,7 +26,7 @@ const projects = [
     live: "https://frontend-ecommerce-website-two.vercel.app/",
   },
   { 
-    id: "02",
+    id: "03",
     type: "Frontend / App",
     title: "Productivity Dashboard",
     image: "/project-image/Pro-dashboar.png",
@@ -24,16 +34,6 @@ const projects = [
     tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Swiper.js", "Remix Icons", "WeatherAPI"],
     github: "https://github.com/shahbazal0m/productivity-dashboard",
     live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
-  },
-  {
-    id: "03",
-    type: "Frontend / Web",
-    title: "Food Ordering Web App",
-    image: "/project-image/food-website.png",
-    description: "A highly responsive food delivery store layout built with seamless category sorting filters, custom micro-interactions, and JSON-based menu integration.",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Swiper.js", "Font Awesome", "Google Fonts"],
-    github: "https://github.com/shahbazal0m/foodie-website",
-    live: "https://foodie-website-eta-one.vercel.app/",
   },
   {
     id: "04",

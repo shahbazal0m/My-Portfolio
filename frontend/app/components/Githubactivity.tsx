@@ -62,7 +62,7 @@ const GitHubActivity = () => {
               </span>
               <p className="text-sm font-medium tracking-wide text-zinc-200">Contribution Analytics</p>
             </div>
-            <span className="text-[10px] uppercase font-mono tracking-wider text-indigo-300 bg-indigo-500/10 px-3 py-1 rounded-md border border-indigo-500/20">
+            <span className="text-[10px] uppercase font-mono tracking-wider text-indigo-300 bg-indigo-500/10 px-1.5 py-1 rounded-md border border-indigo-500/20">
               Last 30 Days
             </span>
           </div>
@@ -105,13 +105,13 @@ const GitHubActivity = () => {
             
             {/* Bottom/Right Section: Stars, Forks & Redirect Button */}
             <div className="flex items-center justify-between md:justify-end gap-3 border-t border-white/5 pt-3 md:border-0 md:pt-0 w-full md:w-auto">
-              <div className="flex items-center gap-2 w-full md:w-auto">
-                <span className="flex items-center justify-center gap-1.5 text-xs font-medium text-zinc-400 bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/5 flex-1 md:flex-none whitespace-nowrap">
-                  <Star size={13} className="text-yellow-500 fill-yellow-500/20 shrink-0" />
+              <div className="flex items-center gap-3 w-full md:w-auto">
+                <span className="text-[10px] uppercase font-mono tracking-wider text-indigo-300 bg-indigo-500/10 px-1.5 py-1 rounded-md border border-indigo-500/20 flex items-center gap-1.5">
+                  <Star size={10} className="text-yellow-500 fill-yellow-500/20 shrink-0" />
                   <span>{repoStats.stars} Stars</span>
                 </span>
-                <span className="flex items-center justify-center gap-1.5 text-xs font-medium text-zinc-400 bg-white/5 px-2.5 py-1.5 rounded-lg border border-white/5 flex-1 md:flex-none whitespace-nowrap">
-                  <GitFork size={13} className="text-indigo-400 shrink-0" />
+                <span className="text-[10px] uppercase font-mono tracking-wider text-indigo-300 bg-indigo-500/10 px-1.5 py-1 rounded-md border border-indigo-500/20 flex items-center gap-1.5">
+                  <GitFork size={10} className="text-indigo-400 shrink-0" />
                   <span>{repoStats.forks} Forks</span>
                 </span>
               </div>
