@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-28 md:pt-40 pb-12 ">
+    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-30 md:pt-40 pb-12 ">
       
       {/* LEFT SIDE: Content */}
       <motion.div
@@ -47,7 +47,7 @@ const Hero = () => {
 
         {/* Upgraded Premium Paragraph Font Styling */}
         <p className="text-sm md:text-[17px] text-zinc-400/85 font-sans font-normal tracking-wide leading-relaxed max-w-xl px-2 md:px-0 mt-2 md:mt-3 antialiased">
-          Based in India, I&apos;m a <span className="text-zinc-300 font-medium">Full Stack Developer</span> specializing in <span className="text-zinc-300 font-medium">MERN Stack</span>, and building scalable web applications.
+          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and building scalable web applications.
         </p>
 
         {/* Buttons + Social Icons */}
@@ -102,7 +102,7 @@ const Hero = () => {
 
       {/* RIGHT SIDE: Image */}
       <motion.div
-        className="md:col-span-5 flex justify-center md:justify-end items-center relative mt-8 md:mt-6"
+        className="md:col-span-5 flex justify-center md:justify-end items-center relative mt-6 md:mt-6"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}

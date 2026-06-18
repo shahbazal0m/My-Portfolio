@@ -63,7 +63,7 @@ const SkillsMarquee = () => {
   const duplicatedSkills = [...skills, ...skills];
 
   return (
-    <div className="w-full relative py-6 bg-black/20 border-y border-white/10 overflow-hidden z-30">
+    <div className="w-full relative py-6 bg-black/20 border-y border-white/7 overflow-hidden z-30">
       
       {/* Side Gradients */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-40 bg-gradient-to-r from-zinc-950 via-zinc-950/80 to-transparent z-20 pointer-events-none" />
@@ -76,12 +76,12 @@ const SkillsMarquee = () => {
         {duplicatedSkills.map((skill, index) => (
           <div
             key={index}
-            className="flex items-center gap-3 md:gap-4 group px-6 md:px-10 cursor-default select-none"
+            className="flex items-center gap-3 md:gap-4 group px-6 md:px-10 cursor-default select-none cursor-pointer"
           >
-            <div className="text-lg md:text-xl opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-out">
+            <div className="text-lg md:text-xl opacity-40 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-out">
               {skill.icon}
             </div>
-            <span className="text-[9px] md:text-[10px] font-bold text-zinc-400 group-hover:text-zinc-200 transition-all duration-500 uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap">
+            <span className="text-[9px] md:text-[10px] font-bold text-zinc-400/85 group-hover:text-zinc-200 transition-all duration-500 uppercase tracking-[0.2em] md:tracking-[0.3em] whitespace-nowrap">
               {skill.name}
             </span>
           </div>

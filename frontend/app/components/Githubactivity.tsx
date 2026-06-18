@@ -26,7 +26,7 @@ const GitHubActivity = () => {
   }, []);
 
   return (
-    <section className="py-5 px-4 md:px-24 max-w-[1400px] mx-auto relative z-10">
+    <section id="education" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10 scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ const GitHubActivity = () => {
           <div className="w-full overflow-hidden rounded-xl bg-[#09090b]/40 border border-white/5 p-1 sm:p-2">
             <a href="https://github.com/ashutosh00710/github-readme-activity-graph" target="_blank" rel="noopener noreferrer">
               <img 
-                src="https://github-readme-activity-graph.vercel.app/graph?username=shahbazal0m&theme=tokyo-night&hide_border=true&area=true&custom_title=Shahbaz%20Alam's%20Contribution%20Activity&title_font_size=12" 
+                src="https://github-readme-activity-graph.vercel.app/graph?username=shahbazal0m&theme=tokyo-night&hide_border=true&area=true&custom_title=Shahbaz%20Alam's%20Contribution%20Graph&title_font_size=10" 
                 alt="Shahbaz Alam's GitHub Activity Graph" 
                 className="w-full h-auto object-cover select-none"
               />

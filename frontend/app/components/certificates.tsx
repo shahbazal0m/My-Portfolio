@@ -54,7 +54,7 @@ const certificates = [
 
 const Certifications = () => {
   return (
-    <section id="certifications" className="py-6 px-6 md:px-24 relative overflow-hidden w-full max-w-[1400px] mx-auto">
+    <section id="certifications" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10 scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,9 @@ const Certifications = () => {
                       <div className="p-2 bg-white/5 rounded-lg border border-white/10 group-hover:scale-110 transition-transform duration-500">
                         {cert.icon}
                       </div>
-                      <span className="text-[10px] uppercase tracking-widest text-zinc-500 font-bold bg-white/5 px-2 py-1 rounded">
+                      
+                      {/* Projects wale exact glow style capsules yahan use kiye hain */}
+                      <span className="text-[10px] md:text-xs font-bold bg-white/5 backdrop-blur-md border border-white/10 rounded-[0.5rem] text-indigo-300 px-3 py-1 select-none whitespace-nowrap">
                         {cert.date}
                       </span>
                     </div>
