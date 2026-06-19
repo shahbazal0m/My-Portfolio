@@ -40,10 +40,10 @@ export default function Home() {
       <Divider />
       <Contact />
 
-      {/* <Divider /> */}
+      <Divider />
       <VisitorCounter />
 
-      {/* <Divider /> */}
+      <Divider />
       <Footer />
 
       <ScrollToTop />
