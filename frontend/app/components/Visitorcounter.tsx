@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, TrendingUp } from "lucide-react";
 
-const Visitorcounter = () => {
+const VisitorCounter = () => {
   const [count, setCount] = useState<number | null>(null);
   const fetched = useRef(false);
 
@@ -11,10 +11,24 @@ const Visitorcounter = () => {
     if (fetched.current) return;
     fetched.current = true;
 
-    fetch("/api/visitor")
-      .then((res) => res.json())
-      .then((data: { count: number }) => setCount(data.count))
-      .catch(() => {});
+    const alreadyVisited = sessionStorage.getItem("has_visited");
+
+    if (alreadyVisited) {
+      // Already counted this session — just fetch current count, don't increment
+      fetch("/api/visitor?increment=false")
+        .then((res) => res.json())
+        .then((data: { count: number }) => setCount(data.count))
+        .catch(() => {});
+    } else {
+      // First visit this session — increment and store
+      fetch("/api/visitor")
+        .then((res) => res.json())
+        .then((data: { count: number }) => {
+          setCount(data.count);
+          sessionStorage.setItem("has_visited", "true");
+        })
+        .catch(() => {});
+    }
   }, []);
 
   return (
@@ -65,4 +79,4 @@ const Visitorcounter = () => {
   );
 };
 
-export default Visitorcounter;
+export default VisitorCounter;
