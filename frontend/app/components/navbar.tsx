@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { HiX } from 'react-icons/hi';
 import { SiGithub } from 'react-icons/si';
 import { FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
-import Logo from './Logo';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +20,8 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
-    { name: "Education", href: "#education" },
     { name: "Projects", href: "#projects" },
+    { name: "Education", href: "#education" },
     { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
   ];
@@ -66,8 +65,10 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 cursor-pointer">
-            <Logo size={32} />
-            <span className="text-medium md:text-2xl font-small bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-500 tracking-tighter whitespace-nowrap">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shrink-0">
+              <span className="text-white text-xs font-bold tracking-tight">SA</span>
+            </div>
+            <span className="text-sm md:text-base font-semibold text-white tracking-tight whitespace-nowrap">
               Shahbaz Alam
             </span>
           </a>
