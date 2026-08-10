@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+/* Tailwind v4 Custom Theme */
+@theme {
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.1);
+
+  /* Marquee Animation Definition */
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+  
+  /* Class create karega: animate-marquee */
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+:root {
+  --background: 3 3 3;
+  --foreground: 255 255 255;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background));
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll and Overflow Fix */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Mobile Input Width & Box-Sizing Fix */
+input, textarea {
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Autofill styling fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-internal-autofill-selected,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important; 
+  transition: background-color 5000s ease-in-out 0s !important;
+  caret-color: white !important;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: var(--color-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Background Animated Glow Points */
+.glow-point {
+  position: absolute;
+  border-radius: 9999px;
+  background: rgba(59, 130, 246, 0.15);
+  filter: blur(120px);
+  pointer-events: none;
+}
