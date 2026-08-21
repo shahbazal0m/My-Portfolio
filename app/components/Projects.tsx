@@ -15,8 +15,18 @@ const projects = [
     github: "https://github.com/shahbazal0m/foodie-website",
     live: "https://foodie-website-eta-one.vercel.app/",
   },
-  { 
+    {
     id: "02",
+    type: "Frontend / UI",
+    title: "E-commerce Website",
+    image: "/project-image/E-commerce.png",
+    description: "A comprehensive digital catalog system simulating active state shopping flows, REST API responses, scalable utility classes, and optimized card checkouts.",
+    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
+    github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
+    live: "https://frontend-ecommerce-website-two.vercel.app/",
+  },
+  { 
+    id: "03",
     type: "Frontend / App",
     title: "Productivity Dashboard",
     image: "/project-image/Pro-dashboar.png",
@@ -26,7 +36,7 @@ const projects = [
     live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
   },
   {
-    id: "03",
+    id: "04",
     type: "Full-Stack Developer",
     title: "Personal Portfolio Website",
     image: "/project-image/portfolio.png",
@@ -46,10 +56,12 @@ const Projects = () => {
         viewport={{ once: true }}
         className="mb-12 md:mb-16 flex flex-col items-center justify-center text-center"
       >
+        <p className="text-[#E8A33D] text-xs font-mono font-bold uppercase tracking-[0.3em] mb-2">
+          // Things I&apos;ve built
+        </p>
         <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
           My Projects
         </h2>
-        <div className="h-1 w-32 md:w-44 bg-indigo-500 mt-3 rounded-full mx-auto" /> 
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-12">
@@ -60,9 +72,9 @@ const Projects = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ y: -8 }}
             viewport={{ once: true }}
-            className="glass rounded-[1rem] border border-white/10 overflow-hidden flex flex-col group transition-all duration-500"
+            className="glass rounded-[1rem] border border-white/10 hover:border-[#E8A33D]/30 overflow-hidden flex flex-col group transition-all duration-500"
           >
-            <div className="w-full overflow-hidden border-b border-white/10 bg-zinc-900">
+            <div className="w-full overflow-hidden border-b border-white/10 bg-zinc-900 relative">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -71,25 +83,24 @@ const Projects = () => {
                 className="w-full h-auto object-cover"
                 priority={index < 2}
               />
+              <div className="absolute top-3 left-3 font-mono text-xs font-bold text-[#E8A33D] bg-[#0a0a0a]/80 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#E8A33D]/30">
+                {project.id}
+              </div>
             </div>
 
-            {/* Responsive Space-y adjustments */}
             <div className="p-5 sm:p-6 md:p-8 flex flex-col flex-grow space-y-4 sm:space-y-5 bg-[#030303]/50 backdrop-blur-sm">
               
-              {/* ID outside aur Capsule Tag ko sharp indigo look diya hai taaki clear dikhe */}
-              <div className="flex items-center w-fit gap-3 font-mono text-[10px] md:text-xs tracking-widest uppercase select-none">
-                <span className="text-indigo-400 font-bold">{project.id}</span>
-                <span className="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded-full text-indigo-300 font-medium">
+              <div className="flex items-center w-fit font-mono text-[10px] md:text-xs tracking-widest uppercase select-none">
+                <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-zinc-400 font-medium">
                   {project.type}
                 </span>
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-indigo-400 transition-colors">
+              <h3 className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-[#E8A33D] transition-colors">
                 {project.title}
               </h3>
 
-              {/* Enhanced Typography for Project Description */}
-              <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased transition-colors duration-300 group-hover:text-zinc-100 selection:bg-indigo-500/30">
+              <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased transition-colors duration-300 group-hover:text-zinc-100">
                 {project.description}
               </p>
 
@@ -97,21 +108,20 @@ const Projects = () => {
                 {project.tech.map((item, i) => (
                   <span 
                     key={i} 
-                    className="px-3 py-1 text-[10px] md:text-xs font-bold bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-indigo-300"
+                    className="px-3 py-1 text-[10px] md:text-xs font-bold bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-[#E8A33D]/90"
                   >
                     {item}
                   </span>
                 ))}
               </div>
 
-              {/* Responsive Capsule Action Buttons with proper gaps */}
               <div className="flex items-center gap-3 sm:gap-4 pt-4 mt-auto relative z-20 w-full">
                 {project.github && (
                   <a 
                     href={project.github} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-indigo-500/10 border border-white/10 hover:border-indigo-500/30 rounded-full transition-all duration-300 whitespace-nowrap ${!project.live ? "w-full flex-none" : ""}`}
+                    className={`flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-[#E8A33D]/10 border border-white/10 hover:border-[#E8A33D]/30 rounded-full transition-all duration-300 whitespace-nowrap ${!project.live ? "w-full flex-none" : ""}`}
                   >
                     <SiGithub size={14} className="flex-shrink-0" />
                     <span>GitHub</span>
@@ -122,7 +132,7 @@ const Projects = () => {
                     href={project.live} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-zinc-300 bg-white/5 hover:bg-purple-500/10 border border-white/10 hover:border-purple-500/30 rounded-full transition-all duration-300 whitespace-nowrap"
+                    className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 md:px-5 py-2.5 md:py-3 text-[10px] md:text-xs font-bold uppercase tracking-[0.12em] md:tracking-[0.15em] text-[#0a0a0a] bg-[#E8A33D] hover:bg-amber-400 border border-[#E8A33D] rounded-full transition-all duration-300 whitespace-nowrap"
                   >
                     <ExternalLink size={14} className="flex-shrink-0" />
                     <span>Live Demo</span>
@@ -134,7 +144,6 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* More Projects Button */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -146,7 +155,7 @@ const Projects = () => {
           href="https://github.com/shahbazal0m?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-3 glass rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/5 transition-all duration-300 group text-sm font-medium"
+          className="inline-flex items-center gap-3 px-8 py-3 glass rounded-full border border-white/10 text-zinc-400 hover:text-white hover:border-[#E8A33D]/40 hover:bg-[#E8A33D]/5 transition-all duration-300 group text-sm font-medium"
         >
           See All Projects
           <svg
@@ -159,7 +168,7 @@ const Projects = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="group-hover:translate-x-1 transition-transform duration-300 text-indigo-400"
+            className="group-hover:translate-x-1 transition-transform duration-300 text-[#E8A33D]"
           >
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>

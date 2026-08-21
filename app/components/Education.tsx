@@ -47,13 +47,15 @@ const Education = () => {
         className="w-full"
       >
         <div className="flex flex-col items-center justify-center text-center mb-10">
+          <p className="text-[#E8A33D] text-xs font-mono font-bold uppercase tracking-[0.3em] mb-2">
+            // Academic background
+          </p>
           <h2 className="text-3xl md:text-4xl font-semibold uppercase tracking-widest text-white/85">
             Education
           </h2>
-          <div className="h-1 w-30 md:w-40 bg-indigo-500 mt-2 rounded-full mx-auto" /> 
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {education.map((edu, index) => (
             <motion.div
               key={index}
@@ -61,16 +63,17 @@ const Education = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass p-6 md:p-8 rounded-[1rem] border border-white/5 hover:border-indigo-500/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
+              className="glass p-6 md:p-8 rounded-[1rem] border border-white/5 hover:border-[#E8A33D]/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
             >
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">
                   <div className="space-y-2">
-                    <h4 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white via-zinc-200 to-zinc-500 bg-clip-text text-transparent group-hover:from-indigo-400 group-hover:to-purple-400 transition-all duration-300 leading-tight text-left">
+                    <span className="font-mono text-[10px] text-[#E8A33D]/70">0{index + 1}</span>
+                    <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#E8A33D] transition-all duration-300 leading-tight text-left">
                       {edu.title}
                     </h4>
                     <div className="space-y-1 text-left">
-                      <p className="text-indigo-400/90 font-medium tracking-wide text-sm uppercase">
+                      <p className="text-[#E8A33D]/90 font-medium tracking-wide text-sm uppercase">
                         {edu.institution}
                       </p>
                       <p className="text-zinc-500 text-[10px] md:text-xs font-medium italic">
@@ -78,15 +81,14 @@ const Education = () => {
                       </p>
                     </div>
                   </div>
-                  <span className="w-fit shrink-0 text-[10px] md:text-xs font-mono font-bold tracking-tighter text-indigo-300 bg-indigo-500/10 px-4 py-1.5 rounded-xl border border-indigo-500/20 backdrop-blur-md">
+                  <span className="w-fit shrink-0 text-[10px] md:text-xs font-mono font-bold tracking-tighter text-[#E8A33D] bg-[#E8A33D]/10 px-4 py-1.5 rounded-lg border border-[#E8A33D]/20 backdrop-blur-md">
                     {edu.duration}
                   </span>
                 </div>
 
                 <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-5" />
 
-                {/* Exact Description Match with Project Component Styling */}
-                <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased text-left mb-6 flex-grow transition-colors duration-300 group-hover:text-zinc-100 selection:bg-indigo-500/30">
+                <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased text-left mb-6 flex-grow transition-colors duration-300 group-hover:text-zinc-100">
                   {edu.details}
                 </p>
 
@@ -96,16 +98,16 @@ const Education = () => {
                       href={edu.certificateLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-wider text-indigo-400 hover:text-indigo-300 transition-colors group/btn"
+                      className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-wider text-[#E8A33D] hover:text-amber-300 transition-colors group/btn"
                     >
                       View Certificate 
-                      <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-indigo-400" />
+                      <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </a>
                   </div>
                 )}
               </div>
 
-              <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-indigo-500/5 blur-[80px] group-hover:bg-indigo-500/10 transition-all duration-700 pointer-events-none" />
+              <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-[#E8A33D]/5 blur-[80px] group-hover:bg-[#E8A33D]/10 transition-all duration-700 pointer-events-none" />
             </motion.div>
           ))}
         </div>

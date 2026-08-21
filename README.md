@@ -1,4 +1,4 @@
-# 🚀 Shahbaz Alam — Portfolio Website
+# Shahbaz Alam — Portfolio Website
 
 A modern, animated personal portfolio built to showcase my skills, projects, and journey as a Full Stack Developer.
 

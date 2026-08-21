@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-30 md:pt-40 pb-12 ">
+    <section id="hero" className="relative z-10 w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center px-6 md:px-24 pt-24 md:pt-28 pb-6 ">
       
       {/* LEFT SIDE: Content */}
       <motion.div
@@ -17,17 +17,17 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <p className="text-indigo-400/80 text-xs md:text-sm font-semibold tracking-[0.3em]">
+        <p className="text-[#E8A33D]/90 text-xs md:text-sm font-mono font-semibold tracking-[0.3em]">
           Hi, I&apos;m
         </p>
 
         <h1 className="text-3xl sm:text-5xl md:text-[52px] lg:text-[62px] xl:text-[72px] font-extrabold tracking-tight leading-[1.2] md:leading-[1.15]">
-          <span className="text-white/85">Shahbaz</span>{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-500">
+          <span className="text-white/90">Shahbaz</span>{" "}
+          <span className="text-[#E8A33D]">
             Alam
           </span>
           <br />
-          <span className="text-white/85 block min-h-[32px] md:min-h-[50px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[50px]">
+          <span className="text-white/85 block min-h-[32px] md:min-h-[50px] overflow-hidden text-2xl sm:text-4xl md:text-[36px] lg:text-[44px] xl:text-[50px] font-mono">
             <Typewriter
               options={{
                 strings: [
@@ -45,7 +45,6 @@ const Hero = () => {
           </span>
         </h1>
 
-        {/* Upgraded Premium Paragraph Font Styling */}
         <p className="text-sm md:text-[17px] text-zinc-400/85 font-sans font-normal tracking-wide leading-relaxed max-w-xl px-2 md:px-0 mt-2 md:mt-3 antialiased">
           Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and building scalable web applications.
         </p>
@@ -54,7 +53,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto px-4 md:px-0">
           <a
             href="#projects"
-            className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group text-center"
+            className="w-full sm:w-auto px-8 py-3 rounded-full font-medium hover:bg-[#E8A33D] hover:text-[#0a0a0a] transition-all text-base border border-[#E8A33D]/40 bg-[#E8A33D]/10 text-[#E8A33D] backdrop-blur-md flex items-center justify-center gap-2 group text-center"
           >
             View My Work
             <ArrowUpRight size={18} className="opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
@@ -92,7 +91,7 @@ const Hero = () => {
               href="https://x.com/shahbaz_al0m"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#1DA1F2] hover:bg-[#1DA1F2]/10 hover:border-[#1DA1F2]/30 transition-all duration-300"
+              className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
             >
               <FaXTwitter size={17} />
             </a>
@@ -107,15 +106,30 @@ const Hero = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="relative w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] overflow-hidden shadow-2xl shadow-indigo-500/10 rounded-[1rem] border-2 border-white/20">
-          <Image
-            src="/profile-image/my-profile-image.jpeg"
-            alt="Shahbaz Alam"
-            fill
-            className="object-cover object-top hover:scale-105 transition-transform duration-500"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+        <div className="relative w-[240px] sm:w-[280px] md:w-[300px] lg:w-[360px] overflow-hidden shadow-2xl shadow-[#E8A33D]/10 rounded-[1rem] border border-white/20 bg-[#0a0a0a]">
+          
+          <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/[0.03]">
+            <div className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+              <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
+            </div>
+            <span className="text-[10px] font-mono text-zinc-500 tracking-wide">
+              shahbaz-alam.jpeg
+            </span>
+            <div className="w-10" />
+          </div>
+
+          <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[300px] md:h-[300px] lg:w-[360px] lg:h-[360px]">
+            <Image
+              src="/profile-image/my-profile-image.jpeg"
+              alt="Shahbaz Alam"
+              fill
+              className="object-cover object-top"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+          </div>
         </div>
       </motion.div>
     </section>

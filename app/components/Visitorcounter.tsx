@@ -40,18 +40,18 @@ const VisitorCounter = () => {
         transition={{ duration: 0.6 }}
         className="w-full"
       >
-        <div className="bg-[#0d0d0d] p-5 md:p-6 rounded-[1rem] border border-white/10 hover:border-indigo-500/20 transition-all duration-500 relative overflow-hidden">
+        <div className="bg-[#0d0d0d] p-5 md:p-6 rounded-[1rem] border border-white/10 hover:border-[#E8A33D]/20 transition-all duration-500 relative overflow-hidden">
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
-                <Eye size={16} className="text-indigo-400" />
+              <div className="w-9 h-9 rounded-xl bg-[#E8A33D]/10 border border-[#E8A33D]/20 flex items-center justify-center shrink-0">
+                <Eye size={16} className="text-[#E8A33D]" />
               </div>
               <div>
                 <p className="text-zinc-500 text-[10px] uppercase tracking-widest font-bold mb-0.5">Analytics</p>
                 <h3 className="text-sm sm:text-base font-semibold text-white/85">Visitor Counter</h3>
               </div>
             </div>
-            <span className="text-[10px] uppercase font-mono tracking-wider text-indigo-300 bg-indigo-500/10 px-2 py-1 rounded-md border border-indigo-500/20 shrink-0">
+            <span className="text-[10px] uppercase font-mono tracking-wider text-[#E8A33D] bg-[#E8A33D]/10 px-2 py-1 rounded-md border border-[#E8A33D]/20 shrink-0">
               <TrendingUp size={12} className="inline mr-1 -mt-0.5" />
               Live
             </span>

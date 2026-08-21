@@ -27,24 +27,9 @@ export default function Navbar() {
   ];
 
   const socialLinks = [
-    {
-      name: "GitHub",
-      href: "https://github.com/shahbazal0m",
-      icon: <SiGithub size={16} />,
-      hoverClass: "hover:text-white",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/iamshahbaz-alam/",
-      icon: <FaLinkedinIn size={16} />,
-      hoverClass: "hover:text-[#0077B5]",
-    },
-    {
-      name: "Twitter",
-      href: "https://x.com/shahbaz_al0m",
-      icon: <FaXTwitter size={16} />,
-      hoverClass: "hover:text-white",
-    },
+    { name: "GitHub", href: "https://github.com/shahbazal0m", icon: <SiGithub size={16} />, hoverClass: "hover:text-white" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/iamshahbaz-alam/", icon: <FaLinkedinIn size={16} />, hoverClass: "hover:text-[#0077B5]" },
+    { name: "Twitter", href: "https://x.com/shahbaz_al0m", icon: <FaXTwitter size={16} />, hoverClass: "hover:text-white" },
   ];
 
   return (
@@ -65,8 +50,8 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 cursor-pointer">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shrink-0">
-              <span className="text-white text-xs font-bold tracking-tight">SA</span>
+            <div className="w-8 h-8 rounded-lg bg-[#E8A33D] flex items-center justify-center shrink-0">
+              <span className="text-[#0a0a0a] text-xs font-black tracking-tight">SA</span>
             </div>
             <span className="text-sm md:text-base font-semibold text-white tracking-tight whitespace-nowrap">
               Shahbaz Alam
@@ -79,7 +64,7 @@ export default function Navbar() {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="hover:text-white transition-all cursor-pointer"
+                className="hover:text-[#E8A33D] transition-all cursor-pointer"
               >
                 {link.name}
               </a>
@@ -93,7 +78,7 @@ export default function Navbar() {
               className="text-white focus:outline-none p-1 flex items-center justify-center"
             >
               {isOpen ? (
-                <HiX className="text-2xl text-indigo-400" />
+                <HiX className="text-2xl text-[#E8A33D]" />
               ) : (
                 <div className="flex flex-col gap-[5px] items-end">
                   <span className="block w-5 h-[2px] bg-white rounded-full"></span>
@@ -134,13 +119,12 @@ export default function Navbar() {
                       closed: { opacity: 0, y: 10, scale: 0.95 }
                     }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full max-w-[200px] py-3 glass border border-white/10 rounded-full text-[11px] font-bold text-zinc-400 text-center uppercase tracking-[0.2em] hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-white transition-all duration-300"
+                    className="w-full max-w-[200px] py-3 glass border border-white/10 rounded-full text-[11px] font-bold text-zinc-400 text-center uppercase tracking-[0.2em] hover:border-[#E8A33D]/50 hover:bg-[#E8A33D]/10 hover:text-white transition-all duration-300"
                   >
                     {link.name}
                   </motion.a>
                 ))}
 
-                {/* Mobile Social Icons */}
                 <div className="flex items-center gap-4 mt-2 pt-4 border-t border-white/10 w-full justify-center">
                   {socialLinks.map((social) => (
                     <a
