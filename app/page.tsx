@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 import Divider from "./components/Divider";
 import ScrollToTop from "./components/Scrolltotop";
 import VisitorCounter from "./components/Visitorcounter";
+import QuoteOfTheDay from "./components/QuoteOfTheDay";
 
 export default function Home() {
   return (
@@ -39,6 +40,9 @@ export default function Home() {
 
       <Divider />
       <Contact />
+
+      <Divider />
+      <QuoteOfTheDay />
 
       <Divider />
       <VisitorCounter />

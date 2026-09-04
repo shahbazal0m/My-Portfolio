@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { SiGithub } from "react-icons/si";
 import { ExternalLink, Star, GitFork } from "lucide-react";
+import { GitHubCalendar } from "react-github-calendar";
 
 type RepoStats = {
   stars: number;
@@ -24,6 +25,17 @@ const GitHubActivity = () => {
       })
       .catch(() => {});
   }, []);
+
+  // High-contrast vibrant shades for commits
+  const customTheme = {
+    dark: [
+      "#161618", // Level 0: Dark square
+      "#784A0E", // Level 1: Deep Amber
+      "#B46E14", // Level 2: Bright Amber
+      "#E8A33D", // Level 3: Portfolio Yellow-Orange
+      "#FFC86B", // Level 4: Glowing Bright Gold
+    ],
+  };
 
   return (
     <section id="github-activity" className="py-5 px-6 md:px-24 max-w-[1400px] mx-auto relative z-10 scroll-mt-20">
@@ -63,20 +75,29 @@ const GitHubActivity = () => {
               <p className="text-sm font-medium tracking-wide text-zinc-200">Contribution Analytics</p>
             </div>
             <span className="text-[10px] uppercase font-mono tracking-wider text-[#E8A33D] bg-[#E8A33D]/10 px-1.5 py-1 rounded-md border border-[#E8A33D]/20">
-              Last 30 Days
+              Last 12 Months
             </span>
           </div>
 
           <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-6" />
 
-          <div className="w-full overflow-hidden rounded-xl bg-[#09090b]/40 border border-white/5 p-1 sm:p-2">
-            <a href="https://github.com/ashutosh00710/github-readme-activity-graph" target="_blank" rel="noopener noreferrer">
-              <img 
-                src="https://github-readme-activity-graph.vercel.app/graph?username=shahbazal0m&theme=react-dark&hide_border=true&area=true&color=e8a33d&line=e8a33d&point=ffffff&custom_title=Shahbaz%20Alam's%20Contribution%20Graph&title_font_size=10" 
-                alt="Shahbaz Alam's GitHub Activity Graph" 
-                className="w-full h-auto object-cover select-none"
-              />
-            </a>
+          {/* Clean Vector Contribution Heatmap */}
+          <div className="w-full overflow-x-auto rounded-xl bg-[#09090b]/80 border border-white/5 p-4 sm:p-6 flex flex-col items-center justify-center">
+            <GitHubCalendar
+              username="shahbazal0m"
+              theme={customTheme}
+              colorScheme="dark"
+              blockSize={13}
+              blockMargin={4}
+              fontSize={12}
+              labels={{
+                legend: {
+                  less: "Less",
+                  more: "More",
+                },
+                totalCount: "{{count}} contributions in the last year",
+              }}
+            />
           </div>
         </div>
 
@@ -101,7 +122,7 @@ const GitHubActivity = () => {
                 </p>
               </div>
             </div>
-            
+
             <div className="flex items-center justify-between md:justify-end gap-3 border-t border-white/5 pt-3 md:border-0 md:pt-0 w-full md:w-auto">
               <div className="flex items-center gap-3 w-full md:w-auto">
                 <span className="text-[10px] uppercase font-mono tracking-wider text-[#E8A33D] bg-[#E8A33D]/10 px-1.5 py-1 rounded-md border border-[#E8A33D]/20 flex items-center gap-1.5">
@@ -113,7 +134,7 @@ const GitHubActivity = () => {
                   <span>{repoStats.forks} Forks</span>
                 </span>
               </div>
-              
+
               <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/5 group-hover:border-[#E8A33D]/30 group-hover:bg-[#E8A33D]/10 transition-all duration-500 shrink-0">
                 <ExternalLink size={14} className="text-zinc-500 group-hover:text-[#E8A33D] transition-colors" />
               </div>

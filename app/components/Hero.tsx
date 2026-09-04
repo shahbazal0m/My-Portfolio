@@ -108,16 +108,18 @@ const Hero = () => {
       >
         <div className="relative w-[240px] sm:w-[280px] md:w-[300px] lg:w-[360px] overflow-hidden shadow-2xl shadow-[#E8A33D]/10 rounded-[1rem] border border-white/20 bg-[#0a0a0a]">
           
-          <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/[0.03]">
-            <div className="flex items-center gap-1.5">
+          {/* Window Header Bar with Absolute Centering */}
+          <div className="relative flex items-center justify-between px-4 py-2 border-b border-white/10 bg-white/[0.03]">
+            <div className="flex items-center gap-1.5 z-10">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
               <span className="w-2.5 h-2.5 rounded-full bg-green-500/80" />
             </div>
-            <span className="text-[10px] font-mono text-zinc-500 tracking-wide">
+            
+            {/* Absolute center alignment for text */}
+            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-mono text-zinc-500 tracking-wide pointer-events-none">
               shahbaz-alam.jpeg
             </span>
-            <div className="w-10" />
           </div>
 
           <div className="relative w-[240px] h-[240px] sm:w-[280px] sm:h-[280px] md:w-[300px] md:h-[300px] lg:w-[360px] lg:h-[360px]">
