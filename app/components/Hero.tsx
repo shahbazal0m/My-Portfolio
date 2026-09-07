@@ -60,7 +60,7 @@ const Hero = () => {
           </a>
           
           <a
-            href="https://drive.google.com/file/d/1aTGWlFF5-BQF5DDtj4cenCgVVb3j4beX/view?usp=sharing"
+            href="https://drive.google.com/file/d/1NgcT5VRgWANzAr0ypyu79BIs5gl3s2NI/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3 glass rounded-full font-medium hover:bg-white/10 transition-all text-base border border-white/10 bg-[#030303] backdrop-blur-md flex items-center justify-center gap-2 group"
@@ -117,8 +117,8 @@ const Hero = () => {
             </div>
             
             {/* Absolute center alignment for text */}
-            <span className="absolute inset-0 flex items-center justify-center text-[10px] font-mono text-zinc-500 tracking-wide pointer-events-none">
-              shahbaz-alam.jpeg
+            <span className="items-center justify-center text-[10px] font-mono text-zinc-500 tracking-wide pointer-events-none">
+              profile.jpeg
             </span>
           </div>
 
