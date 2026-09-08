@@ -14,6 +14,7 @@ import Divider from "./components/Divider";
 import ScrollToTop from "./components/Scrolltotop";
 import VisitorCounter from "./components/Visitorcounter";
 import QuoteOfTheDay from "./components/QuoteOfTheDay";
+import Experience from "./components/Experience";
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
 
       <Divider />
       <About />
+
+      <Divider />
+      <Experience />
 
       <Divider />
       <Education />
