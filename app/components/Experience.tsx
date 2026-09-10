@@ -1,23 +1,51 @@
 "use client";
 import { motion } from "framer-motion";
-import { ExternalLink, Briefcase } from "lucide-react";
+import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiJavascript, SiHtml5, SiCss, SiSass} from "react-icons/si";
+import { MdDevices } from "react-icons/md";
 
 const experience = [
   {
-    role: "Frontend Developer Intern",
     company: "Xubru Technologies Pvt Ltd",
-    location: "Gurugram, Haryana",
+    status: "Completed",
+    role: "Frontend Developer",
+    type: "Internship",
+    mode: "Remote",
     duration: "Apr 2026 — Jul 2026",
-    details: "Worked as a Frontend Developer, demonstrating strong technical skills, commitment to learning, and a proactive approach to tasks and challenges.",
-    certificateLink: "/experience-images/xubru-certificate.jpeg",
+    location: "Gurugram, India (Remote)",
+    stack: [
+      { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+      { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+      { name: "Responsive Design", icon: <MdDevices className="text-[#00BCD4]" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+    ],
+    points: [
+      "Worked as a Frontend Developer, building and shipping UI components with a focus on clean, responsive design.",
+      "Demonstrated strong technical skills and a proactive approach to tasks and challenges during the internship period.",
+      "Collaborated with the team, showing commitment to learning and consistently improving code quality.",
+    ],
   },
   {
-    role: "Front-End Development Intern",
-    company: "Cognifyz Technologies",
-    location: "Nagpur, India",
+    company: "Cognifyz Technologies Pvt Ltd",
+    status: "Completed",
+    role: "Frontend Developer",
+    type: "Internship",
+    mode: "Remote",
     duration: "Nov 2024 — Jan 2025",
-    details: "Displayed remarkable dedication, exceptional coordination skills, and effective communication abilities while consistently approaching new assignments with enthusiasm.",
-    certificateLink: "/experience-images/cognifyz-certificate.png",
+    location: "Nagpur, India (Remote)",
+    stack: [
+      { name: "HTML", icon: <SiHtml5 className="text-[#E34F26]" /> },
+      { name: "CSS", icon: <SiCss className="text-[#1572B6]" /> },
+      { name: "SCSS", icon: <SiSass className="text-[#CC6699]" /> },
+      { name: "Responsive Design", icon: <MdDevices className="text-[#00BCD4]" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+    ],
+    points: [
+      "Served as a Frontend Development Intern, showing dedication, sincerity, and a strong desire to learn.",
+      "Displayed exceptional coordination skills and effective communication while handling assigned tasks.",
+      "Consistently approached new assignments and challenges with enthusiasm and attention to detail.",
+    ],
   },
 ];
 
@@ -40,7 +68,7 @@ const Experience = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {experience.map((exp, index) => (
             <motion.div
               key={index}
@@ -48,51 +76,65 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass p-6 md:p-8 rounded-[1rem] border border-white/5 hover:border-[#E8A33D]/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
+              className="glass rounded-[1rem] border border-white/10 hover:border-[#E8A33D]/30 transition-all duration-500 relative overflow-hidden p-6 md:p-8"
             >
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div className="space-y-2">
-                    <div className="w-10 h-10 rounded-lg bg-[#E8A33D]/10 border border-[#E8A33D]/20 flex items-center justify-center mb-2">
-                      <Briefcase size={18} className="text-[#E8A33D]" />
-                    </div>
-                    <h4 className="text-xl md:text-2xl font-bold text-white group-hover:text-[#E8A33D] transition-all duration-300 leading-tight text-left">
-                      {exp.role}
-                    </h4>
-                    <div className="space-y-1 text-left">
-                      <p className="text-[#E8A33D]/90 font-medium tracking-wide text-sm uppercase">
-                        {exp.company}
-                      </p>
-                      <p className="text-zinc-500 text-[10px] md:text-xs font-medium italic">
-                        {exp.location}
-                      </p>
-                    </div>
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
+
+              {/* Header row */}
+              <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-5">
+                <div>
+                  <div className="flex items-center gap-3 flex-wrap mb-1">
+                    <h3 className="text-xl md:text-2xl font-bold text-white">{exp.company}</h3>
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#E8A33D] bg-[#E8A33D]/10 border border-[#E8A33D]/20 rounded-full px-2.5 py-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#E8A33D]" />
+                      {exp.status}
+                    </span>
                   </div>
-                  <span className="w-fit shrink-0 text-[10px] md:text-xs font-mono font-bold tracking-tighter text-[#E8A33D] bg-[#E8A33D]/10 px-4 py-1.5 rounded-lg border border-[#E8A33D]/20 backdrop-blur-md">
-                    {exp.duration}
-                  </span>
+                  <p className="text-zinc-400 text-sm">
+                    {exp.role} <span className="text-zinc-600">·</span>{" "}
+                    <span className="italic">{exp.type}</span> <span className="text-zinc-600">·</span>{" "}
+                    <span className="italic">{exp.mode}</span>
+                  </p>
                 </div>
 
-                <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-5" />
-
-                <p className="text-slate-300 font-medium text-xs md:text-sm leading-relaxed tracking-wide antialiased text-left mb-6 flex-grow transition-colors duration-300 group-hover:text-zinc-100">
-                  {exp.details}
-                </p>
-
-                <div className="pt-2 mt-auto text-left">
-                  <a
-                    href={exp.certificateLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-wider text-[#E8A33D] hover:text-amber-300 transition-colors group/btn"
-                  >
-                    View Certificate
-                    <ExternalLink size={14} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                  </a>
+                <div className="text-left md:text-right shrink-0">
+                  <p className="flex items-center md:justify-end gap-2 text-sm text-zinc-300 font-mono">
+                    <Calendar size={14} className="text-[#E8A33D]" />
+                    {exp.duration}
+                  </p>
+                  <p className="flex items-center md:justify-end gap-2 text-xs text-zinc-500 mt-1">
+                    <MapPin size={12} />
+                    {exp.location}
+                  </p>
                 </div>
               </div>
 
-              <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-[#E8A33D]/5 blur-[80px] group-hover:bg-[#E8A33D]/10 transition-all duration-700 pointer-events-none" />
+              {/* Stack */}
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 mb-2">
+                Stack
+              </p>
+              <div className="flex flex-wrap gap-2 mb-6">
+                {exp.stack.map((tech) => (
+                  <span
+                    key={tech.name}
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold bg-white/5 border border-white/10 rounded-full text-zinc-200"
+                  >
+                    {tech.icon}
+                    {tech.name}
+                  </span>
+                ))}
+              </div>
+
+              {/* Bullet points */}
+              <ul className="space-y-2.5 mb-6">
+                {exp.points.map((point, i) => (
+                  <li key={i} className="flex gap-3 text-sm text-zinc-300 leading-relaxed">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8A33D] mt-2 shrink-0" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
