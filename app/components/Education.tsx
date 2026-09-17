@@ -55,6 +55,7 @@ const Education = () => {
           </h2>
         </div>
 
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {education.map((edu, index) => (
             <motion.div
@@ -65,6 +66,7 @@ const Education = () => {
               viewport={{ once: true }}
               className="glass p-6 md:p-8 rounded-[1rem] border border-white/5 hover:border-[#E8A33D]/30 transition-all duration-500 group relative overflow-hidden h-full flex flex-col"
             >
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 mb-4">
                   <div className="space-y-2">

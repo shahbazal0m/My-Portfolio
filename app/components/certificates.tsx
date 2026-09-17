@@ -74,7 +74,7 @@ const Certifications = () => {
               className="group relative bg-zinc-900/40 border border-white/10 rounded-[1rem] overflow-hidden backdrop-blur-xl hover:border-[#E8A33D]/30 transition-all duration-500"
             >
               <div className="flex flex-col lg:flex-row items-stretch">
-
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
                 <div className="lg:w-72">
                   <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
                     <Image

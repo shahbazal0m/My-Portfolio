@@ -83,6 +83,7 @@ const Contact = () => {
           <div className="glass p-6 md:p-10 rounded-[1rem] border border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative overflow-hidden group order-1 lg:order-2">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#E8A33D]/10 blur-[80px] group-hover:bg-[#E8A33D]/20 transition-all duration-700" />
             
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
               
               <div className="space-y-2">

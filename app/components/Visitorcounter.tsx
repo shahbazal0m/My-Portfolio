@@ -41,6 +41,8 @@ const VisitorCounter = () => {
         className="w-full"
       >
         <div className="bg-[#0d0d0d] p-5 md:p-6 rounded-[1rem] border border-white/10 hover:border-[#E8A33D]/20 transition-all duration-500 relative overflow-hidden">
+
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
           <div className="flex items-center justify-between gap-4 mb-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-[#E8A33D]/10 border border-[#E8A33D]/20 flex items-center justify-center shrink-0">

@@ -50,6 +50,7 @@ const QuoteOfTheDay = () => {
         <div className="bg-[#0d0d0d] rounded-[1rem] border border-white/10 p-6 sm:p-8 md:p-10 relative overflow-hidden group hover:border-[#E8A33D]/30 transition-all duration-500">
           <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#E8A33D]/[0.08] blur-[100px] pointer-events-none" />
 
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
           <Quote className="text-[#E8A33D]/30 mb-4 transition-transform duration-300 group-hover:scale-110" size={40} />
 
           <p className="relative z-10 text-lg sm:text-xl md:text-2xl font-medium italic text-zinc-200 leading-relaxed max-w-4xl">

@@ -20,9 +20,12 @@ const AboutMe = () => {
           </h2>
         </div>
 
+      
         {/* Container */}
         <div className="glass p-6 sm:p-8 md:p-16 rounded-[1rem] md:rounded-[1.5rem] border border-white/10 relative overflow-hidden group">
-          
+
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
+
           <div className="absolute top-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-[#E8A33D]/[0.06] blur-[100px] md:blur-[140px] rounded-full -mr-20 -mt-20 pointer-events-none group-hover:bg-[#E8A33D]/[0.1] transition-colors duration-700" />
           
           <div className="relative z-10 space-y-5 md:space-y-6 text-zinc-300 leading-relaxed text-base md:text-xl max-w-5xl mx-auto text-center md:text-left">
@@ -46,6 +49,15 @@ const AboutMe = () => {
             </p>
 
             <p>
+              I&apos;ve also worked as a{" "}
+              <span className="text-[#E8A33D] font-medium">Frontend Developer Intern</span> at{" "}
+              <span className="text-white/90">Xubru Technologies Pvt Ltd</span> and as a{" "}
+              <span className="text-[#E8A33D] font-medium">Front-End Development Intern</span> at{" "}
+              <span className="text-white/90">Cognifyz Technologies</span>, where I gained hands-on
+              experience building real-world UI components and working in a team environment.
+            </p>
+
+            <p>
               Beyond development, I work with{" "}
               <span className="text-zinc-200 font-medium">Cloud Infrastructure</span> — holding an{" "}
               <span className="text-white/80">AWS Academy Graduate</span> certification and an{" "}
@@ -59,6 +71,7 @@ const AboutMe = () => {
             <span><span className="text-[#E8A33D]">01</span> B.Tech CSE — 2026</span>
             <span><span className="text-[#E8A33D]">02</span> MERN Stack Trained</span>
             <span><span className="text-[#E8A33D]">03</span> AWS Certified</span>
+            <span><span className="text-[#E8A33D]">04</span> 2x Frontend Intern</span>
           </div>
         </div>
       </motion.div>
