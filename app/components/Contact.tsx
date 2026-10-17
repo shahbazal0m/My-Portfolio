@@ -1,8 +1,16 @@
 "use client";
 import { toast } from 'react-hot-toast';
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, FileText, Clock } from "lucide-react";
+import { SiGithub } from "react-icons/si";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { useRef, useState } from "react";
+
+const socials = [
+  { name: "GitHub", href: "https://github.com/shahbazal0m", icon: <SiGithub size={18} /> },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/iamshahbaz-alam/", icon: <FaLinkedinIn size={18} /> },
+  { name: "Twitter", href: "https://x.com/shahbaz_al0m", icon: <FaXTwitter size={17} /> },
+];
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -82,8 +90,8 @@ const Contact = () => {
           {/* RIGHT SIDE (Form) */}
           <div className="glass p-6 md:p-10 rounded-[1rem] border border-white/5 bg-[#0a0a0a]/40 backdrop-blur-xl relative overflow-hidden group order-1 lg:order-2">
             <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#E8A33D]/10 blur-[80px] group-hover:bg-[#E8A33D]/20 transition-all duration-700" />
-            
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
+
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6 relative z-10">
               
               <div className="space-y-2">
@@ -194,16 +202,52 @@ const Contact = () => {
                   <p className="text-zinc-300 font-small text-sm md:text-lg">New Delhi, India</p>
                 </div>
               </div>
+            </div>
 
-              <div className="p-5 rounded-[1rem] bg-[#E8A33D]/5 border border-[#E8A33D]/10 relative overflow-hidden group/status">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse "/>
-                  <p className="text-[10px] font-bold text-[#E8A33D] uppercase tracking-wider">Current Status</p>
-                </div>
-                <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
-                  Available for <span className="text-zinc-200">Full Stack Developer</span> roles and internships.
-                </p>
+            {/* Socials + Resume */}
+            <div>
+              <p className="text-zinc-500 text-[10px] font-semibold uppercase tracking-widest mb-3">
+                Find me online
+              </p>
+              <div className="flex flex-wrap items-center gap-3">
+                {socials.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-400 hover:text-[#0a0a0a] hover:bg-[#E8A33D] hover:border-[#E8A33D] transition-all duration-300"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+
+                <a
+                  href="https://drive.google.com/file/d/1NgcT5VRgWANzAr0ypyu79BIs5gl3s2NI/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 h-11 px-5 rounded-xl bg-[#E8A33D]/10 border border-[#E8A33D]/30 text-[#E8A33D] text-xs font-bold uppercase tracking-wider hover:bg-[#E8A33D] hover:text-[#0a0a0a] transition-all duration-300"
+                >
+                  <FileText size={16} />
+                  Resume
+                </a>
               </div>
+            </div>
+
+            {/* Current status */}
+            <div className="p-5 rounded-[1rem] bg-[#E8A33D]/5 border border-[#E8A33D]/10 relative overflow-hidden">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                <p className="text-[10px] font-bold text-[#E8A33D] uppercase tracking-wider">Current Status</p>
+              </div>
+              <p className="text-zinc-400 text-xs md:text-sm leading-relaxed">
+                Available for <span className="text-zinc-200">Frontend Developer</span> roles and internships.
+              </p>
+              <p className="flex items-center gap-2 text-zinc-500 text-xs mt-3">
+                <Clock size={12} className="text-[#E8A33D]" />
+                Usually replies within 24 hours
+              </p>
             </div>
           </div>
         </div>

@@ -1,17 +1,59 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Award, ShieldCheck, Cloud } from "lucide-react";
+import {
+  ExternalLink,
+  Award,
+  ShieldCheck,
+  Cloud,
+  FileSpreadsheet,
+  Table,
+  BadgeCheck,
+  Network,
+  Server,
+  TrendingUp,
+  Layers,
+  Binary,
+} from "lucide-react";
+import { FaAws } from "react-icons/fa";
+import { SiHtml5, SiCss, SiJavascript, SiDocker } from "react-icons/si";
 import Image from "next/image";
 
+// Reusable tags with icons
+const T = {
+  excel: { name: "Microsoft Excel", icon: <FileSpreadsheet size={14} className="text-[#217346]" /> },
+  spreadsheets: { name: "Spreadsheets", icon: <Table size={14} className="text-[#E8A33D]" /> },
+  iso: { name: "ISO 9001:2015", icon: <BadgeCheck size={14} className="text-[#E8A33D]" /> },
+  cloud: { name: "Cloud Architecting", icon: <Cloud size={14} className="text-[#38BDF8]" /> },
+  aws: { name: "AWS Services", icon: <FaAws className="text-[#FF9900]" /> },
+  distributed: { name: "Distributed Systems", icon: <Network size={14} className="text-[#00BCD4]" /> },
+  virtualization: { name: "Virtualization", icon: <Server size={14} className="text-[#A78BFA]" /> },
+  scaling: { name: "Scaling", icon: <TrendingUp size={14} className="text-[#4ADE80]" /> },
+  html: { name: "HTML5", icon: <SiHtml5 className="text-[#E34F26]" /> },
+  css: { name: "CSS3", icon: <SiCss className="text-[#1572B6]" /> },
+  js: { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  mern: { name: "MERN Stack", icon: <Layers size={14} className="text-[#47A248]" /> },
+  devops: { name: "DevOps", icon: <SiDocker className="text-[#2496ED]" /> },
+  dsa: { name: "DSA", icon: <Binary size={14} className="text-[#E8A33D]" /> },
+};
+
 const certificates = [
+  {
+    title: "Microsoft Excel",
+    organization: "Skill Course (ISO 9001:2015)",
+    date: "08 - Oct - 2026",
+    icon: <FileSpreadsheet className="text-[#E8A33D]" />,
+    image: "/certificates-images/excel.png",
+    tags: [T.excel, T.spreadsheets, T.iso],
+    verifyLink: "https://edu.skillcourse.in/view-certificate/SC-1I4TWFRDF4",
+  },
   {
     title: "AWS Academy Graduate",
     organization: "AWS Academy",
     date: "09 - Nov - 2025",
     icon: <Cloud className="text-[#E8A33D]" />,
     image: "/certificates-images/aws.png",
-    tags: ["Cloud Architecting", "AWS Services"],
+    tags: [T.cloud, T.aws],
     verifyLink: "https://www.credly.com/badges/7b92f015-e6fd-4e7b-b2ed-6b4b85f9a17c/linked_in_profile",
   },
   {
@@ -20,17 +62,17 @@ const certificates = [
     date: "Jul - Oct 2025",
     icon: <ShieldCheck className="text-[#E8A33D]" />,
     image: "/certificates-images/nptel.png",
-    tags: ["Distributed Systems", "Virtualization", "Scaling"],
+    tags: [T.distributed, T.virtualization, T.scaling],
     verifyLink: "https://drive.google.com/file/d/10rA8xpujhkxIuzI0q4pavUi-xrW2ZHAH/view?usp=drivesdk",
   },
   {
     title: "Frontend Hackathon",
     organization: "Sheryians Coding School",
     date: "26 - July - 2025",
-    icon: <Award className="text-[#E8A33D]" />, 
-    image: "/certificates-images/sheryians-hackathon.png", 
-    tags: ["HTML5", "CSS3", "JavaScript (ES6+)"],
-    verifyLink: "https://drive.google.com/file/d/13Mx3er0g1mzQTu6tIgGcWFAGazs-YQ-g/view?usp=sharing", 
+    icon: <Award className="text-[#E8A33D]" />,
+    image: "/certificates-images/sheryians-hackathon.png",
+    tags: [T.html, T.css, T.js],
+    verifyLink: "https://drive.google.com/file/d/13Mx3er0g1mzQTu6tIgGcWFAGazs-YQ-g/view?usp=sharing",
   },
   {
     title: "Job Ready Cohort",
@@ -38,8 +80,8 @@ const certificates = [
     date: "Jan - Sep 2025",
     icon: <Award className="text-[#E8A33D]" />,
     image: "/certificates-images/sheryians.png",
-    tags: ["MERN Stack", "DevOps", "DSA"],
-    verifyLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing", 
+    tags: [T.mern, T.devops, T.dsa],
+    verifyLink: "https://drive.google.com/file/d/1m7dLbmEnVu_8KDc1nbMb65C3QAjnfwhy/view?usp=sharing",
   },
 ];
 
@@ -74,7 +116,7 @@ const Certifications = () => {
               className="group relative bg-zinc-900/40 border border-white/10 rounded-[1rem] overflow-hidden backdrop-blur-xl hover:border-[#E8A33D]/30 transition-all duration-500"
             >
               <div className="flex flex-col lg:flex-row items-stretch">
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
+
                 <div className="lg:w-72">
                   <div className="relative w-full" style={{ aspectRatio: "4/3" }}>
                     <Image
@@ -106,12 +148,13 @@ const Certifications = () => {
                     </p>
 
                     <div className="flex flex-wrap gap-2 mb-6">
-                      {cert.tags.map((tag, tIndex) => (
+                      {cert.tags.map((tag) => (
                         <span 
-                          key={tIndex}
-                          className="text-[10px] px-2 py-1 rounded-md bg-[#E8A33D]/10 border border-[#E8A33D]/20 text-[#E8A33D]"
+                          key={tag.name}
+                          className="inline-flex items-center gap-2 px-3 py-1.5 text-[11px] font-semibold bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-zinc-200 [&>svg]:text-sm"
                         >
-                          {tag}
+                          {tag.icon}
+                          {tag.name}
                         </span>
                       ))}
                     </div>

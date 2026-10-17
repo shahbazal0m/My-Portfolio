@@ -1,37 +1,71 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
-import { SiGithub } from "react-icons/si";
+import { ExternalLink, Globe, CloudSun, Layers, Bell } from "lucide-react";
+import {
+  SiGithub,
+  SiHtml5,
+  SiCss,
+  SiJavascript,
+  SiJson,
+  SiSwiper,
+  SiFontawesome,
+  SiGooglefonts,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiFramer,
+  SiMinutemailer,
+} from "react-icons/si";
+
+// Reusable tech tags with icons
+const T = {
+  html: { name: "HTML5", icon: <SiHtml5 className="text-[#E34F26]" /> },
+  css: { name: "CSS3", icon: <SiCss className="text-[#1572B6]" /> },
+  js: { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-[#F7DF1E]" /> },
+  json: { name: "JSON", icon: <SiJson className="text-zinc-300" /> },
+  swiper: { name: "Swiper.js", icon: <SiSwiper className="text-[#6332F6]" /> },
+  fontAwesome: { name: "Font Awesome", icon: <SiFontawesome className="text-[#528DD7]" /> },
+  googleFonts: { name: "Google Fonts", icon: <SiGooglefonts className="text-[#4285F4]" /> },
+  rest: { name: "REST APIs", icon: <Globe size={14} className="text-[#00BCD4]" /> },
+  remix: { name: "Remix Icons", icon: <Layers size={14} className="text-[#E8A33D]" /> },
+  weather: { name: "WeatherAPI", icon: <CloudSun size={14} className="text-[#38BDF8]" /> },
+  next: { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+  ts: { name: "TypeScript", icon: <SiTypescript className="text-[#3178C6]" /> },
+  tailwind: { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+  framer: { name: "Framer Motion", icon: <SiFramer className="text-white" /> },
+  emailjs: { name: "EmailJS", icon: <SiMinutemailer className="text-[#FFCA28]" /> },
+  toast: { name: "React Hot Toast", icon: <Bell size={14} className="text-[#E8A33D]" /> },
+};
 
 const projects = [
-    {
+  {
     id: "01",
     type: "Frontend / Web",
     title: "Food Ordering Web App",
     image: "/project-image/food-website.png",
     description: "A highly responsive food delivery store layout built with seamless category sorting filters, custom micro-interactions, and JSON-based menu integration.",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "JSON", "Swiper.js", "Font Awesome", "Google Fonts"],
+    tech: [T.html, T.css, T.js, T.json, T.swiper, T.fontAwesome, T.googleFonts],
     github: "https://github.com/shahbazal0m/foodie-website",
     live: "https://foodie-website-eta-one.vercel.app/",
   },
-    {
+  {
     id: "02",
     type: "Frontend / UI",
     title: "E-commerce Website",
     image: "/project-image/E-commerce.png",
     description: "A comprehensive digital catalog system simulating active state shopping flows, REST API responses, scalable utility classes, and optimized card checkouts.",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "REST APIs", "JSON", "Font Awesome"],
+    tech: [T.html, T.css, T.js, T.rest, T.json, T.fontAwesome],
     github: "https://github.com/shahbazal0m/frontend-ecommerce-website",
     live: "https://frontend-ecommerce-website-two.vercel.app/",
   },
-  { 
+  {
     id: "03",
     type: "Frontend / App",
     title: "Productivity Dashboard",
     image: "/project-image/Pro-dashboar.png",
     description: "An elegant workspace management hub offering real-time custom weather widgets, task queues, habit tracking, and sleek Swiper-powered micro-frontend blocks.",
-    tech: ["HTML5", "CSS3", "JavaScript (ES6+)", "Swiper.js", "Remix Icons", "WeatherAPI"],
+    tech: [T.html, T.css, T.js, T.swiper, T.remix, T.weather],
     github: "https://github.com/shahbazal0m/productivity-dashboard",
     live: "https://productivity-dashboard-kappa-ebon.vercel.app/",
   },
@@ -41,7 +75,7 @@ const projects = [
     title: "Personal Portfolio Website",
     image: "/project-image/portfolio.png",
     description: "A highly interactive, modern portfolio website showcasing dynamic client-side animations, smooth transitions, and seamless responsive design structures.",
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "EmailJS", "React Hot Toast"],
+    tech: [T.next, T.ts, T.tailwind, T.framer, T.emailjs, T.toast],
     github: "https://github.com/shahbazal0m",
     live: "",
   },
@@ -104,15 +138,22 @@ const Projects = () => {
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2 pt-1">
-                {project.tech.map((item, i) => (
-                  <span 
-                    key={i} 
-                    className="px-3 py-1 text-[10px] md:text-xs font-bold bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-[#E8A33D]/90"
-                  >
-                    {item}
-                  </span>
-                ))}
+              {/* Stack with icons */}
+              <div className="pt-1">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 mb-2.5">
+                  Stack
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span 
+                      key={item.name} 
+                      className="inline-flex items-center gap-2 px-3 py-1.5 text-[11px] md:text-xs font-semibold bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-zinc-200 [&>svg]:text-sm"
+                    >
+                      {item.icon}
+                      {item.name}
+                    </span>
+                  ))}
+                </div>
               </div>
 
               <div className="flex items-center gap-3 sm:gap-4 pt-4 mt-auto relative z-20 w-full">

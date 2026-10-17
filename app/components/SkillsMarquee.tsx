@@ -2,6 +2,12 @@
 import React from "react";
 import { MdDevices } from "react-icons/md";
 import { FaAws } from "react-icons/fa";
+import {
+  PiMicrosoftExcelLogoFill,
+  PiMicrosoftWordLogoFill,
+  PiMicrosoftPowerpointLogoFill,
+  PiMicrosoftOutlookLogoFill,
+} from "react-icons/pi";
 import { SiPostman } from "react-icons/si";
 import { 
   SiHtml5, 
@@ -36,19 +42,24 @@ const skills = [
   { name: "SCSS", icon: <SiSass className="text-[#CC6699]" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
   { name: "Responsive Design", icon: <MdDevices className="text-[#00BCD4]" /> },
-  { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
-  { name: "Express.js", icon: <SiExpress className="text-white" /> },
-  { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
-  { name: "Mongoose", icon: <SiMongoose className="text-[#880000]" /> },
-  { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
-  { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
+  // { name: "Node.js", icon: <SiNodedotjs className="text-[#339933]" /> },
+  // { name: "Express.js", icon: <SiExpress className="text-white" /> },
+  // { name: "MongoDB", icon: <SiMongodb className="text-[#47A248]" /> },
+  // { name: "Mongoose", icon: <SiMongoose className="text-[#880000]" /> },
+  // { name: "Docker", icon: <SiDocker className="text-[#2496ED]" /> },
+  // { name: "AWS", icon: <FaAws className="text-[#FF9900]" /> },
   { name: "Git", icon: <SiGit className="text-[#F05032]" /> },
   { name: "GitHub", icon: <SiGithub className="text-white" /> },
-  { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
+  // { name: "Postman", icon: <SiPostman className="text-[#FF6C37]" /> },
   { name: "VS Code", icon: <VscVscode className="text-[#007ACC]" /> },
   { name: "Vercel", icon: <SiVercel className="text-white" /> },
   { name: "EmailJS", icon: <SiMinutemailer className="text-[#FFCA28]" /> },
+  { name: "MS Excel", icon: <PiMicrosoftExcelLogoFill className="text-[#217346]" /> },
+  { name: "MS Word", icon: <PiMicrosoftWordLogoFill className="text-[#2B579A]" /> },
+  { name: "MS PowerPoint", icon: <PiMicrosoftPowerpointLogoFill className="text-[#D24726]" /> },
+  { name: "MS Outlook", icon: <PiMicrosoftOutlookLogoFill className="text-[#0078D4]" /> },
 ];
+
 
 const SkillsMarquee = () => {
   const duplicatedSkills = [...skills, ...skills];
