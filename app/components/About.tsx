@@ -18,7 +18,7 @@ import {
 const stats = [
   { value: "2", label: "INTERNSHIPS" },
   { value: "6+", label: "PROJECTS" },
-  { value: "5+", label: "CERTIFICATIONS" },
+  { value: "10+", label: "CERTIFICATIONS" },
   { value: "20+", label: "TECHNOLOGIES" },
   { value: "∞", label: "CUPS OF COFFEE" },
 ];

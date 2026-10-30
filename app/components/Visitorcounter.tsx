@@ -134,13 +134,12 @@ const VisitorCounter = () => {
               <p className="text-zinc-300 text-base md:text-lg font-medium leading-snug">
                 {count !== null ? (
                   <>
-                    You are visitor{" "}
+                    You are the{" "}
                     <span className="text-white font-bold font-mono">
-                      #{count.toLocaleString()}
-                    </span>
-                    <sup className="text-xs text-zinc-500 font-mono ml-0.5">
-                      {ordinal(count)}
-                    </sup>
+                      {count.toLocaleString()}
+                      <sup className="text-xs text-[#E8A33D] ml-0.5">{ordinal(count)}</sup>
+                    </span>{" "}
+                    visitor
                   </>
                 ) : failed ? (
                   "Counter unavailable right now"
