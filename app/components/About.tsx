@@ -76,7 +76,6 @@ const AboutMe = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-          {/* Intro */}
           <motion.div {...fade(0)} className={`${tile} md:col-span-4`}>
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#E8A33D] via-[#E8A33D]/40 to-transparent" />
             <div className="absolute -top-16 -right-16 w-56 h-56 bg-[#E8A33D]/[0.07] blur-[90px] rounded-full pointer-events-none" />
@@ -101,7 +100,6 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          {/* Stats */}
           <motion.div {...fade(1)} className={`${tile} md:col-span-2 flex flex-col justify-between`}>
             <p className={label}>By the numbers</p>
             <div className="grid grid-cols-2 gap-x-4 gap-y-6">
@@ -119,7 +117,6 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          {/* Working with */}
           <motion.div {...fade(2)} className={`${tile} md:col-span-3`}>
             <p className={label}>What I work with</p>
             <div className="flex flex-wrap gap-2">
@@ -132,7 +129,6 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          {/* Learning */}
           <motion.div {...fade(3)} className={`${tile} md:col-span-3`}>
             <p className={label}>Currently learning</p>
             <div className="flex flex-wrap gap-2 mb-3">
@@ -148,7 +144,6 @@ const AboutMe = () => {
             </p>
           </motion.div>
 
-          {/* Location */}
           <motion.div {...fade(4)} className={`${tile} md:col-span-2 flex items-center gap-4`}>
             <div className="w-11 h-11 rounded-xl bg-[#E8A33D]/10 border border-[#E8A33D]/20 flex items-center justify-center text-[#E8A33D] shrink-0">
               <MapPin size={18} />
@@ -162,7 +157,6 @@ const AboutMe = () => {
             </div>
           </motion.div>
 
-          {/* Status */}
           <motion.div
             {...fade(5)}
             className={`${tile} md:col-span-4 !border-[#E8A33D]/20 !bg-[#E8A33D]/[0.04]`}

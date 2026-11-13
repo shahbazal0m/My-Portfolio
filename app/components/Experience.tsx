@@ -144,7 +144,6 @@ const Experience = () => {
           </h2>
         </div>
 
-        {/* Timeline */}
         <div className="relative w-full">
           {/* Vertical line */}
           <div className="absolute left-[6px] md:left-[8px] top-8 bottom-8 w-px bg-gradient-to-b from-[#E8A33D]/70 via-white/10 to-transparent" />
@@ -159,7 +158,7 @@ const Experience = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative pl-8 md:pl-12"
               >
-                {/* Timeline dot */}
+              
                 <span className="absolute left-0 top-9 flex h-3 w-3 md:h-4 md:w-4 items-center justify-center">
                   {exp.ongoing ? (
                     <>
@@ -171,7 +170,6 @@ const Experience = () => {
                   )}
                 </span>
 
-                {/* Card */}
                 <div
                   className={`glass rounded-[1rem] border transition-all duration-500 relative overflow-hidden p-6 md:p-8 hover:border-[#E8A33D]/40 ${
                     exp.ongoing
@@ -184,7 +182,6 @@ const Experience = () => {
                     <div className="absolute -top-12 -right-12 w-44 h-44 bg-[#E8A33D]/[0.08] blur-[80px] rounded-full pointer-events-none" />
                   )}
 
-                  {/* Header */}
                   <div className="relative flex flex-col md:flex-row md:items-start justify-between gap-5 mb-6">
                     <div className="flex items-start gap-4">
                       <div
@@ -239,7 +236,6 @@ const Experience = () => {
 
                   <div className="h-[1px] w-full bg-gradient-to-r from-white/10 via-white/5 to-transparent mb-6" />
 
-                  {/* Stack */}
                   {exp.stack.length > 0 && (
                     <div className="mb-6">
                       <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-zinc-500 mb-3">
@@ -259,7 +255,6 @@ const Experience = () => {
                     </div>
                   )}
 
-                  {/* Highlights */}
                   <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-zinc-500 mb-3">
                     What I do
                   </p>
@@ -272,7 +267,6 @@ const Experience = () => {
                     ))}
                   </ul>
 
-                  {/* Certificate */}
                   {exp.certificateLink && (
                     <a
                       href={exp.certificateLink}

@@ -35,7 +35,6 @@ const Footer = () => {
         transition={{ duration: 0.6 }}
         className="relative z-10"
       >
-        {/* Main grid */}
         <div className="max-w-[1400px] mx-auto px-6 md:px-24 py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand */}
           <div className="md:col-span-5">
@@ -59,7 +58,6 @@ const Footer = () => {
             </span>
           </div>
 
-          {/* Navigate */}
           <div className="md:col-span-3">
             <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-zinc-500 mb-4">
               Navigate
@@ -81,7 +79,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Connect */}
           <div className="md:col-span-4">
             <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-zinc-500 mb-4">
               Connect
@@ -114,7 +111,7 @@ const Footer = () => {
               ))}
 
               <a
-                href="https://drive.google.com/file/d/1aTGWlFF5-BQF5DDtj4cenCgVVb3j4beX/view?usp=sharing"
+                href="https://drive.google.com/file/d/1tTibVrSj-SjbkWY81eWHV18LENVjZQ0y/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 h-10 px-4 rounded-xl bg-[#E8A33D]/10 border border-[#E8A33D]/30 text-[#E8A33D] text-xs font-bold uppercase tracking-wider hover:bg-[#E8A33D] hover:text-[#0a0a0a] transition-all duration-300"
@@ -126,14 +123,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Big bright name (full width) */}
         <div className="relative overflow-hidden select-none pointer-events-none text-center">
           <p className="text-[12vw] font-black leading-[0.9] tracking-tighter whitespace-nowrap pb-2 bg-gradient-to-b from-[#E8A33D]/60 via-[#E8A33D]/25 to-transparent bg-clip-text text-transparent">
             SHAHBAZ ALAM
           </p>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-6 md:px-24 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
             <p className="text-[11px] font-mono text-zinc-500">
