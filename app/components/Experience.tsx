@@ -9,6 +9,7 @@ import {
   ClipboardList,
   CalendarCheck,
   FileText,
+  Calculator,
 } from "lucide-react";
 import { SiReact, SiNextdotjs, SiTailwindcss, SiJavascript, SiHtml5, SiCss } from "react-icons/si";
 import { PiMicrosoftExcelLogoFill, PiMicrosoftOutlookLogoFill } from "react-icons/pi";
@@ -53,7 +54,26 @@ const experience: ExperienceItem[] = [
   //     "Maintain accurate records and prepare routine reports in the system.",
   //   ],
   // },
-  {
+{
+  company: "Jods Mobile Battery Company",
+  status: "Ongoing",
+  ongoing: true,
+  role: "Accounts Executive (Data Entry)",
+  type: "Full-time",
+  mode: "On-site",
+  duration: "Oct 2026 — Present",
+  location: "Karol Bagh, New Delhi",
+  stack: [
+    { name: "Tally", icon: <Calculator size={14} className="text-[#E8A33D]" /> },
+    { name: "Data Entry", icon: <FileText size={14} className="text-[#A78BFA]" /> },
+    { name: "MS Excel", icon: <PiMicrosoftExcelLogoFill className="text-[#217346]" /> },
+  ],
+  points: [
+    "Enter day-to-day accounting data into Tally accurately and on time.",
+    "Maintain organised records and support the accounts team with routine entries.",
+  ],
+},
+{
     company: "Xubru Technologies Pvt Ltd",
     status: "Completed",
     role: "Frontend Developer",

@@ -126,12 +126,12 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Big faded name (full width) */}
+        {/* Big bright name (full width) */}
         <div className="relative overflow-hidden select-none pointer-events-none text-center">
-  <p className="text-[12vw] font-black leading-[0.9] tracking-tighter text-white/[0.03] whitespace-nowrap pb-2">
-    SHAHBAZ ALAM
-  </p>
-</div>
+          <p className="text-[12vw] font-black leading-[0.9] tracking-tighter whitespace-nowrap pb-2 bg-gradient-to-b from-[#E8A33D]/60 via-[#E8A33D]/25 to-transparent bg-clip-text text-transparent">
+            SHAHBAZ ALAM
+          </p>
+        </div>
 
         {/* Bottom bar */}
         <div className="border-t border-white/5">

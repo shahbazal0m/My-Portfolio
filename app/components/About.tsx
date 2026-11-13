@@ -18,7 +18,7 @@ import {
 const stats = [
   { value: "2", label: "INTERNSHIPS" },
   { value: "6+", label: "PROJECTS" },
-  { value: "10+", label: "CERTIFICATIONS" },
+  { value: "5+", label: "CERTIFICATIONS" },
   { value: "20+", label: "TECHNOLOGIES" },
   { value: "∞", label: "CUPS OF COFFEE" },
 ];
@@ -157,7 +157,7 @@ const AboutMe = () => {
               <p className="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-zinc-500 mb-1">
                 Based in
               </p>
-              <p className="text-white font-semibold">Nwe Delhi, India</p>
+              <p className="text-white font-semibold">New Delhi, India</p>
               <p className="text-xs text-zinc-500">From Darbhanga, Bihar</p>
             </div>
           </motion.div>

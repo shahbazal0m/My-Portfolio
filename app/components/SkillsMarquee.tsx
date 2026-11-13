@@ -2,6 +2,7 @@
 import React from "react";
 import { MdDevices } from "react-icons/md";
 import { FaAws } from "react-icons/fa";
+import { Calculator } from "lucide-react";
 import {
   PiMicrosoftExcelLogoFill,
   PiMicrosoftWordLogoFill,
@@ -58,8 +59,8 @@ const skills = [
   { name: "MS Word", icon: <PiMicrosoftWordLogoFill className="text-[#2B579A]" /> },
   { name: "MS PowerPoint", icon: <PiMicrosoftPowerpointLogoFill className="text-[#D24726]" /> },
   { name: "MS Outlook", icon: <PiMicrosoftOutlookLogoFill className="text-[#0078D4]" /> },
+  { name: "Tally", icon: <Calculator className="text-[#E8A33D]" /> },
 ];
-
 
 const SkillsMarquee = () => {
   const duplicatedSkills = [...skills, ...skills];
@@ -71,7 +72,7 @@ const SkillsMarquee = () => {
 
       <div 
         className="flex w-max items-center animate-marquee will-change-transform"
-        style={{ animationDuration: '35s' }}
+        style={{ animationDuration: '45s' }}
       >
         {duplicatedSkills.map((skill, index) => (
           <div

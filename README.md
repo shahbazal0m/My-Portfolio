@@ -1,38 +1,44 @@
 # Shahbaz Alam — Portfolio Website
 
-A modern, animated personal portfolio built to showcase my skills, projects, and journey as a Full Stack Developer.
+A modern, animated personal portfolio built to showcase my projects, experience and skills as a Frontend Developer.
 
-🔗 **Live Demo:** [shahbaz-alam.vercel.app](https://shahbaz-alam.vercel.app)
-📂 **Repository:** [github.com/shahbazal0m/My-Portfolio](https://github.com/shahbazal0m/My-Portfolio)
+**Live Demo:** [shahbaz-alam.vercel.app](https://shahbaz-alam.vercel.app)
+**Repository:** [github.com/shahbazal0m/My-Portfolio](https://github.com/shahbazal0m/My-Portfolio)
 
----
-
-## 📸 Overview
-
-This portfolio is built with **Next.js 15** and **Tailwind CSS v4**, featuring a sleek glassmorphic dark theme, smooth Framer Motion animations, an interactive particle background, and a fully functional contact form powered by a custom API route.
+![Portfolio preview](./public/project-image/portfolio.png)
 
 ---
 
-## ✨ Key Features
+## Overview
+
+This portfolio is built with **Next.js** and **Tailwind CSS v4**. It uses a dark charcoal theme with amber accents, a subtle grid background, smooth Framer Motion animations, a custom contact form API, and a few live widgets (GitHub activity and a visitor counter).
+
+**Sections:** Hero · About · Experience · Projects · Education · GitHub Activity · Certifications · Contact · Quote of the Day · Visitor Counter
+
+---
+
+## Key Features
 
 | Feature | Description |
 |---|---|
-| 🧊 **Glassmorphic UI** | Floating pill-shaped navbar with dynamic scroll-based blur and shadow effects |
-| 🎬 **Framer Motion Animations** | Smooth, hardware-accelerated transitions across every section |
-| ⌨️ **Typewriter Hero Text** | Rotating role titles (Full Stack, Frontend, Backend Developer) |
-| 🎡 **Skills Marquee** | Infinite auto-scrolling strip of tech stack icons |
-| 🖼️ **Dynamic Project Cards** | Rendered from a structured data array with GitHub & live demo links |
-| 📊 **Live GitHub Activity** | Fetches real-time star/fork counts via the GitHub REST API |
-| 🏆 **Certifications Showcase** | AWS, NPTEL, and Sheryians certificates with verification links |
-| 📩 **Custom Contact Form** | Built with a Next.js API route (`/api/contact`) instead of a third-party-only service, with toast notifications for success/error states |
-| 👀 **Visitor Counter** | Session-based live visitor tracking using `sessionStorage` + API route |
-| 🌌 **Interactive Particle Background** | Built with `tsparticles`, reacts to mouse hover |
-| ⬆️ **Scroll-to-Top Button** | Appears after scrolling, with smooth animated entrance/exit |
-| 📱 **Fully Responsive** | Optimized layouts and reduced animation load for mobile devices |
+| **Amber dark theme** | Charcoal base, amber accents, glass cards and a soft grid background |
+| **Floating navbar** | Pill-shaped navbar that changes its blur and shadow on scroll, with an animated mobile menu |
+| **Hero** | Typewriter role text and a code-window style profile frame |
+| **Skills marquee** | Infinite auto-scrolling strip of languages, frameworks and tools |
+| **About (bento grid)** | Tile layout with intro, stats, current stack, learning list, location and status |
+| **Experience timeline** | Vertical timeline with role, dates, skills chips and certificate links |
+| **Project cards** | Built from a data array, with stack icons and GitHub / live demo links |
+| **GitHub activity** | Contribution heatmap plus total stars and forks from the GitHub REST API |
+| **Certifications** | Certificate cards with icon tags and verification links |
+| **Contact form** | Custom Next.js API route (`/api/contact`) with loading state and toast notifications |
+| **Quote of the Day** | A new developer quote every day, with dots and a "next quote" button |
+| **Visitor counter** | Odometer-style counter backed by an API route and Upstash Redis, counted once per browser session |
+| **Scroll-to-top** | Button that appears after scrolling, with animated entrance and exit |
+| **Responsive** | Layouts tuned for mobile, tablet and desktop |
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend**
 - [Next.js](https://nextjs.org/) (App Router)
@@ -40,49 +46,53 @@ This portfolio is built with **Next.js 15** and **Tailwind CSS v4**, featuring a
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [React Hot Toast](https://react-hot-toast.com/)
-- [tsParticles](https://particles.js.org/)
-- [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+- [typewriter-effect](https://www.npmjs.com/package/typewriter-effect)
+- [Lucide React](https://lucide.dev/) and [React Icons](https://react-icons.github.io/react-icons/)
 
-**Backend**
-- Next.js API Routes (`/api/contact`, `/api/visitor`)
-- GitHub REST API integration
+**Backend and APIs**
+- Next.js route handlers (`/api/contact`, `/api/visitor`)
+- Upstash Redis for the persistent visitor count
+- GitHub REST API for repository stats
 
-**Tools & Deployment**
-- Git & GitHub
-- Vercel (CI/CD & Hosting)
+**Tools and Deployment**
+- Git and GitHub
+- Vercel (deploys from the `master` branch)
 - VS Code
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
-frontend/
+.
 ├── app/
 │   ├── api/
-│   │   ├── contact/           # Handles contact form submissions
-│   │   └── visitor/           # Tracks and returns live visitor count
+│   │   ├── contact/            # Contact form submissions
+│   │   └── visitor/            # Visitor count
 │   ├── components/
-│   │   ├── navbar.tsx         # Floating responsive navbar
-│   │   ├── Hero.tsx           # Landing section with typewriter effect
-│   │   ├── SkillsMarquee.tsx  # Auto-scrolling tech stack
-│   │   ├── About.tsx          # Bio and background
-│   │   ├── Education.tsx      # Education & training timeline
-│   │   ├── Projects.tsx       # Project showcase cards
-│   │   ├── Githubactivity.tsx # Live GitHub stats
-│   │   ├── certificates.tsx   # Certifications grid
-│   │   ├── Contact.tsx        # Contact form with API integration
-│   │   ├── Visitorcounter.tsx # Live visitor counter widget
-│   │   ├── Background.tsx     # Animated particle background
-│   │   ├── Divider.tsx        # Section divider with glow effect
-│   │   ├── Scrolltotop.tsx    # Scroll-to-top button
-│   │   └── Footer.tsx
+│   │   ├── navbar.tsx          # Floating responsive navbar
+│   │   ├── Hero.tsx            # Landing section with typewriter text
+│   │   ├── SkillsMarquee.tsx   # Auto-scrolling skills strip
+│   │   ├── About.tsx           # Bento-grid About section
+│   │   ├── Experience.tsx      # Experience timeline
+│   │   ├── Projects.tsx        # Project cards
+│   │   ├── Education.tsx       # Education cards
+│   │   ├── Githubactivity.tsx  # GitHub heatmap and stats
+│   │   ├── certificates.tsx    # Certifications grid
+│   │   ├── Contact.tsx         # Contact form and details
+│   │   ├── QuoteOfTheDay.tsx   # Daily developer quote
+│   │   ├── Visitorcounter.tsx  # Visitor counter widget
+│   │   ├── Background.tsx      # Grid background
+│   │   ├── Divider.tsx         # Section divider
+│   │   ├── Scrolltotop.tsx     # Scroll-to-top button
+│   │   └── Footer.tsx          # Full-width footer
 │   ├── globals.css
 │   ├── layout.tsx
 │   └── page.tsx
 ├── public/
 │   ├── project-image/
 │   ├── certificates-images/
+│   ├── experience-images/
 │   ├── profile-image/
 │   └── tab-logo/
 └── package.json
@@ -90,39 +100,41 @@ frontend/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-Clone and run the project locally:
+Clone the `master` branch and run the project locally:
 
 ```bash
-git clone https://github.com/shahbazal0m/My-Portfolio.git
-cd My-Portfolio/frontend
+git clone -b master https://github.com/shahbazal0m/My-Portfolio.git
+cd My-Portfolio
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view it.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Environment Variables
 
-Create a `.env.local` file in the `frontend` directory for the contact form and any API keys used:
+Create a `.env.local` file in the project root. The contact form and the visitor counter need keys from their services: an email provider for `/api/contact` and Upstash Redis for `/api/visitor`.
 
 ```
-# Add required environment variables here
+# Add the keys your API routes read from process.env
 ```
+
+The rest of the site runs without them. The contact form and the visitor counter will show an error state until the keys are added.
 
 ---
 
-## 🧩 Featured Projects Shown on This Site
+## Featured Projects
 
-- **Food Ordering Web App** — Responsive food delivery layout with category filters and JSON-based menu integration
-- **E-commerce Website** — Digital catalog with simulated shopping flows and REST API integration
-- **Productivity Dashboard** — Workspace hub with weather widgets, task tracking, and habit tracking
-- **Personal Portfolio** — This very site, built with Next.js, Tailwind, and Framer Motion
+- **Food Ordering Web App**: responsive food delivery layout with category filters and JSON-based menu
+- **E-commerce Website**: product catalog with shopping flow and REST API integration
+- **Productivity Dashboard**: workspace hub with a weather widget, task list and habit tracking
+- **Personal Portfolio**: this site, built with Next.js, TypeScript, Tailwind CSS and Framer Motion
 
 ---
 
-## 📬 Contact
+## Contact
 
 - **Email:** shahbazalam4842@gmail.com
 - **LinkedIn:** [iamshahbaz-alam](https://www.linkedin.com/in/iamshahbaz-alam/)
@@ -131,4 +143,4 @@ Create a `.env.local` file in the `frontend` directory for the contact form and 
 
 ---
 
-⭐ If you found this project interesting, consider giving it a star on GitHub!
+If you like this project, consider giving it a star on GitHub.
