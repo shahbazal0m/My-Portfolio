@@ -40,9 +40,15 @@ const VisitorCounter = () => {
       .catch(() => setFailed(true));
   }, []);
 
-  // Count-up animation
+  // Count-up animation (skipped when the user prefers reduced motion)
   useEffect(() => {
     if (count === null) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplay(count);
+      return;
+    }
+
     const duration = 1200;
     const start = performance.now();
     let raf: number;
@@ -98,10 +104,15 @@ const VisitorCounter = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-1.5 sm:gap-2" aria-label={`${count ?? 0} visitors`}>
+              <div
+                role="img"
+                aria-label={count !== null ? `${count} visitors` : "Visitor count loading"}
+                className="flex items-center gap-1.5 sm:gap-2"
+              >
                 {digits.map((d, i) => (
                   <div
                     key={i}
+                    aria-hidden="true"
                     className="relative w-10 h-14 sm:w-12 sm:h-16 md:w-14 md:h-[4.5rem] rounded-lg bg-gradient-to-b from-white/[0.07] to-white/[0.02] border border-white/10 flex items-center justify-center overflow-hidden"
                   >
                     <span
@@ -123,12 +134,8 @@ const VisitorCounter = () => {
             {/* Right: message */}
             <div className="md:text-right md:max-w-xs">
               <span className="inline-flex items-center gap-1.5 text-[10px] uppercase font-mono font-bold tracking-wider text-[#E8A33D] bg-[#E8A33D]/10 px-2.5 py-1 rounded-full border border-[#E8A33D]/20 mb-4">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8A33D] opacity-75" />
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#E8A33D]" />
-                </span>
                 <TrendingUp size={11} />
-                Live
+                All time
               </span>
 
               <p className="text-zinc-300 text-base md:text-lg font-medium leading-snug">
