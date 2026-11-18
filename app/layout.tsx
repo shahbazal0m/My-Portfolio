@@ -20,8 +20,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Shahbaz Alam — Full Stack Developer",
-  description: "Portfolio of Shahbaz Alam, a Full Stack Developer specializing in MERN Stack.",
+  title: "Shahbaz Alam — Frontend Developer",
+  description:
+    "Portfolio of Shahbaz Alam, a Frontend Developer building responsive web interfaces with React, Next.js, TypeScript and Tailwind CSS.",
   icons: {
     icon: "/tab-logo/favicon-32x32.png",
     shortcut: "/tab-logo/android-chrome-192x192.png",

@@ -12,10 +12,14 @@ import {
   BookOpen,
   ArrowRight,
   ArrowLeft,
+  Share2,
   X,
 } from "lucide-react";
 import {
   SiGithub,
+  SiReact,
+  SiReacthookform,
+  SiVite,
   SiHtml5,
   SiCss,
   SiJavascript,
@@ -73,6 +77,11 @@ const T = {
   framer: { name: "Framer Motion", icon: <SiFramer className="text-white" /> },
   emailjs: { name: "EmailJS", icon: <SiMinutemailer className="text-[#FFCA28]" /> },
   toast: { name: "React Hot Toast", icon: <Bell size={14} className="text-[#E8A33D]" /> },
+  react: { name: "React.js", icon: <SiReact className="text-[#61DAFB]" /> },
+  contextApi: { name: "Context API", icon: <Share2 size={14} className="text-[#E8A33D]" /> },
+  reactHookForm: { name: "React Hook Form", icon: <SiReacthookform className="text-[#EC5990]" /> },
+  toastify: { name: "React Toastify", icon: <Bell size={14} className="text-[#E8A33D]" /> },
+  vite: { name: "Vite", icon: <SiVite className="text-[#646CFF]" /> },
 };
 
 /*
@@ -216,6 +225,71 @@ const projects: Project[] = [
         "Using the Next.js App Router and API routes.",
         "Configuring deployments, branches and environment variables on Vercel.",
         "Designing around third-party failures with fallbacks and error states.",
+      ],
+    },
+  },
+    {
+    id: "05",
+    type: "Frontend / App",
+    title: "React Todo App (Context API)",
+    image: "/project-image/react-todo.png", // TODO: screenshot add karo (1900x910)
+    description: "A task manager built with React where the Context API shares todo state between the form and the list. Input is validated with React Hook Form, and toast messages confirm every create and delete.",
+    tech: [T.react, T.contextApi, T.reactHookForm, T.toastify, T.tailwind, T.vite, T.js],
+    github: "https://github.com/shahbazal0m/react-todo-context-api",
+    live: "https://react-todo-context-api-ecru.vercel.app",
+    caseStudy: {
+      role: "Learning project",
+      overview:
+        "A small to-do app where users add tasks and delete them from a pending list. The todo state is shared through the Context API, so the form and the list stay in sync without passing props.",
+      problem:
+        "When two components need the same data in React, the usual way is to lift the state up and pass it down as props. I wanted to learn a cleaner way to share state, so I built a small app around the Context API.",
+      solution:
+        "A Wrapper component creates a todo context with createContext and keeps the todos in useState. It wraps the whole app, so CreateTodo and ReadTodoList read and update the same list with useContext. The form uses React Hook Form and shows an error when the title is empty. Each todo gets a unique id from nanoid. A new todo is added by copying the array and updating state, and delete removes a todo by filtering on its id. React Toastify shows a message after each action, and Tailwind CSS handles the styling.",
+      challenges: [
+        "Setting up the context, the provider and useContext correctly so two components share one state.",
+        "Updating state immutably: copying the todos array before adding, and filtering to delete, instead of changing the original array.",
+        "Handling form input and validation with React Hook Form instead of keeping a separate state for each field.",
+      ],
+      outcome:
+        "A deployed app where tasks can be created with validation and deleted, with instant toast feedback. Tasks are kept in memory only, so they reset on refresh. Saving to localStorage and adding edit and complete options are the next steps.",
+      learnings: [
+        "How createContext, a Provider and useContext work together to share state.",
+        "Handling forms and validation with React Hook Form.",
+        "Updating array state immutably in React.",
+        "Creating unique ids with nanoid and giving feedback with React Toastify.",
+      ],
+    },
+  },
+  {
+    id: "06",
+    type: "Frontend / Web",
+    title: "Event Management Website",
+    image: "/project-image/Event-website.png",
+    description: "A responsive event-planning website with service cards, a filterable portfolio gallery, testimonials and a consultation booking form, built with HTML, CSS and vanilla JavaScript.",
+    tech: [T.html, T.css, T.js, T.fontAwesome],
+    github: "https://github.com/shahbazal0m/event-management-website",
+    live: "https://event-management-website-henna.vercel.app", // TODO: link browser mein khol ke verify karo
+    caseStudy: {
+      role: "Solo project",
+      overview:
+        "EventPro is a responsive single-page website for an event management company. It presents services, a filterable gallery of past events, client testimonials and a consultation booking form. The company, events and testimonials are sample content created for this demo.",
+      problem:
+        "An event company sells trust, so its site has to show services clearly, let visitors browse past work quickly and make it easy to ask for a quote. I wanted to build that whole experience without a framework, to practise core front-end skills.",
+      solution:
+        "The page uses a fixed header with anchor links and smooth scrolling, a hero section with a call to action, and services laid out as cards in a CSS Grid. The portfolio is filtered by category using data attributes, without reloading the page. The booking form reads its values with FormData, checks the required fields and shows a confirmation. Cards fade in as they scroll into view using the Intersection Observer API, and the header gains a blurred background after scrolling down. Flexbox, CSS Grid and media queries keep the layout fluid from phones to desktops, with a toggle menu on small screens.",
+      challenges: [
+        "Filtering the portfolio by category with data attributes, and replaying the fade-in animation on items that reappear.",
+        "Building a mobile menu that opens, closes after a link is tapped and still works with smooth scrolling.",
+        "Animating cards only when they enter the screen, and stopping the observer afterwards so the animation does not repeat.",
+        "Keeping the layout fluid across screen sizes with auto-fit grids and media queries.",
+      ],
+      outcome:
+        "A deployed, fully responsive site with a working mobile menu, category filter, scroll animations and a validated booking form. The form shows a confirmation but does not send or store data, because the project has no backend.",
+      learnings: [
+        "Selecting and updating the DOM and handling events in vanilla JavaScript.",
+        "Triggering animations on scroll with the Intersection Observer API.",
+        "Building responsive layouts with CSS Grid, Flexbox and media queries.",
+        "Reading form data with FormData and validating it before submitting.",
       ],
     },
   },

@@ -31,10 +31,11 @@ const Hero = () => {
             <Typewriter
               options={{
                 strings: [
-                  'Full Stack Developer',
-                  'MERN Stack Developer',
                   'Frontend Developer',
-                  'Backend Developer',
+                  'React.js Developer',
+                  'Next.js Developer',
+                  'TypeScript Developer',
+                  'JavaScript Developer',
                 ],
                 autoStart: true,
                 loop: true,
@@ -46,7 +47,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-sm md:text-[17px] text-zinc-400/85 font-sans font-normal tracking-wide leading-relaxed max-w-xl px-2 md:px-0 mt-2 md:mt-3 antialiased">
-          Based in India, I&apos;m a Full Stack Developer specializing in MERN Stack, and building scalable web applications.
+          Based in India, I&apos;m a Frontend Developer who builds clean, fast and responsive web interfaces with React, Next.js and TypeScript. I&apos;m currently learning Node.js and MongoDB to build complete products end to end.
         </p>
 
         {/* Buttons + Social Icons */}
